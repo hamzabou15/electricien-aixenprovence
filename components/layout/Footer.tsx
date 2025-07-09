@@ -13,8 +13,8 @@ import { LuSend } from 'react-icons/lu'
 const Footer = () => {
     return (
         <div className='w-full  bg-footer '>
-            <div className='w-full h-full p-10 bg-[url("/images/footer-bg.webp")] bg-cover bg-no-repeat bg-center flex items-center justify-center'>
-                <div className='flex justify-between w-full h-full '>
+            <div className='w-full h-full py-6 px-10 bg-[url("/images/footer-bg.webp")] bg-cover bg-no-repeat bg-center flex flex-col items-start justify-center gap-10'>
+                <div className='flex justify-between w-full h-full mt-10'>
                     <div className='flex flex-col items-start gap-3'>
                         <Image
                             src="/images/logoV4.png"
@@ -77,7 +77,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className='flex flex-col items-start gap-7'>
-                        <h2 className='text-[#f25000] font-semibold text-xl'>Contact</h2>
+                        <h2 className='text-[#f25000] font-semibold text-xl'>S&#39;abooner</h2>
                         <div className="">
                             <div className="">
                                 <div className="mx-auto grid max-w-[540px] gap-6">
@@ -92,11 +92,12 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
 
-                <div>
-
+                <div className='w-full  flex items-center justify-center '>
+                    <p className='text-[12px] text-[#ffffff91] font-light text-center'>
+                        © 2025 Tous droits réservés - <span className='text-[#f25000] cursor-pointer'>OneSpark</span>  Electricité
+                    </p>
                 </div>
             </div>
         </div>

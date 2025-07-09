@@ -144,10 +144,10 @@ body {
     font-size: 20px;
 }
 
-.group  svg {
-    color : #f25000!important
+li button svg {
+    color: #f25000 !important
 }
 
 .bg-footer {
-    background-color:#1b1e3f !important;
+    background-color: #1b1e3f !important;
 }

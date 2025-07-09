@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "../styles/globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import CTA from "@/components/layout/CTA";
 
 // Import de la police Inter avec support des variables CSS
 const inter = Inter({
@@ -25,6 +26,7 @@ export default function RootLayout({
     <html lang="en" className={inter.variable}>
       <body className="antialiased">
         <Header />
+        <CTA />
         {children}
       </body>
       <Footer />

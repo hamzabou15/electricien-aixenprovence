@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+  "inline-flex items-center justify-center  whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
   {
     variants: {
       variant: {
@@ -20,12 +20,14 @@ const buttonVariants = cva(
         ghost:
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",
-        submit:"bg-[#f25000] rounded-none text-primary-foreground shadow-xs hover:bg-[#edeff5] hover:text-[#191c25] transition-colors duration-300 cursor-pointer",
+        send:"bg-[#edeff5] rounded-none text-[#f25000] shadow-xs hover:bg-[#191c25] hover:text-[white] transition-colors duration-300 cursor-pointer  ",
+        submit:"bg-[#f25000] rounded-none text-[white] shadow-xs hover:bg-[#edeff5] hover:text-[#191c25] transition-colors duration-300 cursor-pointer",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
         sm: "h-8  gap-1.5 px-3 has-[>svg]:px-2.5",
         lg: "h-10  px-6 has-[>svg]:px-4",
+        xlg: "h-14 w-14 w-auto px-4 has-[>svg]:px-6 ",
         icon: "size-9",
       },
     },
