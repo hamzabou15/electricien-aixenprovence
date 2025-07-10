@@ -71,7 +71,7 @@ function ListItem({
 }
 const Header = () => {
     return (
-        <div className='w-full h-28 flex items-center p-8 shadow-bottom'>
+        <div className='w-full h-28 flex items-center p-8 shadow-bottom z-20 relative bg-[white]'>
             <div className='flex items-center justify-between w-full'>
                 <div>
                     <Image
@@ -123,37 +123,9 @@ const Header = () => {
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuTrigger className='font-semibold'>À propos</NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="grid w-[300px] gap-4">
-                                        <li>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">
-                                                    <div className="font-medium">Components</div>
-                                                    <div className="text-muted-foreground">
-                                                        Browse all components in the library.
-                                                    </div>
-                                                </Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">
-                                                    <div className="font-medium">Documentation</div>
-                                                    <div className="text-muted-foreground">
-                                                        Learn how to use the library.
-                                                    </div>
-                                                </Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">
-                                                    <div className="font-medium">Blog</div>
-                                                    <div className="text-muted-foreground">
-                                                        Read our latest blog posts.
-                                                    </div>
-                                                </Link>
-                                            </NavigationMenuLink>
-                                        </li>
-                                    </ul>
-                                </NavigationMenuContent>
+                                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                                    <Link className='font-semibold' href="/docs">A propos</Link>
+                                </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <NavigationMenuTrigger className='font-semibold'>Contact</NavigationMenuTrigger>

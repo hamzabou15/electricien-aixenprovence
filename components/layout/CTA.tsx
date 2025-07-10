@@ -5,7 +5,7 @@ import { IoNewspaperOutline } from 'react-icons/io5'
 
 const CTA = () => {
     return (
-        <div className="fixed bottom-16 right-8 flex flex-col items-end ">
+        <div className="fixed bottom-16 right-8 flex flex-col items-end z-50">
             {/* Bouton téléphone */}
             <Button
                 variant="submit"

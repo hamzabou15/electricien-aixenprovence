@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,100..800;1,100..800&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -47,7 +47,7 @@
 body {
     font-family: "Open Sans", sans-serif;
     color: #191c25;
-
+    background-color: rgb(238, 238, 238);
 }
 
 .shadow-bottom {
