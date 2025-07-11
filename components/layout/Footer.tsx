@@ -12,7 +12,7 @@ import { LuSend } from 'react-icons/lu'
 
 const Footer = () => {
     return (
-       <footer className='w-full bg-footer'>
+        <footer className='w-full bg-footer'>
             <div className='w-full h-full py-6 px-10 bg-[url("/images/footer-bg.webp")] bg-cover bg-no-repeat bg-center flex flex-col items-start justify-center gap-10'>
                 <div className='flex justify-between w-full h-full mt-10'>
                     <div className='flex flex-col items-start gap-3'>
@@ -26,13 +26,28 @@ const Footer = () => {
                             <span className='font-semibold'>OneSpark Electricité</span> est votre entreprise d&#39;électricité générale à Marseille à votre service pour tous vos travaux d&#39;électricité et de dépannage électrique.
                         </p>
                         <div className='flex items-center justify-center gap-6 mt-4 text-sm text-[#f25000]'>
-                            <a href="https://www.instagram.com/onesparkelectricite/" target="_blank" rel="noopener noreferrer" className='p-2 rounded-full border-[1px] border-[#f25000] hover:bg-white hover:text-[#f25000] hover:border-[white] transition-colors duration-300'>
+                            <a href="https://www.instagram.com/onesparkelectricite/" target="_blank" rel="noopener noreferrer"
+                                className='p-2 rounded-full border-[1px] border-[#f25000] hover:bg-white hover:text-[#f25000] hover:border-[white] transition-colors duration-300'
+                                aria-label="Lien vers le profil facebook de OneSpark Electricité"
+                            >
+
                                 <RiFacebookFill />
                             </a>
-                            <a href="https://www.instagram.com/onesparkelectricite/" target="_blank" rel="noopener noreferrer" className='p-2 rounded-full border-[1px] border-[#f25000] hover:bg-white hover:text-[#f25000] hover:border-[white] transition-colors duration-300'>
+                            <a
+                                href="https://www.instagram.com/onesparkelectricite/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-2 rounded-full border-[1px] border-[#f25000] hover:bg-white hover:text-[#f25000]"
+                                aria-label="Lien vers le profil Instagram de OneSpark Electricité"
+                            >
                                 <FaInstagram />
                             </a>
-                            <a href="https://www.linkedin.com/company/onesparkelectricite/" target="_blank" rel="noopener noreferrer" className='p-2 rounded-full border-[1px] border-[#f25000] hover:bg-white hover:text-[#f25000] hover:border-[white] transition-colors duration-300'>
+                            <a href="https://www.linkedin.com/company/onesparkelectricite/" 
+                                target="_blank" rel="noopener noreferrer" 
+                                className='p-2 rounded-full border-[1px] border-[#f25000] hover:bg-white hover:text-[#f25000] hover:border-[white] transition-colors duration-300'
+                                aria-label="Lien vers le profil X platforme de OneSpark Electricité"
+                                
+                                >
                                 <FaXTwitter />
                             </a>
                         </div>
@@ -84,7 +99,7 @@ const Footer = () => {
                                     <form className="grid gap-4">
                                         <div className="flex w-full max-w-sm items-center ">
                                             <Input type="email" placeholder="Votre Email..." name="email" className='border-r-0' />
-                                            <Button type="submit" variant="submit" className='h-10'><LuSend />
+                                            <Button type="submit" variant="submit" aria-label="Envoyer le formulaire" className='h-10'><LuSend />
                                             </Button>
                                         </div>
                                     </form>
