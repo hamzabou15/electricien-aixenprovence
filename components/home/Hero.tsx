@@ -11,12 +11,12 @@ const Hero = () => {
             aria-label="Électricien urgence et dépannage à Nice"
         >
             <div
-                className="h-full w-full "
+                className="bg-[url('/images/Electricien-niceV2.webp')] bg-cover bg-top h-full w-full bg-no-repeat"
                 role="img"
                 aria-label="Électricien intervenant à Nice pour pannes et remises aux normes"
             ></div>
 
-            <div className="relative px-16 py-28 z-10 flex flex-col gap-6 bg-[url('/images/bg-img-home.webp')] bg-cover bg-center">
+            <div className="relative px-16 py-28 z-10 flex flex-col gap-6 bg-cover bg-center">
                 <div className="flex flex-col items-start gap-7">
                     <p className="text-[12px] font-semibold text-[#f25000] uppercase tracking-[7px]">
                         Électricien certifié à Nice
