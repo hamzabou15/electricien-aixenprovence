@@ -6,6 +6,7 @@ import SchemaLocalBusiness from "@/components/schema-local-business";
 import About2 from "@/components/home/About2";
 import StatsCard from "@/components/home/StatsCard";
 import Services from "@/components/home/services";
+import Reviews from "@/components/home/reviews";
 
 export default function HomePage() {
   return (
@@ -68,7 +69,10 @@ export default function HomePage() {
           <StatsCard />
         </section>
         <section id="stats" aria-label="Services Electriciens" className="w-full">
-          <Services/>
+          <Services />
+        </section>
+        <section id="reviews" aria-label="Reviews Electriciens sur Nice" className="w-full overflow-hidden">
+          <Reviews />
         </section>
       </main>
 

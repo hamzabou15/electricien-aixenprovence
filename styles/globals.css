@@ -150,9 +150,3 @@ li button svg {
 .bg-footer {
     background-color: #1b1e3f !important;
 }
-
-[data-slot="button"] {
-  background-color: #f25000!important;
-  color: white;
-  transition: background-color 0.3s ease;
-}
