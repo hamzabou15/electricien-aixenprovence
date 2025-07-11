@@ -5,10 +5,10 @@ import { motion } from 'framer-motion';
 
 const StatsCard = () => {
     const stats = [
-        { value: 320, label: 'Urgences électriques et dépannages à Nice' },
-        { value: 95, label: 'Remplacements de tableaux électriques à Nice' },
-        { value: 150, label: 'Remises aux normes NF C 15-100 réalisées' },
-        { value: 85, label: 'Coupures générales et partielles réparées' }
+        { value: 920, label: 'Interventions réalisées' },
+        { value: 85, label: 'Coupures générales et partielles réparées' },
+        { value: 25, label: 'Experts qualifiés' },
+        { value: 3, label: 'Villes desservies' },
     ];
 
     return (
@@ -23,7 +23,7 @@ const StatsCard = () => {
                         key={index}
                         value={stat.value}
                         label={stat.label}
-                        isLast={index === stats.length - 1}
+                        isLast={index === stats.length - 0}
                     />
                 ))}
             </div>

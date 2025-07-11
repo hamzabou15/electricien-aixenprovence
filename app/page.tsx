@@ -5,6 +5,7 @@ import ServiceCard from "@/components/home/ServiceCard";
 import SchemaLocalBusiness from "@/components/schema-local-business";
 import About2 from "@/components/home/About2";
 import StatsCard from "@/components/home/StatsCard";
+import Services from "@/components/home/services";
 
 export default function HomePage() {
   return (
@@ -66,13 +67,12 @@ export default function HomePage() {
         <section id="stats" aria-label="Statistique de l'entreprise" className="w-full">
           <StatsCard />
         </section>
+        <section id="stats" aria-label="Services Electriciens" className="w-full">
+          <Services/>
+        </section>
       </main>
 
-      {/* FOOTER (à compléter si tu as un footer global) */}
-      <footer className="w-full bg-[#1b1e3f] text-white py-10 px-4 text-center">
-        <p>© {new Date().getFullYear()} Électricien Nice - Tous droits réservés</p>
-        <p>Intervention rapide – Devis gratuit – Artisan certifié</p>
-      </footer>
+
     </>
   );
 }

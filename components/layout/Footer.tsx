@@ -12,7 +12,7 @@ import { LuSend } from 'react-icons/lu'
 
 const Footer = () => {
     return (
-        <div className='w-full  bg-footer '>
+       <footer className='w-full bg-footer'>
             <div className='w-full h-full py-6 px-10 bg-[url("/images/footer-bg.webp")] bg-cover bg-no-repeat bg-center flex flex-col items-start justify-center gap-10'>
                 <div className='flex justify-between w-full h-full mt-10'>
                     <div className='flex flex-col items-start gap-3'>
@@ -100,7 +100,7 @@ const Footer = () => {
                     </p>
                 </div>
             </div>
-        </div>
+        </footer>
     )
 }
 
