@@ -2,6 +2,7 @@ import React from 'react';
 import { FaStar } from 'react-icons/fa';
 import { Button } from '../ui/button';
 import { GoArrowRight } from 'react-icons/go';
+import Image from 'next/image';
 
 const Hero = () => {
     return (
@@ -12,11 +13,18 @@ const Hero = () => {
             id="hero-electricien-nice"
             aria-label="Électricien urgence et dépannage à Nice"
         >
-            <div
-                className="bg-[url('/images/Electricien-niceV2.webp')] bg-cover bg-top h-[400px] w-full bg-no-repeat h-full max-md:h-[500px]"
-                role="img"
-                aria-label="Électricien intervenant à Nice pour pannes et remises aux normes"
-            ></div>
+            <div className="relative h-full w-full max-md:h-[500px]">
+                <Image
+                    src="/images/Electricien-niceV2.webp"
+                    alt="Électricien intervenant à Nice pour pannes et remises aux normes"
+                    fill
+                    className="object-cover object-top"
+                    priority
+                    fetchPriority="high"
+                    sizes="100vw"
+                />
+
+            </div>
 
             <div className="relative px-16 py-28 z-10 flex flex-col gap-6 bg-cover bg-center max-lg:px-12 md:py-20  max-sm:py-16 max-sm:px-7">
                 <div className="flex flex-col items-start gap-7 max-md:items-center">
