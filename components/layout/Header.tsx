@@ -58,13 +58,13 @@ const Header = () => {
         {/* Mobile Burger */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden text-2xl"
+          className="lg:hidden text-2xl"
         >
           {mobileMenuOpen ? <HiX /> : <HiMenu />}
         </button>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-6">
           <NavigationMenu>
             <NavigationMenuList className="flex items-center gap-4">
               <NavigationMenuItem>
@@ -119,7 +119,7 @@ const Header = () => {
         </div>
 
         {/* Contact & Devis */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-6">
           <div className="flex items-center gap-2 text-sm font-semibold">
             <MdLocalPhone className="rounded-full w-8 h-8 p-2 bg-[#edeff5]" />
             <span>+33 693 78 88 07</span>
@@ -133,7 +133,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden px-4 pb-4">
+        <div className="lg:hidden px-4 pb-4">
           <nav className="flex flex-col gap-3">
             <Link href="/" className="text-sm font-semibold">Accueil</Link>
             <Link href="/services" className="text-sm font-semibold">Services</Link>

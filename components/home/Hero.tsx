@@ -7,13 +7,13 @@ const Hero = () => {
     return (
         <section
             className="w-full grid grid-cols-1 relative text-white overflow-hidden bg-[#1b1e3f]  
-                      sm:grid-cols-2  h-full 
+                      md:grid-cols-2  h-full 
             "
             id="hero-electricien-nice"
             aria-label="Électricien urgence et dépannage à Nice"
         >
             <div
-                className="bg-[url('/images/Electricien-niceV2.webp')] bg-cover bg-top h-[400px] w-full bg-no-repeat sm:h-full"
+                className="bg-[url('/images/Electricien-niceV2.webp')] bg-cover bg-top h-[400px] w-full bg-no-repeat h-full max-md:h-[500px]"
                 role="img"
                 aria-label="Électricien intervenant à Nice pour pannes et remises aux normes"
             ></div>

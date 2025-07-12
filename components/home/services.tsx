@@ -53,7 +53,7 @@ const Services = () => {
                     Nos Services
                 </p>
                 
-                <h2 className="text-[40px] sm:text-[54px] leading-[1.15em] font-bold tracking-[-1.5px] text-center text-[#1b1e3f] max-lg:text-[36px] max-md:text-[32px] max-sm:text-[28px] ">
+                <h2 className="text-[40px]  leading-[1.15em] font-bold tracking-[-1.5px] text-center text-[#1b1e3f] max-lg:text-[36px] max-md:text-[32px] ">
                     Électricien à <span className='text-[#f25000]'>Nice</span> : dépannage, mise aux normes, tableaux
                 </h2>
                 <p className="text-[17px] text-[#2E2937BF] text-center max-w-3xl leading-7 max-md:text-base" >
@@ -64,7 +64,7 @@ const Services = () => {
             <Carousel
                 opts={{ align: "start" }}
                 orientation="horizontal"
-                className="w-full max-w-7xl mx-auto"
+                className="w-full max-w-7xl mx-auto max-sm:max-w-[92%]"
             >
                 <CarouselContent className="-mt-1">
                     {services.map((service, index) => (
