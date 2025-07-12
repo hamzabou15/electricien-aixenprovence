@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
 import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+// import Footer from "@/components/layout/Footer";
 import CTA from "@/components/layout/CTA";
 
 const inter = Inter({ subsets: ['latin'], weight: ['100', '200', '300', '400', '500', '600', '700'] });
@@ -25,7 +25,7 @@ export default function RootLayout({
         <Header />
         <CTA />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

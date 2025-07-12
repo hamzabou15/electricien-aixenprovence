@@ -46,16 +46,17 @@ const Services = () => {
         <section
             id="services-electricien-nice"
             aria-label="Nos prestations électriques à Nice"
-            className="w-full py-24 px-16 bg-white"
+            className="w-full py-24 px-16 bg-white max-md:px-8"
         >
-            <div className="flex flex-col items-center justify-center mb-12 px-6 sm:px-20 gap-6">
-                <p className="text-[14px] font-semibold text-[#f25000] uppercase tracking-[7px]">
+            <div className="flex flex-col items-center justify-center mb-12 px-6 sm:px-20 gap-6 max-md:gap-5">
+                <p className="text-[14px] font-semibold text-[#f25000] uppercase tracking-[7px] max-lg:text-[12px]">
                     Nos Services
                 </p>
-                <h2 className="text-[40px] sm:text-[54px] leading-[1.15em] font-bold tracking-[-1.5px] text-center text-[#1b1e3f]">
+                
+                <h2 className="text-[40px] sm:text-[54px] leading-[1.15em] font-bold tracking-[-1.5px] text-center text-[#1b1e3f] max-lg:text-[36px] max-md:text-[32px] max-sm:text-[28px] ">
                     Électricien à <span className='text-[#f25000]'>Nice</span> : dépannage, mise aux normes, tableaux
                 </h2>
-                <p className="text-[17px] text-[#2E2937BF] text-center max-w-3xl leading-7">
+                <p className="text-[17px] text-[#2E2937BF] text-center max-w-3xl leading-7 max-md:text-base" >
                     Interventions rapides à Nice pour tout type de besoin électrique : urgence, diagnostic, remise aux normes NF C 15-100, remplacement de tableaux et réparations.
                 </p>
             </div>

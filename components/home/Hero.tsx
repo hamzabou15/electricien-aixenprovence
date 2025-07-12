@@ -19,24 +19,24 @@ const Hero = () => {
             ></div>
 
             <div className="relative px-16 py-28 z-10 flex flex-col gap-6 bg-cover bg-center max-lg:px-12 md:py-20  max-sm:py-16 max-sm:px-7">
-                <div className="flex flex-col items-start gap-7">
-                    <p className="text-[12px] font-semibold text-[#f25000] uppercase tracking-[7px] max-sm:text-[12px] max-md:text-[10px]">
+                <div className="flex flex-col items-start gap-7 max-md:items-center">
+                    <p className="text-[12px] font-semibold text-[#f25000] uppercase tracking-[7px] max-sm:text-[12px] max-md:text-[10px] max-md:text-center">
                         Électricien certifié à Nice
                     </p>
 
-                    <h1 className="text-[54px] font-bold tracking-[-3px] leading-tight sm:text-[40px] lg:text-[54px] max-sm:text-[32px] max-sm:tracking-normal">
+                    <h1 className="text-[54px] font-bold tracking-[-3px] leading-tight sm:text-[40px] lg:text-[54px] max-sm:text-[32px] max-sm:tracking-normal max-md:text-center">
                         Urgence électricité à Nice – Réparation rapide 7j/7
                     </h1>
 
-                    <p className="text-[17px] font-light text-[#ffffffb7] leading-8 sm:text-[14px] lg:text-[17px]max-sm:text-base ">
+                    <p className="text-[17px] font-light text-[#ffffffb7] leading-8 sm:text-[14px] lg:text-[17px]max-sm:text-base max-md:text-center ">
                         Vous faites face à une <strong>coupure générale ou partielle</strong> ? Notre <strong>électricien en urgence à Nice</strong> intervient rapidement pour tout dépannage :
                         <strong> remplacement de tableau électrique</strong>, <strong>mise en conformité NF C 15-100</strong>, disjoncteur HS ou panne soudaine.
                         Intervention 7j/7 – service certifié et fiable.
                     </p>
 
-                    <div className="flex gap-5 items-start mt-4 max-sm:flex-col sm:items-start">
+                    <div className="flex gap-5 items-start mt-4 max-sm:flex-col sm:items-start max-md:items-center">
                         <h3 className="text-[40px] font-semibold leading-9 sm:text-4xl sm:leading-8 lg:leading-9 lg:text-[40px] ">4.95</h3>
-                        <div className="flex flex-col items-start gap-1 max-sm:justify-center">
+                        <div className="flex flex-col items-start gap-1 max-sm:justify-center max-md:items-center">
                             <div className="flex items-center gap-1 text-[16px] text-[#edae00]">
                                 <FaStar />
                                 <FaStar />

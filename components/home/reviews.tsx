@@ -55,25 +55,25 @@ const Reviews = () => {
             aria-label="Avis clients sur notre électricien à Nice"
             className="w-full py-24"
         >
-            <div className="flex flex-col items-center justify-center mb-12 px-6 sm:px-20 gap-6">
-                <p className="text-[14px] font-semibold text-[#f25000] uppercase tracking-[7px]">
+            <div className="flex flex-col items-center justify-center mb-12 px-6 sm:px-20 gap-6 max-sm:gap-4">
+                <p className="text-[14px] font-semibold text-[#f25000] uppercase tracking-[7px] max-lg:text-[12px]">
                     Témoignages
                 </p>
-                <h2 className="text-[40px] sm:text-[54px] leading-[1.15em] font-bold tracking-[-1.5px] text-center text-[#1b1e3f]">
+                <h2 className="text-[54px] leading-[1.15em] font-bold tracking-[-1.5px] text-center text-[#1b1e3f] max-lg:text-[46px] max-md:text-[40px] max-md:leading-[1.05em] max-sm:text-[28px]">
                     Ce que disent nos <span className="text-[#f25000]">clients à Nice</span> sur nos interventions électriques
                 </h2>
-                <p className="text-[17px] text-[#2E2937BF] text-center max-w-3xl leading-7">
+                <p className="text-[17px] text-[#2E2937BF] text-center max-w-3xl leading-7 max-md:text-base">
                     Nos clients à Nice nous font confiance pour les interventions en urgence, le remplacement de tableaux électriques ou la remise aux normes NF C 15-100. Découvrez leurs témoignages !
                 </p>
             </div>
 
             <Carousel setApi={setApi} opts={{ loop: true }}>
-                <CarouselContent>
+                <CarouselContent className="max-sm:flex">
                     {reviews.map((review, index) => (
-                        <CarouselItem key={index} className="basis-3/7 p-4 min-h-screen">
+                        <CarouselItem key={index} className="basis-3/7 p-0 h-screen max-sm:basis-[100%]  gap-4  ">
                             <Card
                                 className={cn(
-                                    "text-[#585964] text-[18px] leading-7 transition-all duration-500 min-h-[screen -70px] bg-[#1b1e3f]",
+                                    "text-[#585964] text-[18px] leading-7 transition-all duration-500 h-[450px] bg-[#1b1e3f] max-sm:m-[20px] max-sm:w-[90%]  max-sm:ml-[40px] max-sm:rounded-lg",
                                     {
                                         "bg-[white]": index !== current - 1,
                                     }

@@ -17,7 +17,7 @@ const StatsCard = () => {
             id="chiffres-electricien-nice"
             aria-label="Statistiques sur les interventions d'électricité à Nice"
         >
-            <div className='flex items-start justify-between'>
+            <div className='flex items-start justify-between max-lg:flex-wrap max-lg:gap-y-6 '>
                 {stats.map((stat, index) => (
                     <StatItem
                         key={index}
@@ -89,18 +89,18 @@ const StatItem = ({
     return (
         <div
             ref={ref}
-            className={`flex flex-col mx-auto w-[100%] items-center gap-3 px-6 py-6 ${!isLast ? 'border-l-[2px] border-[#d8d8d8] border-dashed' : ''
+            className={`flex flex-col mx-auto w-[25%] items-center gap-3 px-6 py-6  ${!isLast ? 'border-l-[2px]  border-[#d8d8d8] border-dashed max-lg:w-[50%] max-sm:w-[100%] max-sm:border-0 ' : ''
                 }`}
         >
             <motion.h1
                 initial={{ opacity: 0 }}
                 animate={{ opacity: isVisible ? 1 : 0 }}
                 transition={{ duration: 0.5 }}
-                className='text-[110px] leading-24 m-0 font-semibold text-[#e8e8e8]'
+                className='text-[110px] leading-24 m-0 font-semibold text-[#e8e8e8] max-lg:text-[92px]'
             >
                 {count}
             </motion.h1>
-            <span className='text-[18px] font-semibold text-center text-[#1b1e3f]'>{label}</span>
+            <span className='text-[18px] font-semibold text-center text-[#1b1e3f] max-lg:text-base'>{label}</span>
         </div>
     );
 };
