@@ -7,7 +7,7 @@ const ServiceCard = () => {
         <section className="w-full px-4 py-24 ">
             <div className="grid grid-cols-4 ">
                 <div className="relative group before:h-full before:content-[''] before:absolute before:border-r-[2px] before:border-[#d8d8d8] before:border-dashed">
-                    <div className="flex flex-col items-start px-9 py-5 gap-7 relative transition-all duration-300">
+                    <div className="flex flex-col items-start px-9 py-5 gap-7 relative transition-all duration-300 max-lg:px-5">
 
                         {/* Image animée */}
                         <Image
@@ -19,9 +19,9 @@ const ServiceCard = () => {
                         />
 
                         {/* Titre + description */}
-                        <div className="flex flex-col items-start gap-2 text-[#1b1e3f] max-w-[80%]">
-                            <h3 className="text-2xl font-bold">Outils professionnels</h3>
-                            <span className="text-[15px] text-[#1b1e3f8f] font-[300] leading-7">
+                        <div className="flex flex-col items-start gap-2 text-[#1b1e3f] max-w-[80%] max-lg:max-w[100%]">
+                            <h3 className="text-2xl font-bold max-lg:text-xl">Outils professionnels</h3>
+                            <span className="text-[15px] text-[#1b1e3f8f] font-[300] leading-7 max-lg:text-[14px] max-lg:leading-6">
                                 Un travail de qualité avec une touche personnelle et amicale
                             </span>
                         </div>
@@ -43,7 +43,7 @@ const ServiceCard = () => {
                     </div>
                 </div>
                 <div className="relative group before:h-full before:content-[''] before:absolute before:border-r-[2px] before:border-[#d8d8d8] before:border-dashed">
-                    <div className="flex flex-col items-start px-9 py-5 gap-7 relative transition-all duration-300">
+                    <div className="flex flex-col items-start px-9 py-5 gap-7 relative transition-all duration-300 max-lg:px-5">
 
                         {/* Image animée */}
                         <Image
@@ -55,8 +55,8 @@ const ServiceCard = () => {
                         />
 
                         {/* Titre + description */}
-                        <div className="flex flex-col items-start gap-2 text-[#1b1e3f] max-w-[80%]">
-                            <h3 className="text-2xl font-bold">Expert Électricien</h3>
+                        <div className="flex flex-col items-start gap-2 text-[#1b1e3f] max-w-[80%] max-lg:max-w[100%]">
+                            <h3 className="text-2xl font-bold max-lg:text-xl">Expert Électricien</h3>
                             <span className="text-[15px] text-[#1b1e3f8f] font-[300] leading-7">
                                 De la panne à la performance, une expertise électrique à chaque intervention
                             </span>
@@ -79,7 +79,7 @@ const ServiceCard = () => {
                     </div>
                 </div>
                 <div className="relative group before:h-full before:content-[''] before:absolute before:border-r-[2px] before:border-[#d8d8d8] before:border-dashed">
-                    <div className="flex flex-col items-start px-9 py-5 gap-7 relative transition-all duration-300">
+                    <div className="flex flex-col items-start px-9 py-5 gap-7 relative transition-all duration-300 max-lg:px-5">
 
                         {/* Image animée */}
                         <Image
@@ -91,8 +91,8 @@ const ServiceCard = () => {
                         />
 
                         {/* Titre + description */}
-                        <div className="flex flex-col items-start gap-2 text-[#1b1e3f] max-w-[80%]">
-                            <h3 className="text-2xl font-bold">Large gamme de services</h3>
+                        <div className="flex flex-col items-start gap-2 text-[#1b1e3f] max-w-[80%] max-lg:max-w-[100%]">
+                            <h3 className="text-2xl font-bold max-lg:text-xl">Large gamme de services</h3>
                             <span className="text-[15px] text-[#1b1e3f8f] font-[300] leading-7">
                                 Des experts locaux prêts à vous aider pour tous vos besoins domestiques aujourd&#39;hui
                             </span>
@@ -115,7 +115,7 @@ const ServiceCard = () => {
                     </div>
                 </div>
                 <div className="relative group before:h-full before:content-[''] before:absolute before:border-r-[2px] before:border-[#d8d8d8] before:border-dashed">
-                    <div className="flex flex-col items-start px-9 py-5 gap-7 relative transition-all duration-300">
+                    <div className="flex flex-col items-start px-9 py-5 gap-7 relative transition-all duration-300 max-lg:px-5">
 
                         {/* Image animée */}
                         <Image
@@ -127,8 +127,8 @@ const ServiceCard = () => {
                         />
 
                         {/* Titre + description */}
-                        <div className="flex flex-col items-start gap-2 text-[#1b1e3f] max-w-[80%]">
-                            <h3 className="text-2xl font-bold">Assurance qualité</h3>
+                        <div className="flex flex-col items-start gap-2 text-[#1b1e3f] max-w-[80%] max-lg:max-w[100%]">
+                            <h3 className="text-2xl font-bold max-lg:text-xl">Assurance qualité</h3>
                             <span className="text-[15px] text-[#1b1e3f8f] font-[300] leading-7">
                                 Une aide fiable pour tous vos besoins de rénovation domiciliaire
                             </span>

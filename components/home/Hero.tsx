@@ -6,35 +6,37 @@ import { GoArrowRight } from 'react-icons/go';
 const Hero = () => {
     return (
         <section
-            className="w-full grid grid-cols-2 relative text-white overflow-hidden bg-[#1b1e3f]"
+            className="w-full grid grid-cols-1 relative text-white overflow-hidden bg-[#1b1e3f]  
+                      sm:grid-cols-2  h-full 
+            "
             id="hero-electricien-nice"
             aria-label="Électricien urgence et dépannage à Nice"
         >
             <div
-                className="bg-[url('/images/Electricien-niceV2.webp')] bg-cover bg-top h-full w-full bg-no-repeat"
+                className="bg-[url('/images/Electricien-niceV2.webp')] bg-cover bg-top h-[400px] w-full bg-no-repeat sm:h-full"
                 role="img"
                 aria-label="Électricien intervenant à Nice pour pannes et remises aux normes"
             ></div>
 
-            <div className="relative px-16 py-28 z-10 flex flex-col gap-6 bg-cover bg-center">
+            <div className="relative px-16 py-28 z-10 flex flex-col gap-6 bg-cover bg-center max-lg:px-12 md:py-20  max-sm:py-16 max-sm:px-7">
                 <div className="flex flex-col items-start gap-7">
-                    <p className="text-[12px] font-semibold text-[#f25000] uppercase tracking-[7px]">
+                    <p className="text-[12px] font-semibold text-[#f25000] uppercase tracking-[7px] max-sm:text-[12px] max-md:text-[10px]">
                         Électricien certifié à Nice
                     </p>
 
-                    <h1 className="text-[54px] font-bold tracking-[-3px] leading-tight">
+                    <h1 className="text-[54px] font-bold tracking-[-3px] leading-tight sm:text-[40px] lg:text-[54px] max-sm:text-[32px] max-sm:tracking-normal">
                         Urgence électricité à Nice – Réparation rapide 7j/7
                     </h1>
 
-                    <p className="text-[17px] font-light text-[#ffffffb7] leading-8">
+                    <p className="text-[17px] font-light text-[#ffffffb7] leading-8 sm:text-[14px] lg:text-[17px]max-sm:text-base ">
                         Vous faites face à une <strong>coupure générale ou partielle</strong> ? Notre <strong>électricien en urgence à Nice</strong> intervient rapidement pour tout dépannage :
                         <strong> remplacement de tableau électrique</strong>, <strong>mise en conformité NF C 15-100</strong>, disjoncteur HS ou panne soudaine.
                         Intervention 7j/7 – service certifié et fiable.
                     </p>
 
-                    <div className="flex gap-5 items-start mt-4">
-                        <h3 className="text-[40px] font-semibold leading-9">4.95</h3>
-                        <div className="flex flex-col items-start gap-1">
+                    <div className="flex gap-5 items-start mt-4 max-sm:flex-col sm:items-start">
+                        <h3 className="text-[40px] font-semibold leading-9 sm:text-4xl sm:leading-8 lg:leading-9 lg:text-[40px] ">4.95</h3>
+                        <div className="flex flex-col items-start gap-1 max-sm:justify-center">
                             <div className="flex items-center gap-1 text-[16px] text-[#edae00]">
                                 <FaStar />
                                 <FaStar />
@@ -42,17 +44,17 @@ const Hero = () => {
                                 <FaStar />
                                 <FaStar />
                             </div>
-                            <span className="text-l font-medium">
+                            <span className="text-[16px] font-medium sm:text-[14px] lg:text-[16px]">
                                 Note Google (basée sur 320 avis clients satisfaits à Nice)
                             </span>
                         </div>
                     </div>
 
-                    <div className="flex justify-start mt-7">
+                    <div className="flex justify-start mt-7 max-sm:justify-center max-sm:mx-auto">
                         <Button
                             variant="submit"
                             size="xlg"
-                            className="min-w-[200px] flex items-center gap-2 font-medium"
+                            className="min-w-[200px] flex items-center gap-2 font-medium "
                         >
                             Demander un devis gratuit
                             <GoArrowRight
