@@ -97,7 +97,7 @@ const Footer = () => {
 
                         {/* Section 4 - Newsletter */}
                         <div className="flex flex-col items-start gap-4 w-full sm:max-w-sm">
-                            <h2 className="text-[#f25000] font-semibold text-lg">S'abonner</h2>
+                            <h2 className="text-[#f25000] font-semibold text-lg">S&apos;abonner</h2>
                             <form className="flex w-full max-w-xs">
                                 <Input
                                     type="email"
