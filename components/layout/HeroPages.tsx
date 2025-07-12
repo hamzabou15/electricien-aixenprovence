@@ -34,7 +34,7 @@ const HeroPages = ({ previous, actual, title, link }: HeroPagesProps) => {
                                 className="flex items-center gap-2"
                             >
                                 <a href={link} itemProp="item">
-                                    <span itemProp="name" className="text-white hover:underline font-medium">
+                                    <span itemProp="name" className="text-white hover:underline font-light">
                                         {previous}
                                     </span>
                                 </a>

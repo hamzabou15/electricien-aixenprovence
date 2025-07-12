@@ -1,0 +1,27 @@
+import React from 'react'
+import HeroPages from '../layout/HeroPages'
+import Head from 'next/head'
+
+const Hero = () => {
+    return (
+        <>
+            <Head>
+                <title>Électricien à Nice - Services d&apos;urgence, tableaux et conformité</title>
+                <meta
+                    name="description"
+                    content="Services d'électricité à Nice : urgence, réparation, remplacement de tableau, conformité NF C 15-100. Intervention rapide et certifiée."
+                />
+            </Head>
+            <HeroPages
+                actual='services'
+                previous='Accueil'
+                title='Nos Services'
+                link='/'
+            />
+
+
+        </>
+    )
+}
+
+export default Hero

@@ -121,7 +121,7 @@ const Header = () => {
         {/* Contact & Devis */}
         <div className="hidden lg:flex items-center gap-6">
           <div className="flex items-center gap-2 text-sm font-semibold">
-            <MdLocalPhone className="rounded-full w-8 h-8 p-2 bg-[#edeff5]" />
+            <MdLocalPhone className="rounded-full w-8 h-8 p-2 text-[#e03a00] bg-[#edeff5]" />
             <span>+33 693 78 88 07</span>
           </div>
           <button className="bg-[#f25000] text-white px-4 py-2 rounded-md hover:bg-[#e03a00] flex items-center gap-2 transition-colors duration-300">
