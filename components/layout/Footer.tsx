@@ -12,107 +12,116 @@ import { LuSend } from 'react-icons/lu'
 
 const Footer = () => {
     return (
-        <footer className='w-full bg-footer'>
-            <div className='w-full h-full py-6 px-10 bg-[url("/images/footer-bg.webp")] bg-cover bg-no-repeat bg-center flex flex-col items-start justify-center gap-10'>
-                <div className='flex justify-between w-full h-full mt-10'>
-                    <div className='flex flex-col items-start gap-3'>
-                        <Image
-                            src="/images/logoV4.png"
-                            width={150}
-                            height={20}
-                            alt='Logo OneSpark Electricité'
-                        />
-                        <p className='max-w-[300px] text-[11px] font-extralight text-[#FFFFFF91] text-start leading-5'>
-                            <span className='font-semibold'>OneSpark Electricité</span> est votre entreprise d&#39;électricité générale à Marseille à votre service pour tous vos travaux d&#39;électricité et de dépannage électrique.
-                        </p>
-                        <div className='flex items-center justify-center gap-6 mt-4 text-sm text-[#f25000]'>
-                            <a href="https://www.instagram.com/onesparkelectricite/" target="_blank" rel="noopener noreferrer"
-                                className='p-2 rounded-full border-[1px] border-[#f25000] hover:bg-white hover:text-[#f25000] hover:border-[white] transition-colors duration-300'
-                                aria-label="Lien vers le profil facebook de OneSpark Electricité"
-                            >
-
-                                <RiFacebookFill />
-                            </a>
-                            <a
-                                href="https://www.instagram.com/onesparkelectricite/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="p-2 rounded-full border-[1px] border-[#f25000] hover:bg-white hover:text-[#f25000]"
-                                aria-label="Lien vers le profil Instagram de OneSpark Electricité"
-                            >
-                                <FaInstagram />
-                            </a>
-                            <a href="https://www.linkedin.com/company/onesparkelectricite/" 
-                                target="_blank" rel="noopener noreferrer" 
-                                className='p-2 rounded-full border-[1px] border-[#f25000] hover:bg-white hover:text-[#f25000] hover:border-[white] transition-colors duration-300'
-                                aria-label="Lien vers le profil X platforme de OneSpark Electricité"
-                                
+        <footer className="w-full bg-footer">
+            <div className="w-full py-10 px-6 md:px-10 bg-[url('/images/footer-bg.webp')] bg-cover bg-no-repeat bg-center">
+                <div className="flex flex-col gap-10">
+                    {/* Main sections */}
+                    <div className="flex flex-col lg:flex-row flex-wrap justify-between gap-y-10 gap-x-6">
+                        {/* Section 1 - Logo & Réseaux */}
+                        <div className="flex flex-col items-start gap-4 max-w-xs">
+                            <Image
+                                src="/images/logoV4.png"
+                                width={150}
+                                height={20}
+                                alt="Logo OneSpark Electricité"
+                            />
+                            <p className="text-xs font-extralight text-[#FFFFFF91] leading-5">
+                                <span className="font-semibold">OneSpark Electricité</span> est votre entreprise d&#39;électricité générale à Marseille à votre service pour tous vos travaux d&#39;électricité et de dépannage électrique.
+                            </p>
+                            <div className="flex gap-4 mt-2 text-sm text-[#f25000]">
+                                <a
+                                    href="https://www.facebook.com/onesparkelectricite/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="p-2 rounded-full border border-[#f25000] hover:bg-white hover:text-[#f25000] transition"
+                                    aria-label="Facebook"
                                 >
-                                <FaXTwitter />
-                            </a>
-                        </div>
-                    </div>
-                    <div className='flex flex-col items-start gap-3'>
-                        <h2 className='text-[#f25000] font-semibold text-xl'>Explorer</h2>
-                        <ul className='flex flex-col gap-2 mt-4 text-[12px] font-light text-[#ffffff91]'>
-                            <li className='hover:text-[#f25000] transition-colors duration-300 cursor-pointer flex items-center gap-2 font-medium hover:font-semibold '> <GoArrowRight className='text-[#f25000] text-sm ' /> Accueil</li>
-                            <li className='hover:text-[#f25000] transition-colors duration-300 cursor-pointer flex items-center gap-2 font-medium hover:font-semibold'> <GoArrowRight className='text-[#f25000] text-sm ' /> Services</li>
-                            <li className='hover:text-[#f25000] transition-colors duration-300 cursor-pointer flex items-center gap-2 font-medium hover:font-semibold'> <GoArrowRight className='text-[#f25000] text-sm ' /> Électricité</li>
-                            <li className='hover:text-[#f25000] transition-colors duration-300 cursor-pointer flex items-center gap-2 font-medium hover:font-semibold'> <GoArrowRight className='text-[#f25000] text-sm ' /> À propos</li>
-                            <li className='hover:text-[#f25000] transition-colors duration-300 cursor-pointer flex items-center gap-2 font-medium hover:font-semibold'> <GoArrowRight className='text-[#f25000] text-sm ' /> Contact</li>
-                        </ul>
-                    </div>
-                    <div className='flex flex-col items-start gap-3'>
-                        <h2 className='text-[#f25000] font-semibold text-xl'>Contact</h2>
-                        <div className='text-[white]'>
-                            <div className='flex items-start gap-3 mt-4 text-[12px] font-light '>
-                                <TiLocation className='text-2xl p-1.5 bg-[#f25000] rounded-full hover:text-[#191c25] cursor-pointer hover:bg-[white]  transition-colors duration-300' />
-                                <div className='flex flex-col gap-1'>
-                                    <h4 className='font-semibold text-sm'>Bureau central :</h4>
-                                    <span className='text-[#ffffff91] text-xs'>
-                                        17 Avenue des Bleuets 13001 Marseille, France
-                                    </span>
-                                </div>
+                                    <RiFacebookFill />
+                                </a>
+                                <a
+                                    href="https://www.instagram.com/onesparkelectricite/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="p-2 rounded-full border border-[#f25000] hover:bg-white hover:text-[#f25000] transition"
+                                    aria-label="Instagram"
+                                >
+                                    <FaInstagram />
+                                </a>
+                                <a
+                                    href="https://www.linkedin.com/company/onesparkelectricite/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="p-2 rounded-full border border-[#f25000] hover:bg-white hover:text-[#f25000] transition"
+                                    aria-label="X / Twitter"
+                                >
+                                    <FaXTwitter />
+                                </a>
                             </div>
-                            <div className='flex items-start gap-3 mt-4 text-[12px] font-light '>
-                                <MdLocalPhone className='text-2xl p-1.5 bg-[#f25000] rounded-full hover:text-[#191c25] cursor-pointer hover:bg-[white]  transition-colors duration-300' />
-                                <div className='flex flex-col gap-1'>
-                                    <h4 className='font-semibold text-sm'>Phones :</h4>
-                                    <div className='flex flex-col gap-1'>
-                                        <span className='text-[#ffffff91] text-xs'>
-                                            0 (550) 680-34-12
-                                        </span>
-                                        <span className='text-[#ffffff91] text-xs'>
-                                            0 (550) 680-78-14
-                                        </span>
+                        </div>
+
+                        {/* Section 2 - Navigation */}
+                        <div className="flex flex-col items-start gap-3 min-w-[150px]">
+                            <h2 className="text-[#f25000] font-semibold text-lg">Explorer</h2>
+                            <ul className="flex flex-col gap-2 text-sm text-[#ffffff91]">
+                                {["Accueil", "Services", "Électricité", "À propos", "Contact"].map((item, idx) => (
+                                    <li key={idx} className="flex items-center gap-2 hover:text-[#f25000] cursor-pointer font-medium transition">
+                                        <GoArrowRight className="text-[#f25000] text-xs" /> {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Section 3 - Contact */}
+                        <div className="flex flex-col items-start gap-3 min-w-[200px]">
+                            <h2 className="text-[#f25000] font-semibold text-lg">Contact</h2>
+                            <div className="text-white text-sm flex flex-col gap-4">
+                                <div className="flex items-start gap-3">
+                                    <TiLocation className="text-xl p-1.5 bg-[#f25000] rounded-full hover:bg-white hover:text-[#191c25] transition" />
+                                    <div>
+                                        <h4 className="font-semibold text-sm">Bureau central :</h4>
+                                        <p className="text-[#ffffff91] text-xs">
+                                            17 Avenue des Bleuets 13001 Marseille, France
+                                        </p>
                                     </div>
-
+                                </div>
+                                <div className="flex items-start gap-3">
+                                    <MdLocalPhone className="text-xl p-1.5 bg-[#f25000] rounded-full hover:bg-white hover:text-[#191c25] transition" />
+                                    <div>
+                                        <h4 className="font-semibold text-sm">Phones :</h4>
+                                        <p className="text-[#ffffff91] text-xs">0 (550) 680-34-12</p>
+                                        <p className="text-[#ffffff91] text-xs">0 (550) 680-78-14</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className='flex flex-col items-start gap-7'>
-                        <h2 className='text-[#f25000] font-semibold text-xl'>S&#39;abooner</h2>
-                        <div className="">
-                            <div className="">
-                                <div className="mx-auto grid max-w-[540px] gap-6">
-                                    <form className="grid gap-4">
-                                        <div className="flex w-full max-w-sm items-center ">
-                                            <Input type="email" placeholder="Votre Email..." name="email" className='border-r-0' />
-                                            <Button type="submit" variant="submit" aria-label="Envoyer le formulaire" className='h-10'><LuSend />
-                                            </Button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+
+                        {/* Section 4 - Newsletter */}
+                        <div className="flex flex-col items-start gap-4 w-full sm:max-w-sm">
+                            <h2 className="text-[#f25000] font-semibold text-lg">S'abonner</h2>
+                            <form className="flex w-full max-w-xs">
+                                <Input
+                                    type="email"
+                                    placeholder="Votre Email..."
+                                    name="email"
+                                    className="rounded-r-none border-r-0"
+                                />
+                                <Button
+                                    type="submit"
+                                    className="h-10 rounded-l-none"
+                                    aria-label="Envoyer l'email"
+                                >
+                                    <LuSend />
+                                </Button>
+                            </form>
                         </div>
                     </div>
-                </div>
 
-                <div className='w-full  flex items-center justify-center '>
-                    <p className='text-[12px] text-[#ffffff91] font-light text-center'>
-                        © 2025 Tous droits réservés - <span className='text-[#f25000] cursor-pointer'>OneSpark</span>  Electricité
-                    </p>
+                    {/* Copyright */}
+                    <div className="w-full flex justify-center pt-6">
+                        <p className="text-xs text-[#ffffff91] text-center">
+                            © 2025 Tous droits réservés - <span className="text-[#f25000] cursor-pointer">OneSpark</span> Electricité
+                        </p>
+                    </div>
                 </div>
             </div>
         </footer>

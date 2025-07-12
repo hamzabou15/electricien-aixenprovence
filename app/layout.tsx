@@ -4,6 +4,7 @@ import "../styles/globals.css";
 import Header from "@/components/layout/Header";
 // import Footer from "@/components/layout/Footer";
 import CTA from "@/components/layout/CTA";
+import Footer from "@/components/layout/Footer";
 
 const inter = Inter({ subsets: ['latin'], weight: ['100', '200', '300', '400', '500', '600', '700'] });
 // Import de la police Inter avec support des variables CSS
@@ -25,7 +26,7 @@ export default function RootLayout({
         <Header />
         <CTA />
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
