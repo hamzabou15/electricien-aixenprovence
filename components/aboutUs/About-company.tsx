@@ -9,18 +9,18 @@ import Image from 'next/image'
 const AboutCompany = () => {
     return (
         <section
-            className='w-full h-auto flex bg-white'
+            className='w-full h-auto  flex bg-white'
             id="a-propos-electricien-nice"
             aria-label="Présentation de notre entreprise d'électricité à Nice"
         >
-            <div className='px-8 py-32 flex gap-6 flex-wrap lg:flex-nowrap'>
-                <div className="flex flex-col items-start gap-5 max-md:items-center w-full lg:w-[40%]">
+            <div className='px-8 py-32 flex gap-6 flex-wrap lg:flex-nowrap h-auto'>
+                <div className="flex flex-col items-start gap-5 max-md:items-center w-full lg:w-[40%] h-auto">
                     <h2 className="text-[14px] font-semibold text-[#f25000] uppercase tracking-[7px] text-start max-sm:text-center">
                         Électricien certifié à Nice
                     </h2>
 
                     <h1 className="text-[48px] text-[#1b1e3f] font-bold tracking-[-2px] leading-tight max-sm:text-[32px] max-md:text-center">
-                        Plus de 35 ans d’expérience dans le dépannage électrique à Nice
+                        Plus de 22 ans d’expérience dans le dépannage électrique à Nice
                     </h1>
 
                     <p className="text-[18px] font-light text-[#2E2937BF] leading-8 max-sm:text-center my-5">
@@ -42,8 +42,8 @@ const AboutCompany = () => {
                     </div>
                 </div>
 
-                <div className='w-full lg:w-[60%] h-full max-h-[500px] flex gap-5 mt-10 lg:mt-0'>
-                    <div className='flex gap-4 relative'>
+                <div className='w-full lg:w-[60%] h-full max-h-[500px] flex gap-5 mt-10 lg:mt-0 max-sm:flex-col max-sm:max-h-[100%]'>
+                    <div className='flex gap-4 relative '>
                         <Image
                             alt="Électricien intervenant à Nice pour une réparation urgente"
                             src="/images/un-ouvrier-du-batiment-en-combinaison-un-electricien-en-combinaison (1).webp"
@@ -51,12 +51,14 @@ const AboutCompany = () => {
                             height={1000}
                             className='object-cover'
                         />
-                        <div className='absolute left-[-30px] bottom-[30px] w-[220px] h-[130px] text-white bg-[#f25000] flex flex-col justify-center items-center'>
+                        <div className='absolute left-[-30px] bottom-[30px] w-[220px] h-[130px]
+                             text-white bg-[#f25000] flex flex-col justify-center items-center
+                                max-lg:left-0 max-lg:bottom-0
+                             '>
                             <span className='text-4xl font-bold'>35 ans</span>
                             <span className='text-[18px] font-semibold'>d’expérience</span>
                         </div>
                     </div>
-
                     <div className='flex gap-4'>
                         <Image
                             alt="Dépannage électrique professionnel à Nice"

@@ -80,7 +80,7 @@ const Footer = () => {
                                     <div>
                                         <h4 className="font-semibold text-sm">Bureau central :</h4>
                                         <p className="text-[#ffffff91] text-xs">
-                                            17 Avenue des Bleuets 13001 Marseille, France
+                                            34 Chemin des Moulins 06000 NICE
                                         </p>
                                     </div>
                                 </div>
@@ -88,8 +88,8 @@ const Footer = () => {
                                     <MdLocalPhone className="text-xl p-1.5 bg-[#f25000] rounded-full hover:bg-white hover:text-[#191c25] transition" />
                                     <div>
                                         <h4 className="font-semibold text-sm">Phones :</h4>
-                                        <p className="text-[#ffffff91] text-xs">0 (550) 680-34-12</p>
-                                        <p className="text-[#ffffff91] text-xs">0 (550) 680-78-14</p>
+                                        <p className="text-[#ffffff91] text-xs">+33 693 78 88 07</p>
+                                        <p className="text-[#ffffff91] text-xs">+33 693 78 88 07</p>
                                     </div>
                                 </div>
                             </div>

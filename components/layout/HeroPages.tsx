@@ -12,7 +12,7 @@ interface HeroPagesProps {
 const HeroPages = ({ previous, actual, title, link }: HeroPagesProps) => {
     return (
         <section
-            className='w-full h-screen max-h-[550px] bg-[url("/images/HeroImage.webp")] bg-cover bg-center relative'
+            className='w-full h-screen max-h-[550px] bg-[url("/images/HeroImage.webp")] bg-cover bg-center relative bg-fixed'
             aria-label={`En-tête de la page : ${title}`}
         >
             <div className='px-8 py-2 flex justify-center items-center h-full text-white bg-[#00000062]'>
@@ -34,7 +34,7 @@ const HeroPages = ({ previous, actual, title, link }: HeroPagesProps) => {
                                 className="flex items-center gap-2"
                             >
                                 <a href={link} itemProp="item">
-                                    <span itemProp="name" className="text-white hover:underline">
+                                    <span itemProp="name" className="text-white hover:underline font-medium">
                                         {previous}
                                     </span>
                                 </a>
@@ -48,7 +48,7 @@ const HeroPages = ({ previous, actual, title, link }: HeroPagesProps) => {
                                 itemScope
                                 itemType="https://schema.org/ListItem"
                             >
-                                <span itemProp="name" className="text-[#f25000]">
+                                <span itemProp="name" className="text-[#f25000] font-bold">
                                     {actual}
                                 </span>
                                 <meta itemProp="position" content="2" />
