@@ -5,6 +5,7 @@ import { Button } from '../ui/button'
 import { GoArrowRight } from 'react-icons/go'
 import { PiPhoneCallLight } from 'react-icons/pi'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const AboutCompany = () => {
     return (
@@ -28,11 +29,12 @@ const AboutCompany = () => {
                     </p>
 
                     <div className='flex items-end gap-4 mt-6 max-sm:flex-col max-sm:items-center'>
-                        <Button variant='read' size='xlg' className='min-w-[200px] flex items-center gap-2 font-medium'>
-                            En savoir plus
-                            <GoArrowRight style={{ width: '20px', height: '20px' }} />
-                        </Button>
-
+                        <Link href="/projets">
+                            <Button variant='read' size='xlg' className='min-w-[200px] flex items-center gap-2 font-medium'>
+                                En savoir plus
+                                <GoArrowRight style={{ width: '20px', height: '20px' }} />
+                            </Button>
+                        </Link>
                         <a href="tel:+33756935200" aria-label="Appeler le numéro +33 7 56 93 52 00"
                             className="flex items-center gap-2 mt-4 text-[#1b1e3f] font-semibold cursor-pointer relative group">
                             <div className="w-16 h-16 bg-[#f0f0f0] flex items-center justify-center group-hover:bg-[#1b1e3f] transition-colors duration-200 group-hover:text-white">

@@ -24,7 +24,7 @@ const About2 = () => {
         {/* Texte à droite */}
         <div className='w-[40%] flex flex-col py-2 px-0 gap-8 mt-20 max-lg:w-full max-lg:items-center'>
           <div className='flex flex-col gap-2 max-lg:max-w-[600px] max-lg:items-center max-sm:px-7'>
-            <p className='text-[12px] font-semibold text-[#f25000] uppercase tracking-[7px]'>
+            <p className='text-[12px] font-semibold text-[#f25000] uppercase tracking-[7px] max-md:text-center'>
               Électricien certifié à Nice
             </p>
             <h3 className='text-[54px] text-[#1b1e3f] m-0 leading-[1.15em] font-bold tracking-[-1.5px] pr-7 max-lg:p-0 max-lg:text-center max-lg:text-[46px] max-md:text-[40px] max-md:leading-[1.05em] max-sm:text-[28px] '>

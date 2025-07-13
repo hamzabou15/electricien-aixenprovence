@@ -23,8 +23,13 @@ export default function ElectricianCard({ image, title, subtitle }: ElectricianC
             <div className="absolute inset-0 bg-gradient-to-t from-[#f25000] via-[#f25000]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
             {/* Contenu affiché au hover */}
-            <div className="absolute bottom-6 left-6 space-y-2 opacity-0 group-hover:opacity-100 transition duration-500">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#1b1e3f] text-white">
+            <div
+                className="
+    absolute bottom-6 left-6 space-y-2 
+    opacity-0 group-hover:opacity-100 transition duration-500 
+    max-sm:opacity-75 max-sm:translate-y-2 max-sm:group-hover:translate-y-0 max-sm:group-hover:opacity-100
+  "
+            >                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#1b1e3f] text-white">
                     <FaArrowRight size={16} />
                 </div>
                 <div className="bg-[#edeff5] px-3 py-1 font-bold text-lg text-[#1b1e3f] w-fit rounded">

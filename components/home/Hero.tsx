@@ -54,7 +54,7 @@ const Hero = () => {
                                 <FaStar />
                                 <FaStar />
                             </div>
-                            <span className="text-[16px] font-medium sm:text-[14px] lg:text-[16px]">
+                            <span className="text-[16px] font-medium sm:text-[14px] lg:text-[16px] max-sm:text-center">
                                 Note Google (basée sur 320 avis clients satisfaits à Nice)
                             </span>
                         </div>
