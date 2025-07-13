@@ -18,7 +18,7 @@ const AboutSince = () => {
             <section
                 id="chiffres-electricien-nice"
                 aria-label="Chiffres clés électricité Nice"
-                className="w-full relative bg-white py-16"
+                className="w-full relative  py-16 xl:max-w-[1300px] xl:mx-auto"
             >
                 <div className="flex flex-col lg:flex-row gap-4 max-lg:flex-col">
                     <div className="lg:w-2/5 p-8 ">

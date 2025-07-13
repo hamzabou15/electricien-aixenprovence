@@ -14,7 +14,7 @@ const ProjectPage = () => {
 
     return (
         <section className="w-full py-16 bg-white px-8 md:px-20">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 xl:max-w-[1300px] xl:mx-auto">
                 {/* Left content */}
                 <div className="lg:col-span-2 flex flex-col gap-8">
                     <Image

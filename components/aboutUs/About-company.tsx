@@ -10,7 +10,7 @@ import Link from 'next/link'
 const AboutCompany = () => {
     return (
         <section
-            className='w-full h-auto  flex bg-white'
+            className='w-full h-auto  flex  xl:max-w-[1300px] xl:mx-auto'
             id="a-propos-electricien-nice"
             aria-label="Présentation de notre entreprise d'électricité à Nice"
         >

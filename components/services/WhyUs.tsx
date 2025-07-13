@@ -21,7 +21,7 @@ const WhyUs = () => {
                 aria-label="Pourquoi choisir notre entreprise d'électricité à Nice"
                 className="w-full bg-white"
             >
-                <div className="px-12 py-16 flex flex-wrap lg:flex-nowrap gap-8 max-lg:flex-col-reverse">
+                <div className="px-12 py-16 flex flex-wrap lg:flex-nowrap gap-8 max-lg:flex-col-reverse xl:max-w-[1300px] xl:mx-auto">
 
                     {/* Texte explicatif */}
                     <div className="bg-white w-full lg:w-[45%] max-lg:w-full">

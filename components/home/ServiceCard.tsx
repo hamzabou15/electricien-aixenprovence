@@ -5,8 +5,8 @@ import { GoArrowRight } from 'react-icons/go'
 
 const ServiceCard = () => {
     return (
-        <section className="w-full px-4 py-24 ">
-            <div className="grid grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 gap-4">
+        <section className="w-full px-4 py-24 xl:max-w-[1300px] xl:mx-auto">
+            <div className="grid grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 gap-4 xl:max-w-[1300px]">
                 <div className="relative group before:h-full before:content-[''] before:absolute before:border-r-[2px] before:border-[#d8d8d8] before:border-dashed max-sm:border-0 max-sm:before:border-0">
                     <div className="flex flex-col items-start px-9 py-5 gap-7 relative transition-all duration-300 max-lg:px-5 max-sm:items-center ">
 

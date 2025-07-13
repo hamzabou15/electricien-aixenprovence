@@ -20,8 +20,8 @@ const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <header className="w-full shadow-bottom z-20 relative bg-white">
-            <div className="flex items-center justify-between px-4 md:px-8 py-4">
+        <header className="w-full shadow-bottom z-20 relative bg-white  ">
+            <div className="flex items-center justify-between px-4 md:px-8 py-4  max-w-[1300px] m-auto">
                 <Link href="/">
                     <Image src="/images/logo-electrcien-nice.svg" alt="Logo" width={160} height={50} />
                 </Link>

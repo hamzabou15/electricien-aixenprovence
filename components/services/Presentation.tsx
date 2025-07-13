@@ -17,7 +17,7 @@ const Presentation = () => {
             </Head>
 
             <section className="w-full bg-white" id="services-intro-electricien-nice">
-                <div className="px-12 py-16 flex flex-wrap lg:flex-nowrap gap-8 max-lg:flex-col-reverse">
+                <div className="px-12 py-16 flex flex-wrap lg:flex-nowrap gap-8 max-lg:flex-col-reverse xl:max-w-[1300px] xl:mx-auto">
 
                     {/* Image illustrative */}
                     <div className="w-full lg:w-[55%] max-lg:w-full items-center">

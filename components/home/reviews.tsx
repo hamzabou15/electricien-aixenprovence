@@ -55,7 +55,7 @@ const Reviews = () => {
             aria-label="Avis clients sur notre électricien à Nice"
             className="w-full py-24"
         >
-            <div className="flex flex-col items-center justify-center mb-12 px-6 sm:px-20 gap-6 max-sm:gap-4">
+            <div className="flex flex-col items-center justify-center mb-12 px-6 sm:px-20 gap-6 max-sm:gap-4 xl:max-w-[1300px] xl:mx-auto">
                 <p className="text-[14px] font-semibold text-[#f25000] uppercase tracking-[7px] max-lg:text-[12px]">
                     Témoignages
                 </p>

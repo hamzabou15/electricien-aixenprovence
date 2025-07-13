@@ -28,7 +28,7 @@ const Hero = () => {
             </div>
 
             <div className="relative px-16 py-28 z-10 flex flex-col gap-6 bg-cover bg-center max-lg:px-12 md:py-20  max-sm:py-16 max-sm:px-7">
-                <div className="flex flex-col items-start gap-7 max-md:items-center">
+                <div className="flex flex-col items-start gap-7 max-md:items-center xl:max-w-[1300px]">
                     <p className="text-[12px] font-semibold text-[#f25000] uppercase 
                         tracking-[7px] max-sm:text-[12px] max-md:text-[10px] max-md:text-center">
                         Électricien certifié à Nice

@@ -6,12 +6,14 @@ import React from 'react';
 const AboutStats = () => {
     return (
         <section
-            className='w-full h-screen max-h-[600px] bg-[url("/images/electricien-de-sexe-masculin-travaillant-dans-un-central-electrique.webp")] bg-cover bg-center relative bg-fixed'
+            className='w-full h-screen max-h-[600px] bg-[url("/images/electricien-de-sexe-masculin-travaillant-dans-un-central-electrique.webp")] bg-cover bg-center relative bg-fixed
+                
+            '
             id="stats-electricien-nice"
             aria-label="Chiffres clés de notre entreprise d'électricité à Nice"
         >
-            <div className="py-2 flex justify-start px-10 items-center h-full text-[#f6f6f6] bg-[#00000062]">
-                <div className="flex items-center gap-7 justify-start text-start max-w-3xl max-sm:flex-col ">
+            <div className="py-2 flex justify-start px-10 items-center h-full text-[#f6f6f6] bg-[#00000062] ">
+                <div className="flex items-center gap-7 justify-start text-start max-w-3xl max-sm:flex-col xl:max-w-[1300px] xl:mx-auto ">
                     {/* Logo ou icône liée à l'électricité */}
                     <div className="cursor-pointer">
                         <Image

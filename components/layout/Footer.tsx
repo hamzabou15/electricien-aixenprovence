@@ -24,7 +24,9 @@ const Footer = () => {
 
     return (
         <footer className="w-full bg-footer">
-            <div className="w-full py-10 px-6 md:px-10 bg-[url('/images/footer-bg.webp')] bg-cover bg-no-repeat bg-center">
+            <div className="w-full py-10 px-6 md:px-10 bg-[url('/images/footer-bg.webp')] bg-cover bg-no-repeat bg-center
+                xl:max-w-[1300px]  xl:mx-auto
+            ">
                 <div className="flex flex-col gap-10">
                     {/* Main sections */}
                     <div className="flex flex-col lg:flex-row flex-wrap justify-between gap-y-10 gap-x-6">

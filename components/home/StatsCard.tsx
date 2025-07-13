@@ -13,7 +13,7 @@ const StatsCard = () => {
 
     return (
         <section
-            className='bg-white w-full px-14 h-auto py-12'
+            className='bg-white w-full px-14 h-auto py-12 xl:max-w-[1300px] m-auto'
             id="chiffres-electricien-nice"
             aria-label="Statistiques sur les interventions d'électricité à Nice"
         >

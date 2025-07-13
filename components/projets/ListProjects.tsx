@@ -8,7 +8,7 @@ const ListProjects = () => {
     return (
         <section
             aria-label="Exemples de projets réalisés par notre électricien à Nice"
-            className="w-full bg-white py-16 px-8 max-md:px-2"
+            className="w-full  py-16 px-8 max-md:px-2 xl:max-w-[1300px] xl:mx-auto"
         >
             <div className="text-center mb-12">
                 <p className="text-[14px] font-semibold text-[#f25000] uppercase tracking-[7px]">

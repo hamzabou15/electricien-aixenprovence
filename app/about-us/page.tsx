@@ -48,16 +48,16 @@ const page = () => {
             </header>
             <main className="flex flex-col items-center justify-center w-full">
                 {/* SECTION À PROPOS */}
-                <section id="a-propos" aria-label="Présentation de l'entreprise">
+                <section id="a-propos" aria-label="Présentation de l'entreprise" className='bg-white w-full'>
                     <AboutCompany />
                 </section>
-                <section id="ServiceCard" aria-label="Présentation de l'entreprise" className='bg-white'>
+                <section id="ServiceCard" aria-label="Présentation de l'entreprise" className='bg-white w-full'>
                     <ServiceCard />
                 </section>
                 <section id="stats" aria-label="Présentation de l'entreprise" className='w-full'>
                     <AboutStats />
                 </section>
-                <section id="since" aria-label="Présentation de l'entreprise" className='w-full'>
+                <section id="since" aria-label="Présentation de l'entreprise" className='w-full bg-white'>
                     <AboutSince />
                 </section>
                 <section id="Specification" aria-label="Présentation de l'entreprise" className='w-full'>

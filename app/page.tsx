@@ -65,7 +65,7 @@ export default function HomePage() {
         >
           <About2 />
         </section>
-        <section id="stats" aria-label="Statistique de l'entreprise" className="w-full">
+        <section id="stats" aria-label="Statistique de l'entreprise" className="w-full bg-white">
           <StatsCard />
         </section>
         <section id="stats" aria-label="Services Electriciens" className="w-full">

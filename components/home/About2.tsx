@@ -9,7 +9,7 @@ import Image from 'next/image';
 const About2 = () => {
   return (
     <section className='bg-white w-full px-4 h-auto max-sm:px-7'>
-      <div className='flex gap-8 py-2 h-full max-lg:flex-col-reverse'>
+      <div className='flex gap-8 py-2 h-full max-lg:flex-col-reverse max-w-[1300px] m-auto'>
         {/* Image à gauche */}
         <div className='w-[60%] h-full pr-10 mt-20 max-lg:w-full max-lg:pr-0 '>
           <Image

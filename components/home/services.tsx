@@ -22,12 +22,12 @@ const services = [
         title: "Remise aux normes NF C 15-100",
         description: "Mise en conformité de votre réseau électrique selon la norme NF C 15-100 pour votre sécurité.",
     },
-        {
+    {
         img: "/images/electricien-sur-nice2.webp",
         title: "Réparation de coupures générales ou partielles",
         description: "Traitement rapide des coupures de courant dans votre logement ou local professionnel à Nice.",
     },
-        {
+    {
         img: "/images/un-electricien-sur-nice.webp",
         title: "Diagnostic de panne électrique à Nice",
         description: "Analyse complète et test des circuits pour localiser les défauts de votre installation.",
@@ -48,11 +48,11 @@ const Services = () => {
             aria-label="Nos prestations électriques à Nice"
             className="w-full py-24 px-16 bg-white max-md:px-8"
         >
-            <div className="flex flex-col items-center justify-center mb-12 px-6 sm:px-20 gap-6 max-md:gap-5">
+            <div className="flex flex-col items-center justify-center mb-12 px-6 sm:px-20 gap-6 max-md:gap-5 xl:max-w-[1300px] xl:mx-auto">
                 <p className="text-[14px] font-semibold text-[#f25000] uppercase tracking-[7px] max-lg:text-[12px]">
                     Nos Services
                 </p>
-                
+
                 <h2 className="text-[40px]  leading-[1.15em] font-bold tracking-[-1.5px] text-center text-[#1b1e3f] max-lg:text-[36px] max-md:text-[32px] ">
                     Électricien à <span className='text-[#f25000]'>Nice</span> : dépannage, mise aux normes, tableaux
                 </h2>
@@ -64,7 +64,7 @@ const Services = () => {
             <Carousel
                 opts={{ align: "start" }}
                 orientation="horizontal"
-                className="w-full max-w-7xl mx-auto max-sm:max-w-[92%]"
+                className="w-full max-w-7xl mx-auto max-sm:max-w-[92%] xl:max-w-[1300px]"
             >
                 <CarouselContent className="-mt-1">
                     {services.map((service, index) => (

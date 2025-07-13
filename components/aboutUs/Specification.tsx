@@ -17,7 +17,7 @@ const Expertise = () => {
             </Head>
 
             <div className='w-full bg-white'>
-                <div className='px-8 py-16 flex gap-5 justify-between items-start flex-wrap lg:flex-nowrap'>
+                <div className='px-8 py-16 flex gap-5 justify-between items-start flex-wrap lg:flex-nowrap xl:max-w-[1300px] xl:mx-auto'>
 
                     <div className='flex items-center w-full lg:w-[50%]'>
                         <Image

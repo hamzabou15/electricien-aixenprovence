@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://electricien-nice.fr/sitemap.xml

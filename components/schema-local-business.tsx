@@ -4,16 +4,17 @@ const SchemaLocalBusiness = () => {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Electrician",
-    "name": "Électricien Nice 24h/24",
+    "name": "Electricien Nice Expert",
     "image": "https://electricien-nice.fr/images/electricien-nice-intervention.webp",
     "url": "https://electricien-nice.fr",
     "telephone": "+33 6 00 00 00 00",
     "priceRange": "€€",
-    "description": "Dépannage électrique à Nice : court-circuit, panne, installation, mise aux normes. Électricien certifié disponible 7j/7. Intervention rapide et garantie.",
+    "description": "Electricien certifié à Nice pour dépannages, installations électriques, mises aux normes et rénovations. Intervention rapide et garantie 7j/7.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "12 Rue Masséna",
       "addressLocality": "Nice",
+      "addressRegion": "Provence-Alpes-Côte d’Azur",
       "postalCode": "06000",
       "addressCountry": "FR"
     },
@@ -23,19 +24,20 @@ const SchemaLocalBusiness = () => {
       "longitude": 7.2661
     },
     "areaServed": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": 43.7031,
-        "longitude": 7.2661
-      },
-      "geoRadius": 20000
+      "@type": "Place",
+      "name": "Nice"
     },
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": [
-          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
         ],
         "opens": "08:00",
         "closes": "20:00"
@@ -91,7 +93,10 @@ const SchemaLocalBusiness = () => {
 
   return (
     <Head>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
     </Head>
   );
 };

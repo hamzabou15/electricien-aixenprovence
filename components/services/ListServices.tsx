@@ -50,7 +50,7 @@ const ListServices = () => {
         aria-label="Prestations électricien à Nice"
         className="w-full py-24 px-16 bg-white max-md:px-8"
       >
-        <div className="flex flex-col items-center mb-12 px-6 sm:px-20 gap-6 max-md:gap-5">
+        <div className="flex flex-col items-center mb-12 px-6 sm:px-20 gap-6 max-md:gap-5 xl:max-w-[1300px] xl:mx-auto">
           <p className="text-[14px] font-semibold text-[#f25000] uppercase tracking-[7px] max-lg:text-[12px]">
             Nos Services
           </p>
@@ -65,7 +65,7 @@ const ListServices = () => {
         <Carousel
           opts={{ align: "start" }}
           orientation="horizontal"
-          className="w-full max-w-7xl mx-auto max-sm:max-w-[92%]"
+          className="w-full max-w-7xl mx-auto max-sm:max-w-[92%] xl:max-w-[1300px] xl:mx-auto"
         >
           <CarouselContent className="-mt-1">
             {services.map((service, index) => (

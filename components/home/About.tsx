@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
   return (
     <section
-      className="w-full px-9 py-24 md:px-12 md:py-20  sm:py-16 max-sm:px-7 max-md:px-9 "
+      className="w-full px-9 py-24 md:px-12 md:py-20  sm:py-16 max-sm:px-7 max-md:px-9 max-w-[1300px] "
       id="a-propos-electricien-nice"
       aria-label="Présentation de l'entreprise d'électricité à Nice"
     >
