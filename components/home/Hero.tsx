@@ -3,6 +3,7 @@ import { FaStar } from 'react-icons/fa';
 import { Button } from '../ui/button';
 import { GoArrowRight } from 'react-icons/go';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Hero = () => {
     return (
@@ -28,11 +29,12 @@ const Hero = () => {
 
             <div className="relative px-16 py-28 z-10 flex flex-col gap-6 bg-cover bg-center max-lg:px-12 md:py-20  max-sm:py-16 max-sm:px-7">
                 <div className="flex flex-col items-start gap-7 max-md:items-center">
-                    <p className="text-[12px] font-semibold text-[#f25000] uppercase tracking-[7px] max-sm:text-[12px] max-md:text-[10px] max-md:text-center">
+                    <p className="text-[12px] font-semibold text-[#f25000] uppercase 
+                        tracking-[7px] max-sm:text-[12px] max-md:text-[10px] max-md:text-center">
                         Électricien certifié à Nice
                     </p>
 
-                    <h1 className="text-[54px] font-bold tracking-[-3px] leading-tight sm:text-[40px] lg:text-[54px] max-sm:text-[32px] max-sm:tracking-normal max-md:text-center">
+                    <h1 className="text-[54px] font-bold tracking-[-2px] leading-tight sm:text-[40px] lg:text-[54px] max-sm:text-[32px] max-sm:tracking-normal max-md:text-center">
                         Urgence électricité à Nice – Réparation rapide 7j/7
                     </h1>
 
@@ -59,17 +61,20 @@ const Hero = () => {
                     </div>
 
                     <div className="flex justify-start mt-7 max-sm:justify-center max-sm:mx-auto">
-                        <Button
-                            variant="submit"
-                            size="xlg"
-                            className="min-w-[200px] flex items-center gap-2 font-medium "
-                        >
-                            Demander un devis gratuit
-                            <GoArrowRight
-                                className="text-[90px] w-10 h-10"
-                                style={{ width: '24px', height: '24px' }}
-                            />
-                        </Button>
+                        <Link href="/contact">
+                            <Button
+                                variant="submit"
+                                size="xlg"
+                                className="min-w-[200px] flex items-center gap-2 font-medium "
+                            >
+
+                                Demander un devis gratuit
+                                <GoArrowRight
+                                    className="text-[90px] w-10 h-10"
+                                    style={{ width: '24px', height: '24px' }}
+                                />
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </div>

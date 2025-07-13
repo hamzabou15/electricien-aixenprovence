@@ -22,7 +22,7 @@ const Header = () => {
     return (
         <header className="w-full shadow-bottom z-20 relative bg-white">
             <div className="flex items-center justify-between px-4 md:px-8 py-4">
-                <Image src="/images/LogoSpark.webp" alt="Logo" width={160} height={50} />
+                <Image src="/images/logo-electrcien-nice.svg" alt="Logo" width={160} height={50} />
 
                 {/* Mobile Burger */}
                 <button
@@ -48,7 +48,7 @@ const Header = () => {
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                    <Link className="font-semibold" href="/Électricité">Électricité</Link>
+                                    <Link className="font-semibold" href="/projets">Projets</Link>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
@@ -73,7 +73,7 @@ const Header = () => {
                         <span className="group-hover:underline ">+33 693 78 88 07</span>
                     </a>
                     <Button type="button" variant="submit" size="lg">
-                        <Link  className="flex gap-2" href={"/contact"}>
+                        <Link className="flex gap-2" href={"/contact"}>
                             <IoNewspaperOutline />
                             <span>Devis</span>
                         </Link>
@@ -87,7 +87,7 @@ const Header = () => {
                     <nav className="flex flex-col gap-3">
                         <Link href="/" className="text-sm font-semibold">Accueil</Link>
                         <Link href="/services" className="text-sm font-semibold">Services</Link>
-                        <Link href="/electricite" className="text-sm font-semibold">Électricité</Link>
+                        <Link href="/projets" className="text-sm font-semibold">projets</Link>
                         <Link href="/a-propos" className="text-sm font-semibold">À propos</Link>
                         <Link href="/contact" className="text-sm font-semibold">Contact</Link>
                         <div className="mt-4 flex flex-col gap-2">

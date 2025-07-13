@@ -54,14 +54,14 @@ const Presentation = () => {
                         </p>
 
                         {/* Call to action */}
-                        <div className="flex flex-col items-start lg:items-start">
-                            <span className="font-semibold text-[#1b1e3f]">Contactez-nous dès maintenant</span>
-                            <div className="flex items-center gap-2 mt-4 text-[#f25000] font-semibold cursor-pointer">
-                                <div className="w-16 h-16 bg-[#f0f0f0] flex items-center justify-center hover:bg-[#1b1e3f] transition-colors duration-200 hover:text-white">
+                        <div className="flex flex-col items-start lg:items-start group">
+                            <span className="font-semibold text-[#1b1e3f] ">Contactez-nous dès maintenant</span>
+                            <div className="flex items-center gap-2 mt-4 font-semibold cursor-pointer ">
+                                <div className="w-16 h-16 bg-[#f0f0f0] flex items-center justify-center group-hover:bg-[#1b1e3f]  transition-colors duration-200 group-hover:text-white">
                                     <PiPhoneCallLight className="text-4xl" />
                                 </div>
                                 <a href="tel:+33756935200" aria-label="Appeler Électricien Nice">
-                                    <span className="text-[18px] font-medium">+33 7 56 93 52 00</span>
+                                    <span className="text-[18px] font-medium text-[#f25000] ">+33 7 56 93 52 00</span>
                                 </a>
                             </div>
                         </div>

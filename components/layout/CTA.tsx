@@ -2,6 +2,7 @@ import React from 'react'
 import { Button } from '../ui/button'
 import { MdLocalPhone } from 'react-icons/md'
 import { IoNewspaperOutline } from 'react-icons/io5'
+import Link from 'next/link'
 
 const CTA = () => {
     return (
@@ -22,18 +23,20 @@ const CTA = () => {
 
 
             {/* Bouton devis */}
-            <Button
-                variant="send"
-                size="xlg"
-                className="group flex items-center overflow-hidden mt-3  hover:gap-2"
-            >
-                <IoNewspaperOutline style={{ height: "24px", width: "24px" }} />
-                <span
-                    className=" transition-all duration-300 opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-[200px]"
+            <Link href="/contact">
+                <Button
+                    variant="send"
+                    size="xlg"
+                    className="group flex items-center overflow-hidden mt-3  hover:gap-2"
                 >
-                    Un devis ?
-                </span>
-            </Button>
+                    <IoNewspaperOutline style={{ height: "24px", width: "24px" }} />
+                    <span
+                        className=" transition-all duration-300 opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-[200px]"
+                    >
+                        Un devis ?
+                    </span>
+                </Button>
+            </Link>
         </div>
 
 

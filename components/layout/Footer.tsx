@@ -16,7 +16,7 @@ const Footer = () => {
     const menuItems = [
         { label: "Accueil", href: "/" },
         { label: "Services", href: "/services" },
-        { label: "Électricité", href: "/electricity" },
+        { label: "Projets", href: "/projets" },
         { label: "À propos", href: "/about-us" },
         { label: "Contact", href: "/contact" },
     ];
@@ -31,13 +31,13 @@ const Footer = () => {
                         {/* Section 1 - Logo & Réseaux */}
                         <div className="flex flex-col items-start gap-4 max-w-xs">
                             <Image
-                                src="/images/logoV4.png"
+                                src="/images/electricien-expert-nice.svg"
                                 width={150}
                                 height={20}
                                 alt="Logo OneSpark Electricité"
                             />
-                            <p className="text-xs font-extralight text-[#FFFFFF91] leading-5">
-                                <span className="font-semibold">OneSpark Electricité</span> est votre entreprise d&#39;électricité générale à Marseille à votre service pour tous vos travaux d&#39;électricité et de dépannage électrique.
+                            <p className="text-xs font-light text-[#FFFFFF91] leading-5">
+                                <span className="font-semibold">Eelectricien Nice Expert</span> est votre entreprise d&#39;électricité générale à Nice à votre service pour tous vos travaux d&#39;électricité et de dépannage électrique.
                             </p>
                             <div className="flex gap-4 mt-2 text-sm text-[#f25000]">
                                 <a
@@ -136,7 +136,7 @@ const Footer = () => {
                     {/* Copyright */}
                     <div className="w-full flex justify-center pt-6">
                         <p className="text-xs text-[#ffffff91] text-center">
-                            © 2025 Tous droits réservés - <span className="text-[#f25000] cursor-pointer">OneSpark</span> Electricité
+                            © 2025 Tous droits réservés - <span className="text-[#f25000] cursor-pointer">Elecricien Nice Expert</span>
                         </p>
                     </div>
                 </div>
