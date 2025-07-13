@@ -71,7 +71,7 @@ const ServiceCard = () => {
                             <a href="#" className="inline-block">
                                 <span className="flex items-center gap-2 text-[16px] tracking-[-1px] font-semibold 
                       text-[#1b1e3f] -translate-x-[80%] transition-transform duration-300 group-hover:translate-x-0
-                        hover:text-[#f25000]  hover:transition-all
+                        hover:text-[#f25000]  hover:transition-all max-sm:-translate-x-0
                       ">
                                     <Link href={"/services"} >
                                         <span className="block  ">
