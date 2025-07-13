@@ -9,8 +9,19 @@ import { TiLocation } from 'react-icons/ti'
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
 import { LuSend } from 'react-icons/lu'
+import Link from 'next/link'
 
 const Footer = () => {
+
+    const menuItems = [
+        { label: "Accueil", href: "/" },
+        { label: "Services", href: "/services" },
+        { label: "Électricité", href: "/electricity" },
+        { label: "À propos", href: "/about-us" },
+        { label: "Contact", href: "/contact" },
+    ];
+
+
     return (
         <footer className="w-full bg-footer">
             <div className="w-full py-10 px-6 md:px-10 bg-[url('/images/footer-bg.webp')] bg-cover bg-no-repeat bg-center">
@@ -63,9 +74,15 @@ const Footer = () => {
                         <div className="flex flex-col items-start gap-3 min-w-[150px]">
                             <h2 className="text-[#f25000] font-semibold text-lg">Explorer</h2>
                             <ul className="flex flex-col gap-2 text-sm text-[#ffffff91]">
-                                {["Accueil", "Services", "Électricité", "À propos", "Contact"].map((item, idx) => (
-                                    <li key={idx} className="flex items-center gap-2 hover:text-[#f25000] cursor-pointer font-medium transition">
-                                        <GoArrowRight className="text-[#f25000] text-xs" /> {item}
+                                {menuItems.map((item, idx) => (
+                                    <li key={idx}>
+                                        <Link
+                                            href={item.href}
+                                            className="flex items-center gap-2 hover:text-[#f25000] cursor-pointer font-medium transition"
+                                        >
+                                            <GoArrowRight className="text-[#f25000] text-xs" />
+                                            {item.label}
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
@@ -107,7 +124,7 @@ const Footer = () => {
                                 />
                                 <Button
                                     type="submit"
-                                    className="h-10 rounded-l-none"
+                                    className="h-10 rounded-l-none bg-[#f25000]"
                                     aria-label="Envoyer l'email"
                                 >
                                     <LuSend />

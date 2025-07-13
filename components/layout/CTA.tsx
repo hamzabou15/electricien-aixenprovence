@@ -7,22 +7,18 @@ const CTA = () => {
     return (
         <div className="fixed bottom-16 right-8 flex flex-col items-end z-50">
             {/* Bouton téléphone */}
-            <Button
-                variant="submit"
-                size="xlg"
-                className="group flex items-center overflow-hidden hover:gap-2"
-            >
-                <MdLocalPhone
-                    className="text-white transition-colors duration-300 group-hover:text-[#f25000]"
-                    style={{ height: "24px", width: "24px" }}
-                />
-                <span
-                    className=" transition-all duration-300 opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-[200px]"
-                >
-                    Appelez nous
-                </span>
-            </Button>
 
+            <Button asChild variant="submit" size="xlg" className="group flex items-center overflow-hidden hover:gap-2">
+                <a href="tel:+33756935200" aria-label="Appeler le numéro +33 7 56 93 52 00">
+                    <MdLocalPhone
+                        className="text-white transition-colors duration-300 group-hover:text-[#f25000]"
+                        style={{ height: "24px", width: "24px" }}
+                    />
+                    <span className="transition-all duration-300 opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-[200px]">
+                        Appelez nous
+                    </span>
+                </a>
+            </Button>
 
 
             {/* Bouton devis */}

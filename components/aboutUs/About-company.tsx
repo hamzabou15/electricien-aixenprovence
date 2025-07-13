@@ -33,12 +33,14 @@ const AboutCompany = () => {
                             <GoArrowRight style={{ width: '20px', height: '20px' }} />
                         </Button>
 
-                        <div className='flex items-center gap-2 mt-4 text-[#1b1e3f] font-semibold cursor-pointer relative group'>
-                            <div className='w-16 h-16 bg-[#f0f0f0] flex items-center justify-center group-hover:bg-[#1b1e3f] transition-colors duration-200 group-hover:text-white'>
-                                <PiPhoneCallLight className='text-4xl' />
+                        <a href="tel:+33756935200" aria-label="Appeler le numéro +33 7 56 93 52 00"
+                            className="flex items-center gap-2 mt-4 text-[#1b1e3f] font-semibold cursor-pointer relative group">
+                            <div className="w-16 h-16 bg-[#f0f0f0] flex items-center justify-center group-hover:bg-[#1b1e3f] transition-colors duration-200 group-hover:text-white">
+                                <PiPhoneCallLight className="text-4xl" />
                             </div>
-                            <span className='text-[18px] font-medium'>+33 7 56 93 52 00</span>
-                        </div>
+                            <span className="text-[15px] font-medium">+33 7 56 93 52 00</span>
+                        </a>
+
                     </div>
                 </div>
 
@@ -55,7 +57,7 @@ const AboutCompany = () => {
                              text-white bg-[#f25000] flex flex-col justify-center items-center
                                 max-lg:left-0 max-lg:bottom-0
                              '>
-                            <span className='text-4xl font-bold'>35 ans</span>
+                            <span className='text-4xl font-bold'>22 ans</span>
                             <span className='text-[18px] font-semibold'>d’expérience</span>
                         </div>
                     </div>

@@ -15,9 +15,11 @@ const Hero = () => {
             <HeroPages
                 actual='A propos'
                 previous='Accueil'
-                title='A propos'
+                title='A propos de nous'
                 link='/'
             />
+            
+            
         </>
     )
 }
