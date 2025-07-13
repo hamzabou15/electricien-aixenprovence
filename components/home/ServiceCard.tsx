@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import { GoArrowRight } from 'react-icons/go'
 
@@ -33,9 +34,12 @@ const ServiceCard = () => {
                       text-[#1b1e3f] -translate-x-[80%] transition-transform duration-300 group-hover:translate-x-0
                         hover:text-[#f25000]  hover:transition-all
                       ">
-                                    <span className="block  ">
-                                        Savoir plus
-                                    </span>
+                                    <Link href={"/services"} >
+                                        <span className="block  ">
+                                            Savoir plus
+                                        </span>
+                                    </Link>
+
                                     <GoArrowRight className="text-[#f25000]  " style={{ width: "24px", height: "24px" }} />
                                 </span>
                             </a>
@@ -69,9 +73,11 @@ const ServiceCard = () => {
                       text-[#1b1e3f] -translate-x-[80%] transition-transform duration-300 group-hover:translate-x-0
                         hover:text-[#f25000]  hover:transition-all
                       ">
-                                    <span className="block  ">
-                                        Savoir plus
-                                    </span>
+                                    <Link href={"/services"} >
+                                        <span className="block  ">
+                                            Savoir plus
+                                        </span>
+                                    </Link>
                                     <GoArrowRight className="text-[#f25000]  " style={{ width: "24px", height: "24px" }} />
                                 </span>
                             </a>
@@ -105,9 +111,11 @@ const ServiceCard = () => {
                       text-[#1b1e3f] -translate-x-[80%] transition-transform duration-300 group-hover:translate-x-0
                         hover:text-[#f25000]  hover:transition-all
                       ">
-                                    <span className="block  ">
-                                        Savoir plus
-                                    </span>
+                                    <Link href={"/services"} >
+                                        <span className="block  ">
+                                            Savoir plus
+                                        </span>
+                                    </Link>
                                     <GoArrowRight className="text-[#f25000]  " style={{ width: "24px", height: "24px" }} />
                                 </span>
                             </a>
@@ -141,9 +149,11 @@ const ServiceCard = () => {
                       text-[#1b1e3f] -translate-x-[80%] transition-transform duration-300 group-hover:translate-x-0
                         hover:text-[#f25000]  hover:transition-all
                       ">
-                                    <span className="block  ">
-                                        Savoir plus
-                                    </span>
+                                    <Link href={"/services"} >
+                                        <span className="block  ">
+                                            Savoir plus
+                                        </span>
+                                    </Link>
                                     <GoArrowRight className="text-[#f25000]  " style={{ width: "24px", height: "24px" }} />
                                 </span>
                             </a>
