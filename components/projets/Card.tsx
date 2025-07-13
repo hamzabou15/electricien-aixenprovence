@@ -20,7 +20,10 @@ export default function ElectricianCard({ image, title, subtitle }: ElectricianC
             />
 
             {/* Overlay orange au hover */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#f25000] via-[#f25000]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#f25000] via-[#f25000]/80 to-transparent
+                 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+                    max-sm:opacity-30
+                 " />
 
             {/* Contenu affiché au hover */}
             <div
