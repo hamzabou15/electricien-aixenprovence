@@ -105,7 +105,13 @@ const Header = () => {
             {mobileMenuOpen && (
                 <div className="lg:hidden px-4 pb-4">
                     <nav className="flex flex-col gap-3">
-                        <Link href="/" className="text-sm font-semibold">Accueil</Link>
+                        <Link
+                            href="/"
+                            className="text-sm font-semibold"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            Accueil
+                        </Link>
 
                         {/* Sous-menu Services mobile */}
                         <button
@@ -116,7 +122,8 @@ const Header = () => {
                         >
                             <span>Services</span>
                             <svg
-                                className={`w-5 h-5 transition-transform duration-300 ${mobileServicesOpen ? "rotate-180" : "rotate-0"}`}
+                                className={`w-5 h-5 transition-transform duration-300 ${mobileServicesOpen ? "rotate-180" : "rotate-0"
+                                    }`}
                                 fill="none"
                                 stroke="currentColor"
                                 strokeWidth={2}
@@ -139,7 +146,7 @@ const Header = () => {
                                         <Link
                                             href={`/services/${service.slug}`}
                                             className="block text-sm px-2 py-1 hover:text-orange-500"
-                                            onClick={() => setMobileMenuOpen(false)} // ferme menu mobile au clic
+                                            onClick={() => setMobileMenuOpen(false)}
                                         >
                                             {service.title}
                                         </Link>
@@ -148,9 +155,27 @@ const Header = () => {
                             </ul>
                         )}
 
-                        <Link href="/projets" className="text-sm font-semibold">Projets</Link>
-                        <Link href="/a-propos" className="text-sm font-semibold">À propos</Link>
-                        <Link href="/contact" className="text-sm font-semibold">Contact</Link>
+                        <Link
+                            href="/projets"
+                            className="text-sm font-semibold"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            Projets
+                        </Link>
+                        <Link
+                            href="/a-propos"
+                            className="text-sm font-semibold"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            À propos
+                        </Link>
+                        <Link
+                            href="/contact"
+                            className="text-sm font-semibold"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            Contact
+                        </Link>
 
                         <div className="mt-4 flex flex-col gap-2">
                             <div className="flex items-center gap-2 text-sm font-semibold">
@@ -159,7 +184,7 @@ const Header = () => {
                             </div>
                             <button
                                 className="bg-[#f25000] text-white py-2 rounded-md hover:bg-[#e03a00] flex items-center justify-center gap-2"
-                                onClick={() => setMobileMenuOpen(false)} // ferme menu mobile au clic
+                                onClick={() => setMobileMenuOpen(false)}
                             >
                                 <IoNewspaperOutline />
                                 <span>Devis</span>
@@ -168,6 +193,7 @@ const Header = () => {
                     </nav>
                 </div>
             )}
+
         </header>
     )
 }
