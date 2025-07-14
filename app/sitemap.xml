@@ -27,4 +27,37 @@
     <lastmod>2025-07-13</lastmod>
     <priority>0.6</priority>
   </url>
+
+  <!-- Services individuels -->
+  <url>
+    <loc>https://electriciennice-expert.fr/services/depannage</loc>
+    <lastmod>2025-07-13</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://electriciennice-expert.fr/services/installation</loc>
+    <lastmod>2025-07-13</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://electriciennice-expert.fr/services/renovation</loc>
+    <lastmod>2025-07-13</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://electriciennice-expert.fr/services/inspection</loc>
+    <lastmod>2025-07-13</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://electriciennice-expert.fr/services/eclairage</loc>
+    <lastmod>2025-07-13</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://electriciennice-expert.fr/services/mise-aux-normes</loc>
+    <lastmod>2025-07-13</lastmod>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

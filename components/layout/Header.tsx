@@ -73,7 +73,7 @@ const Header = () => {
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                    <Link className="font-semibold" href="/about-us">À propos</Link>
+                                    <Link className="font-semibold" href="/a-propos">À propos</Link>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
@@ -149,7 +149,7 @@ const Header = () => {
                         )}
 
                         <Link href="/projets" className="text-sm font-semibold">Projets</Link>
-                        <Link href="/about-us" className="text-sm font-semibold">À propos</Link>
+                        <Link href="/a-propos" className="text-sm font-semibold">À propos</Link>
                         <Link href="/contact" className="text-sm font-semibold">Contact</Link>
 
                         <div className="mt-4 flex flex-col gap-2">
