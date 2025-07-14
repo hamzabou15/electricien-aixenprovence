@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Head from 'next/head';
 import { Card, CardContent } from '../ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../ui/carousel';
+import Link from 'next/link';
 
 const ListServices = () => {
   const services = [
@@ -12,28 +13,34 @@ const ListServices = () => {
       img: "/images/electricien-reaparation.webp",
       title: "Électricien urgence panne à Nice",
       description: "Intervention rapide 7j/7 pour pannes électriques totales ou partielles.",
+      href: "/services/depannage",
     },
     {
       img: "/images/electricien-sur-nice3.webp",
       title: "Remise aux normes NF C 15‑100",
       description: "Mise en conformité de votre installation selon les normes French NF C 15‑100.",
+      href: "/services/mise-aux-normes",
     },
     {
       img: "/images/electricien-sur-nice2.webp",
       title: "Réparation de coupures générales ou partielles",
       description: "Réparation de coupure de courant à domicile ou en local pro à Nice.",
+      href: "/services/depannage",
     },
     {
       img: "/images/un-electricien-sur-nice.webp",
       title: "Diagnostic de panne électrique à Nice",
       description: "Analyse et test complet des circuits pour identifier les défauts électriques.",
+      href: "/services/inspection",
     },
     {
       img: "/images/electricien-sur-nice2.webp",
       title: "Remplacement de tableau électrique à Nice",
       description: "Remplacement sécurisé d’un tableau vétuste ou endommagé à Nice.",
+      href: "/services/mise-aux-normes",
     },
   ];
+
 
   return (
     <>
@@ -74,6 +81,7 @@ const ListServices = () => {
                 className="basis-full sm:basis-1/2 md:basis-1/3 h-[450px]"
                 aria-label={`Service ${index + 1} sur ${services.length}: ${service.title}`}
               >
+                <Link href={service.href}>
                 <Card className="h-full w-full border-0 shadow-none bg-black group overflow-hidden relative cursor-pointer">
                   <CardContent className="flex flex-col justify-end items-center text-center gap-4 h-full relative p-0 text-white">
                     <Image
@@ -85,15 +93,16 @@ const ListServices = () => {
                       priority={index === 0}
                     />
                     <div className="relative z-10 flex flex-col items-start bg-[#191c25d4] w-full p-6">
-                      <h3 className="text-[18px] font-semibold">
+                      <h3 className="text-[18px] font-semibold text-start">
                         {service.title}
                       </h3>
-                      <p className="text-[12px] text-[#e9e9e9bf] leading-6 mt-1">
+                      <p className="text-[12px] text-[#e9e9e9bf] leading-6 mt-1 text-start">
                         {service.description}
                       </p>
                     </div>
                   </CardContent>
                 </Card>
+                </Link>
               </CarouselItem>
             ))}
           </CarouselContent>

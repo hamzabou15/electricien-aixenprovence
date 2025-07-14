@@ -4,9 +4,11 @@ import Image from "next/image"
 import React, { useState } from "react"
 import {
     NavigationMenu,
+    NavigationMenuContent,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
+    NavigationMenuTrigger,
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import Link from "next/link"
@@ -14,6 +16,7 @@ import { MdLocalPhone } from "react-icons/md"
 import { IoNewspaperOutline } from "react-icons/io5"
 import { HiMenu, HiX } from "react-icons/hi"
 import { Button } from "../ui/button"
+import { servicesData } from "@/lib/data"
 
 
 const Header = () => {
@@ -44,11 +47,25 @@ const Header = () => {
                                 </NavigationMenuLink>
 
                             </NavigationMenuItem>
+
                             <NavigationMenuItem>
-                                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                                <NavigationMenuTrigger className="font-semibold">
                                     <Link className="font-semibold" href="/services">Services</Link>
-                                </NavigationMenuLink>
+                                </NavigationMenuTrigger>
+                                <NavigationMenuContent>
+                                    <ul className="grid gap-2 p-4 w-[250px]">
+                                        {servicesData.map((service, index) => (
+                                            <li key={index}>
+                                                <Link href={`/services/${service.slug}`} className="block px-2 py-1 hover:text-orange-500">
+                                                    {service.title}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </NavigationMenuContent>
+
                             </NavigationMenuItem>
+
                             <NavigationMenuItem>
                                 <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
                                     <Link className="font-semibold" href="/projets">Projets</Link>
