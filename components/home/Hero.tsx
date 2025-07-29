@@ -16,7 +16,7 @@ const Hero = () => {
         >
             <div className="relative h-full w-full max-md:h-[500px]">
                 <Image
-                    src="/images/electricien-toulonV2.webp"
+                    src="/images/Electricien-toulonV2.webp"
                     alt="Électricien intervenant à Toulon pour pannes et remises aux normes"
                     fill
                     className="object-cover object-top"
