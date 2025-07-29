@@ -23,6 +23,7 @@ const Hero = () => {
                     priority
                     fetchPriority="high"
                     sizes="100vw"
+                
                 />
 
             </div>
