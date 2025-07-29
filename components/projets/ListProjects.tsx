@@ -7,15 +7,15 @@ import { listItems } from '@/lib/projetcs';
 const ListProjects = () => {
     return (
         <section
-            aria-label="Exemples de projets réalisés par notre électricien à Nice"
+            aria-label="Exemples de projets réalisés par notre électricien à Toulon"
             className="w-full  py-16 px-8 max-md:px-2 xl:max-w-[1300px] xl:mx-auto"
         >
             <div className="text-center mb-12">
-                <p className="text-[14px] font-semibold text-[#f25000] uppercase tracking-[7px]">
+                <p className="text-[14px] font-semibold text-[#c1121f] uppercase tracking-[7px]">
                     Réalisations
                 </p>
-                <h2 className="text-[40px] font-bold tracking-[-1.5px] text-[#1b1e3f] max-md:text-[32px] max-sm:text-[28px]">
-                    Projets récents à Nice et alentours
+                <h2 className="text-[40px] font-bold tracking-[-1.5px] text-[#003049] max-md:text-[32px] max-sm:text-[28px]">
+                    Projets récents à Toulon et alentours
                 </h2>
                 <p className="text-[16px] text-[#2E2937BF] mt-4 font-light">
                     Découvrez un aperçu de nos interventions, que ce soit en rénovation, installation ou dépannage électrique sur la Côte d’Azur.

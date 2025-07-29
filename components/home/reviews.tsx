@@ -30,40 +30,40 @@ const Reviews = () => {
         {
             img: "/images/user1.webp",
             name: "Jean Dupont",
-            description: "Suite à une coupure générale, l'électricien est intervenu en moins d'une heure à Nice. Travail rapide et conforme aux normes.",
+            description: "Suite à une coupure générale, l'électricien est intervenu en moins d'une heure à Toulon. Travail rapide et conforme aux normes.",
         },
         {
             img: "/images/user4.webp",
             name: "Claire Martin",
-            description: "Nous avons fait appel pour un remplacement de tableau électrique à Nice. Très professionnel, avec mise aux normes NF C 15-100.",
+            description: "Nous avons fait appel pour un remplacement de tableau électrique à Toulon. Très professionnel, avec mise aux normes NF C 15-100.",
         },
         {
             img: "/images/user2.webp",
             name: "Marc Laurent",
-            description: "Électricien compétent à Nice. Il a identifié la panne électrique rapidement et effectué la réparation le jour-même.",
+            description: "Électricien compétent à Toulon. Il a identifié la panne électrique rapidement et effectué la réparation le jour-même.",
         },
         {
             img: "/images/user5.webp",
             name: "Sophie Bernard",
-            description: "Excellent service à Nice pour une remise aux normes de notre installation. Travail soigné, je recommande cet électricien.",
+            description: "Excellent service à Toulon pour une remise aux normes de notre installation. Travail soigné, je recommande cet électricien.",
         }
     ]
 
     return (
         <section
-            id="avis-electricien-nice"
-            aria-label="Avis clients sur notre électricien à Nice"
+            id="avis-electricien-Toulon"
+            aria-label="Avis clients sur notre électricien à Toulon"
             className="w-full py-24"
         >
             <div className="flex flex-col items-center justify-center mb-12 px-6 sm:px-20 gap-6 max-sm:gap-4 xl:max-w-[1300px] xl:mx-auto">
-                <p className="text-[14px] font-semibold text-[#f25000] uppercase tracking-[7px] max-lg:text-[12px]">
+                <p className="text-[14px] font-semibold text-[#c1121f] uppercase tracking-[7px] max-lg:text-[12px]">
                     Témoignages
                 </p>
-                <h2 className="text-[54px] leading-[1.15em] font-bold tracking-[-1.5px] text-center text-[#1b1e3f] max-lg:text-[46px] max-md:text-[40px] max-md:leading-[1.05em] max-sm:text-[28px]">
-                    Ce que disent nos <span className="text-[#f25000]">clients à Nice</span> sur nos interventions électriques
+                <h2 className="text-[54px] leading-[1.15em] font-bold tracking-[-1.5px] text-center text-[#003049] max-lg:text-[46px] max-md:text-[40px] max-md:leading-[1.05em] max-sm:text-[28px]">
+                    Ce que disent nos <span className="text-[#c1121f]">clients à Toulon</span> sur nos interventions électriques
                 </h2>
                 <p className="text-[17px] text-[#2E2937BF] text-center max-w-3xl leading-7 max-md:text-base">
-                    Nos clients à Nice nous font confiance pour les interventions en urgence, le remplacement de tableaux électriques ou la remise aux normes NF C 15-100. Découvrez leurs témoignages !
+                    Nos clients à Toulon nous font confiance pour les interventions en urgence, le remplacement de tableaux électriques ou la remise aux normes NF C 15-100. Découvrez leurs témoignages !
                 </p>
             </div>
 
@@ -73,7 +73,7 @@ const Reviews = () => {
                         <CarouselItem key={index} className="basis-3/7 p-0 h-screen max-sm:basis-[100%]  gap-4  ">
                             <Card
                                 className={cn(
-                                    "text-[#585964] text-[18px] leading-7 transition-all duration-500 h-[450px] bg-[#1b1e3f] max-sm:m-[20px] max-sm:w-[90%]  max-sm:ml-[40px] max-sm:rounded-lg",
+                                    "text-[#585964] text-[18px] leading-7 transition-all duration-500 h-[450px] bg-[#003049] max-sm:m-[20px] max-sm:w-[90%]  max-sm:ml-[40px] max-sm:rounded-lg",
                                     {
                                         "bg-[white]": index !== current - 1,
                                     }
@@ -96,13 +96,13 @@ const Reviews = () => {
                                     <div className="flex flex-col items-center gap-1 mt-4">
                                         <Image
                                             src={review.img}
-                                            alt={`Témoignage client de ${review.name} sur nos services d'électricité à Nice`}
+                                            alt={`Témoignage client de ${review.name} sur nos services d'électricité à Toulon`}
                                             width={100}
                                             height={100}
                                             className="rounded-full w-16 h-16 object-cover"
                                         />
                                         <h3 className={cn('text-[white] text-[16px] font-semibold mt-2', {
-                                            "text-[#1b1e3f]": index !== current - 1,
+                                            "text-[#003049]": index !== current - 1,
                                         })}>
                                             {review.name}
                                         </h3>

@@ -14,27 +14,27 @@ import {
 const services = [
     {
         img: "/images/electricien-reaparation.webp",
-        title: "Électricien urgence panne à Nice",
+        title: "Électricien urgence panne à Toulon",
         description: "Intervention rapide 7j/7 en cas de panne électrique totale ou partielle, avec solution immédiate.",
     },
     {
-        img: "/images/electricien-sur-nice3.webp",
+        img: "/images/electricien-sur-Toulon3.webp",
         title: "Remise aux normes NF C 15-100",
         description: "Mise en conformité de votre réseau électrique selon la norme NF C 15-100 pour votre sécurité.",
     },
     {
-        img: "/images/electricien-sur-nice2.webp",
+        img: "/images/electricien-sur-Toulon2.webp",
         title: "Réparation de coupures générales ou partielles",
-        description: "Traitement rapide des coupures de courant dans votre logement ou local professionnel à Nice.",
+        description: "Traitement rapide des coupures de courant dans votre logement ou local professionnel à Toulon.",
     },
     {
-        img: "/images/un-electricien-sur-nice.webp",
-        title: "Diagnostic de panne électrique à Nice",
+        img: "/images/un-electricien-sur-Toulon.webp",
+        title: "Diagnostic de panne électrique à Toulon",
         description: "Analyse complète et test des circuits pour localiser les défauts de votre installation.",
     },
     {
-        img: "/images/electricien-sur-nice2.webp",
-        title: "Remplacement de tableau électrique à Nice",
+        img: "/images/electricien-sur-Toulon2.webp",
+        title: "Remplacement de tableau électrique à Toulon",
         description: "Remplacement sécurisé et conforme des tableaux électriques obsolètes ou endommagés.",
     },
 
@@ -44,20 +44,20 @@ const services = [
 const Services = () => {
     return (
         <section
-            id="services-electricien-nice"
-            aria-label="Nos prestations électriques à Nice"
+            id="services-electricien-Toulon"
+            aria-label="Nos prestations électriques à Toulon"
             className="w-full py-24 px-16 bg-white max-md:px-8"
         >
             <div className="flex flex-col items-center justify-center mb-12 px-6 sm:px-20 gap-6 max-md:gap-5 xl:max-w-[1300px] xl:mx-auto">
-                <p className="text-[14px] font-semibold text-[#f25000] uppercase tracking-[7px] max-lg:text-[12px]">
+                <p className="text-[14px] font-semibold text-[#c1121f] uppercase tracking-[7px] max-lg:text-[12px]">
                     Nos Services
                 </p>
 
-                <h2 className="text-[40px]  leading-[1.15em] font-bold tracking-[-1.5px] text-center text-[#1b1e3f] max-lg:text-[36px] max-md:text-[32px] ">
-                    Électricien à <span className='text-[#f25000]'>Nice</span> : dépannage, mise aux normes, tableaux
+                <h2 className="text-[40px]  leading-[1.15em] font-bold tracking-[-1.5px] text-center text-[#003049] max-lg:text-[36px] max-md:text-[32px] ">
+                    Électricien à <span className='text-[#c1121f]'>Toulon</span> : dépannage, mise aux normes, tableaux
                 </h2>
                 <p className="text-[17px] text-[#2E2937BF] text-center max-w-3xl leading-7 max-md:text-base" >
-                    Interventions rapides à Nice pour tout type de besoin électrique : urgence, diagnostic, remise aux normes NF C 15-100, remplacement de tableaux et réparations.
+                    Interventions rapides à Toulon pour tout type de besoin électrique : urgence, diagnostic, remise aux normes NF C 15-100, remplacement de tableaux et réparations.
                 </p>
             </div>
 

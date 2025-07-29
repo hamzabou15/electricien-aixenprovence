@@ -16,13 +16,13 @@ const ServiceCard = () => {
                             alt="Handyman Icon"
                             width={70}
                             height={70}
-                            className="transition-transform duration-300 group-hover:-translate-y-2"
+                            className="transition-transform duration-300 group-hover:-translate-y-2 filter  brightness-70 hue-rotate-[-30deg] saturate-200"
                         />
 
                         {/* Titre + description */}
-                        <div className="flex flex-col items-start gap-2 text-[#1b1e3f] max-w-[80%] max-lg:max-w[100%] max-sm:items-center">
+                        <div className="flex flex-col items-start gap-2 text-[#003049] max-w-[80%] max-lg:max-w[100%] max-sm:items-center">
                             <h3 className="text-2xl font-bold max-lg:text-xl max-sm:text-center">Outils professionnels</h3>
-                            <span className="text-[15px] text-[#1b1e3f8f] font-[300] leading-7 max-lg:text-[14px] max-lg:leading-6 max-sm:text-center">
+                            <span className="text-[15px] text-[#0030498f] font-[300] leading-7 max-lg:text-[14px] max-lg:leading-6 max-sm:text-center">
                                 Un travail de qualité avec une touche personnelle et amicale
                             </span>
                         </div>
@@ -31,8 +31,8 @@ const ServiceCard = () => {
                         <div className="overflow-hidden w-full group">
                             <a href="#" className="inline-block">
                                 <span className="flex items-center gap-2 text-[16px] tracking-[-1px] font-semibold 
-                      text-[#1b1e3f] -translate-x-[80%] transition-transform duration-300 group-hover:translate-x-0
-                        hover:text-[#f25000]  hover:transition-all max-sm:-translate-x-0
+                      text-[#003049] -translate-x-[80%] transition-transform duration-300 group-hover:translate-x-0
+                        hover:text-[#c1121f]  hover:transition-all max-sm:-translate-x-0
                       ">
                                     <Link href={"/services"} >
                                         <span className="block  ">
@@ -40,7 +40,7 @@ const ServiceCard = () => {
                                         </span>
                                     </Link>
 
-                                    <GoArrowRight className="text-[#f25000]  " style={{ width: "24px", height: "24px" }} />
+                                    <GoArrowRight className="text-[#c1121f]  " style={{ width: "24px", height: "24px" }} />
                                 </span>
                             </a>
                         </div>
@@ -55,13 +55,13 @@ const ServiceCard = () => {
                             alt="Handyman Icon"
                             width={70}
                             height={70}
-                            className="transition-transform duration-300 group-hover:-translate-y-2"
+                            className="transition-transform duration-300 group-hover:-translate-y-2 filter  brightness-70 hue-rotate-[-30deg] saturate-200"
                         />
 
                         {/* Titre + description */}
-                        <div className="flex flex-col items-start gap-2 text-[#1b1e3f] max-w-[80%] max-lg:max-w[100%] max-sm:items-center">
+                        <div className="flex flex-col items-start gap-2 text-[#003049] max-w-[80%] max-lg:max-w[100%] max-sm:items-center">
                             <h3 className="text-2xl font-bold max-lg:text-xl max-sm:text-center ">Expert Électricien</h3>
-                            <span className="text-[15px] text-[#1b1e3f8f] font-[300] leading-7 max-sm:tec">
+                            <span className="text-[15px] text-[#0030498f] font-[300] leading-7 max-sm:tec">
                                 De la panne à la performance, une expertise électrique à chaque intervention
                             </span>
                         </div>
@@ -70,15 +70,15 @@ const ServiceCard = () => {
                         <div className="overflow-hidden w-full group">
                             <a href="#" className="inline-block">
                                 <span className="flex items-center gap-2 text-[16px] tracking-[-1px] font-semibold 
-                      text-[#1b1e3f] -translate-x-[80%] transition-transform duration-300 group-hover:translate-x-0
-                        hover:text-[#f25000]  hover:transition-all max-sm:-translate-x-0
+                      text-[#003049] -translate-x-[80%] transition-transform duration-300 group-hover:translate-x-0
+                        hover:text-[#c1121f]  hover:transition-all max-sm:-translate-x-0
                       ">
                                     <Link href={"/services"} >
                                         <span className="block  ">
                                             Savoir plus
                                         </span>
                                     </Link>
-                                    <GoArrowRight className="text-[#f25000]  " style={{ width: "24px", height: "24px" }} />
+                                    <GoArrowRight className="text-[#c1121f]  " style={{ width: "24px", height: "24px" }} />
                                 </span>
                             </a>
                         </div>
@@ -93,13 +93,13 @@ const ServiceCard = () => {
                             alt="Handyman Icon"
                             width={70}
                             height={70}
-                            className="transition-transform duration-300 group-hover:-translate-y-2"
+                            className="transition-transform duration-300 group-hover:-translate-y-2 filter  brightness-70 hue-rotate-[-30deg] saturate-200"
                         />
 
                         {/* Titre + description */}
-                        <div className="flex flex-col items-start gap-2 text-[#1b1e3f] max-w-[80%] max-lg:max-w-[100%] max-sm:items-center">
+                        <div className="flex flex-col items-start gap-2 text-[#003049] max-w-[80%] max-lg:max-w-[100%] max-sm:items-center">
                             <h3 className="text-2xl font-bold max-lg:text-xl max-sm:text-center">Large gamme de services</h3>
-                            <span className="text-[15px] text-[#1b1e3f8f] font-[300] leading-7 max-sm:text-center">
+                            <span className="text-[15px] text-[#0030498f] font-[300] leading-7 max-sm:text-center">
                                 Des experts locaux prêts à vous aider pour tous vos besoins domestiques aujourd&#39;hui
                             </span>
                         </div>
@@ -108,15 +108,15 @@ const ServiceCard = () => {
                         <div className="overflow-hidden w-full group">
                             <a href="#" className="inline-block">
                                 <span className="flex items-center gap-2 text-[16px] tracking-[-1px] font-semibold 
-                      text-[#1b1e3f] -translate-x-[80%] transition-transform duration-300 group-hover:translate-x-0
-                        hover:text-[#f25000]  hover:transition-all max-sm:-translate-x-0
+                      text-[#003049] -translate-x-[80%] transition-transform duration-300 group-hover:translate-x-0
+                        hover:text-[#c1121f]  hover:transition-all max-sm:-translate-x-0
                       ">
                                     <Link href={"/services"} >
                                         <span className="block  ">
                                             Savoir plus
                                         </span>
                                     </Link>
-                                    <GoArrowRight className="text-[#f25000]  " style={{ width: "24px", height: "24px" }} />
+                                    <GoArrowRight className="text-[#c1121f]  " style={{ width: "24px", height: "24px" }} />
                                 </span>
                             </a>
                         </div>
@@ -131,13 +131,13 @@ const ServiceCard = () => {
                             alt="Handyman Icon"
                             width={70}
                             height={70}
-                            className="transition-transform duration-300 group-hover:-translate-y-2"
+                            className="transition-transform duration-300 group-hover:-translate-y-2 filter  brightness-70 hue-rotate-[-30deg] saturate-200"
                         />
 
                         {/* Titre + description */}
-                        <div className="flex flex-col items-start gap-2 text-[#1b1e3f] max-w-[80%] max-lg:max-w[100%] max-sm:items-center">
+                        <div className="flex flex-col items-start gap-2 text-[#003049] max-w-[80%] max-lg:max-w[100%] max-sm:items-center">
                             <h3 className="text-2xl font-bold max-lg:text-xl max-sm:text-center">Assurance qualité</h3>
-                            <span className="text-[15px] text-[#1b1e3f8f] font-[300] leading-7 max-sm:text-center">
+                            <span className="text-[15px] text-[#0030498f] font-[300] leading-7 max-sm:text-center">
                                 Une aide fiable pour tous vos besoins de rénovation domiciliaire
                             </span>
                         </div>
@@ -146,15 +146,15 @@ const ServiceCard = () => {
                         <div className="overflow-hidden w-full group">
                             <a href="#" className="inline-block">
                                 <span className="flex items-center gap-2 text-[16px] tracking-[-1px] font-semibold 
-                      text-[#1b1e3f] -translate-x-[80%] transition-transform duration-300 group-hover:translate-x-0
-                        hover:text-[#f25000]  hover:transition-all max-sm:-translate-x-0
+                      text-[#003049] -translate-x-[80%] transition-transform duration-300 group-hover:translate-x-0
+                        hover:text-[#c1121f]  hover:transition-all max-sm:-translate-x-0
                       ">
                                     <Link href={"/services"} >
                                         <span className="block  ">
                                             Savoir plus
                                         </span>
                                     </Link>
-                                    <GoArrowRight className="text-[#f25000]  " style={{ width: "24px", height: "24px" }} />
+                                    <GoArrowRight className="text-[#c1121f]  " style={{ width: "24px", height: "24px" }} />
                                 </span>
                             </a>
                         </div>

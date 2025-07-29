@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://electriciennice-expert.fr/sitemap.xml
+Sitemap: https://electricienToulon-expert.fr/sitemap.xml

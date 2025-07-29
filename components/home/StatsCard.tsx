@@ -14,8 +14,8 @@ const StatsCard = () => {
     return (
         <section
             className='bg-white w-full px-14 h-auto py-12 xl:max-w-[1300px] m-auto'
-            id="chiffres-electricien-nice"
-            aria-label="Statistiques sur les interventions d'électricité à Nice"
+            id="chiffres-electricien-Toulon"
+            aria-label="Statistiques sur les interventions d'électricité à Toulon"
         >
             <div className='flex items-start justify-between max-lg:flex-wrap max-lg:gap-y-6 '>
                 {stats.map((stat, index) => (
@@ -100,7 +100,7 @@ const StatItem = ({
             >
                 {count}
             </motion.h1>
-            <span className='text-[18px] font-semibold text-center text-[#1b1e3f] max-lg:text-base'>{label}</span>
+            <span className='text-[18px] font-semibold text-center text-[#003049] max-lg:text-base'>{label}</span>
         </div>
     );
 };

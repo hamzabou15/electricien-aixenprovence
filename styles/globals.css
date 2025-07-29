@@ -135,18 +135,18 @@ body {
 }
 
 .premium-bg {
-    background-color: #f25000;
+    background-color: #c1121f;
 }
 
 .icon {
-    color: #f25000;
+    color: #c1121f;
     font-size: 20px;
 }
 
 li button svg {
-    color: #f25000 !important
+    color: #c1121f !important
 }
 
 .bg-footer {
-    background-color: #1b1e3f !important;
+    background-color: black !important;
 }

@@ -4,16 +4,16 @@ const SchemaLocalBusiness = () => {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Electrician",
-    "name": "Electricien Nice Expert",
-    "image": "https://electricien-nice.fr/images/electricien-nice-intervention.webp",
-    "url": "https://electricien-nice.fr",
+    "name": "Electricien Toulon Expert",
+    "image": "https://electricientoulon-expert.fr/images/electricien-Toulon-intervention.webp",
+    "url": "https://electricientoulon-expert.fr",
     "telephone": "+33 6 00 00 00 00",
     "priceRange": "€€",
-    "description": "Electricien certifié à Nice pour dépannages, installations électriques, mises aux normes et rénovations. Intervention rapide et garantie 7j/7.",
+    "description": "Electricien certifié à Toulon pour dépannages, installations électriques, mises aux normes et rénovations. Intervention rapide et garantie 7j/7.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "12 Rue Masséna",
-      "addressLocality": "Nice",
+      "addressLocality": "Toulon",
       "addressRegion": "Provence-Alpes-Côte d’Azur",
       "postalCode": "06000",
       "addressCountry": "FR"
@@ -25,7 +25,7 @@ const SchemaLocalBusiness = () => {
     },
     "areaServed": {
       "@type": "Place",
-      "name": "Nice"
+      "name": "Toulon"
     },
     "openingHoursSpecification": [
       {
@@ -60,7 +60,7 @@ const SchemaLocalBusiness = () => {
           "@type": "Person",
           "name": "Marie Lemoine"
         },
-        "reviewBody": "Excellent service, électricien très professionnel à Nice. Je recommande vivement !"
+        "reviewBody": "Excellent service, électricien très professionnel à Toulon. Je recommande vivement !"
       },
       {
         "@type": "Review",
@@ -73,7 +73,7 @@ const SchemaLocalBusiness = () => {
           "@type": "Person",
           "name": "Sofiane B."
         },
-        "reviewBody": "Rapide, ponctuel et efficace. Intervention nickel dans mon appartement à Nice centre."
+        "reviewBody": "Rapide, ponctuel et efficace. Intervention nickel dans mon appartement à Toulon centre."
       },
       {
         "@type": "Review",

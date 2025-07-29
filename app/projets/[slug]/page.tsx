@@ -1,16 +1,60 @@
-'use client';
+import Image from "next/image";
+import { notFound } from "next/navigation";
+import { listItems } from "@/lib/projetcs";
+import {
+    FaFacebookF,
+    FaTwitter,
+    FaLinkedinIn,
+    FaInstagram,
+    FaCheckCircle,
+} from "react-icons/fa";
+import { Metadata } from "next";
 
-import React from 'react';
-import Image from 'next/image';
-import { useParams, notFound } from 'next/navigation';
-import { listItems } from '@/lib/projetcs';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaCheckCircle } from 'react-icons/fa';
+// ✅ Typage standard requis par Next.js pour les routes dynamiques
+interface ProjectPageProps {
 
-const ProjectPage = () => {
-    const { slug } = useParams();
+    params: Promise<{ slug: string }>
+}
+
+
+// ✅ Fonction SEO dynamique (metadata)
+export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
+    const { slug } = await params;
+
     const project = listItems.find((p) => p.slug === slug);
 
-    if (!project) return notFound();
+    if (!project) return {
+        title: "Projet introuvable | Électricien à Toulon",
+        description: "Ce projet n'existe pas ou a été supprimé.",
+    };
+
+    return {
+        title: `${project.title} | Projet électrique à Toulon`,
+        description: project.description,
+        openGraph: {
+            title: `${project.title} | Projet électrique à Toulon`,
+            description: project.description,
+            images: [
+                {
+                    url: project.image,
+                    width: 1200,
+                    height: 630,
+                    alt: project.title,
+                },
+            ],
+        },
+    };
+}
+
+// ✅ Composant server-side : pas de "use client"
+export default async function ProjectPage({ params }: ProjectPageProps) {
+    const { slug } = await params;
+
+    const project = listItems.find((p) => p.slug === slug);
+
+    if (!project) {
+        notFound();
+    }
 
     return (
         <section className="w-full py-16 bg-white px-8 md:px-20">
@@ -32,9 +76,10 @@ const ProjectPage = () => {
                             Nos clients bénéficient d’un accompagnement personnalisé, de conseils adaptés, et d’une intervention rapide avec garantie.
                         </p>
                     </div>
+
                     <div className="flex flex-col md:flex-row items-start gap-8 mt-6">
                         <div className="flex-1">
-                            <h3 className="text-xl font-semibold text-[#1b1e3f] mb-4">Entreprise reconnue à Nice</h3>
+                            <h3 className="text-xl font-semibold text-[#1b1e3f] mb-4">Entreprise reconnue à Toulon</h3>
                             <ul className="space-y-3 text-[15px] text-[#1b1e3f]">
                                 <li className="flex items-center gap-2">
                                     <FaCheckCircle className="text-[#f25000]" />
@@ -46,13 +91,12 @@ const ProjectPage = () => {
                                 </li>
                                 <li className="flex items-center gap-2">
                                     <FaCheckCircle className="text-[#f25000]" />
-                                    Électricien agréé à Nice & alentours
+                                    Électricien agréé à Toulon & alentours
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-
 
                 {/* Right project info */}
                 <aside className="bg-[#f7f7f7] p-6 rounded-md shadow-sm h-[max-content]">
@@ -83,6 +127,4 @@ const ProjectPage = () => {
             </div>
         </section>
     );
-};
-
-export default ProjectPage;
+}

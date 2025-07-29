@@ -9,27 +9,27 @@ const WhyUs = () => {
     return (
         <>
             <Head>
-                <title>Pourquoi nous choisir ? Électricien à Nice – Fiable, Certifié, Rapide</title>
+                <title>Pourquoi nous choisir ? Électricien à Toulon – Fiable, Certifié, Rapide</title>
                 <meta
                     name="description"
-                    content="Découvrez pourquoi choisir notre entreprise d'électricité à Nice : électriciens certifiés, interventions rapides, sécurité garantie et service client exemplaire."
+                    content="Découvrez pourquoi choisir notre entreprise d'électricité à Toulon : électriciens certifiés, interventions rapides, sécurité garantie et service client exemplaire."
                 />
             </Head>
 
             <section
-                id="pourquoi-nous-electricien-nice"
-                aria-label="Pourquoi choisir notre entreprise d'électricité à Nice"
+                id="pourquoi-nous-electricien-Toulon"
+                aria-label="Pourquoi choisir notre entreprise d'électricité à Toulon"
                 className="w-full bg-white"
             >
                 <div className="px-12 py-16 flex flex-wrap lg:flex-nowrap gap-8 max-lg:flex-col-reverse xl:max-w-[1300px] xl:mx-auto">
 
                     {/* Texte explicatif */}
                     <div className="bg-white w-full lg:w-[45%] max-lg:w-full">
-                        <span className="text-[12px] font-semibold text-[#f25000] uppercase tracking-[7px]">
+                        <span className="text-[12px] font-semibold text-[#c1121f] uppercase tracking-[7px]">
                             Pourquoi nous ?
                         </span>
-                        <h2 className="text-[30px] text-[#1b1e3f] font-bold tracking-[-1.5px] leading-tight mt-3 mb-6">
-                            Nos engagements à Nice :
+                        <h2 className="text-[30px] text-[#003049] font-bold tracking-[-1.5px] leading-tight mt-3 mb-6">
+                            Nos engagements à Toulon :
                         </h2>
 
                         <ul className="text-[14px] font-medium text-[#2E2937BF] space-y-4">
@@ -43,7 +43,7 @@ const WhyUs = () => {
                                 "Professionnels amicaux, fiables, chez vous en moins de 60 min"
                             ].map((text, i) => (
                                 <li key={i} className="flex items-start gap-3">
-                                    <FaCheck className="text-[#f25000] mt-1" aria-hidden="true" />
+                                    <FaCheck className="text-[#c1121f] mt-1" aria-hidden="true" />
                                     <span>{text}</span>
                                 </li>
                             ))}
@@ -53,8 +53,8 @@ const WhyUs = () => {
                     {/* Image illustrative */}
                     <div className="w-full lg:w-[55%] max-lg:w-full">
                         <Image
-                            src="/images/homme-un-technicien-electricien-nice.webp"
-                            alt="Une équipe d'électriciens professionnels à Nice"
+                            src="/images/homme-un-technicien-electricien-Toulon.webp"
+                            alt="Une équipe d'électriciens professionnels à Toulon"
                             width={200}
                             height={400}
                             layout="responsive"

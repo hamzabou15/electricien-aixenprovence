@@ -12,7 +12,7 @@ const CTA = () => {
             <Button asChild variant="submit" size="xlg" className="group flex items-center overflow-hidden hover:gap-2">
                 <a href="tel:+33756935200" aria-label="Appeler le numéro +33 7 56 93 52 00">
                     <MdLocalPhone
-                        className="text-white transition-colors duration-300 group-hover:text-[#f25000]"
+                        className="text-white transition-colors duration-300 group-hover:text-[#c1121f]"
                         style={{ height: "24px", width: "24px" }}
                     />
                     <span className="transition-all duration-300 opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-[200px]">

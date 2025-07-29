@@ -8,16 +8,16 @@ import Link from 'next/link';
 const Hero = () => {
     return (
         <section
-            className="w-full grid grid-cols-1 relative text-white overflow-hidden bg-[#1b1e3f]  
+            className="w-full grid grid-cols-1 relative text-white overflow-hidden bg-[#003049]  
                       md:grid-cols-2  h-full 
             "
-            id="hero-electricien-nice"
-            aria-label="Électricien urgence et dépannage à Nice"
+            id="hero-electricien-Toulon"
+            aria-label="Électricien urgence et dépannage à Toulon"
         >
             <div className="relative h-full w-full max-md:h-[500px]">
                 <Image
-                    src="/images/Electricien-niceV2.webp"
-                    alt="Électricien intervenant à Nice pour pannes et remises aux normes"
+                    src="/images/Electricien-ToulonV2.webp"
+                    alt="Électricien intervenant à Toulon pour pannes et remises aux normes"
                     fill
                     className="object-cover object-top"
                     priority
@@ -29,17 +29,17 @@ const Hero = () => {
 
             <div className="relative px-16 py-28 z-10 flex flex-col gap-6 bg-cover bg-center max-lg:px-12 md:py-20  max-sm:py-16 max-sm:px-7">
                 <div className="flex flex-col items-start gap-7 max-md:items-center xl:max-w-[1300px]">
-                    <p className="text-[12px] font-semibold text-[#f25000] uppercase 
+                    <p className="text-[12px] font-semibold text-[#c1121f] uppercase 
                         tracking-[7px] max-sm:text-[12px] max-md:text-[10px] max-md:text-center">
-                        Électricien certifié à Nice
+                        Électricien certifié à Toulon
                     </p>
 
                     <h1 className="text-[54px] font-bold tracking-[-2px] leading-tight sm:text-[40px] lg:text-[54px] max-sm:text-[32px] max-sm:tracking-normal max-md:text-center">
-                        Urgence électricité à Nice – Réparation rapide 7j/7
+                        Urgence électricité à Toulon – Réparation rapide 7j/7
                     </h1>
 
                     <p className="text-[17px] font-light text-[#ffffffb7] leading-8 sm:text-[14px] lg:text-[17px]max-sm:text-base max-md:text-center ">
-                        Vous faites face à une <strong>coupure générale ou partielle</strong> ? Notre <strong>électricien en urgence à Nice</strong> intervient rapidement pour tout dépannage :
+                        Vous faites face à une <strong>coupure générale ou partielle</strong> ? Notre <strong>électricien en urgence à Toulon</strong> intervient rapidement pour tout dépannage :
                         <strong> remplacement de tableau électrique</strong>, <strong>mise en conformité NF C 15-100</strong>, disjoncteur HS ou panne soudaine.
                         Intervention 7j/7 – service certifié et fiable.
                     </p>
@@ -55,7 +55,7 @@ const Hero = () => {
                                 <FaStar />
                             </div>
                             <span className="text-[16px] font-medium sm:text-[14px] lg:text-[16px] max-sm:text-center">
-                                Note Google (basée sur 320 avis clients satisfaits à Nice)
+                                Note Google (basée sur 320 avis clients satisfaits à Toulon)
                             </span>
                         </div>
                     </div>

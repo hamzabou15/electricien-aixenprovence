@@ -1,24 +1,20 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
-import { notFound, useParams } from "next/navigation";
+import { notFound } from "next/navigation";
 import { servicesData } from "../../../lib/data";
 import { FaCheckCircle } from "react-icons/fa";
 import { MdPhone } from "react-icons/md";
 import { cn } from "@/lib/utils";
 import React from "react";
 
-const services = [
-  { title: "Dépannage d'urgence", href: "/services/depannage", slug: "depannage" },
-  { title: "Installations électriques", href: "/services/installation", slug: "installation" },
-  { title: "Rénovation complète", href: "/services/renovation", slug: "renovation" },
-  { title: "Inspection de sécurité", href: "/services/inspection", slug: "inspection" },
-  { title: "Installation éclairage", href: "/services/eclairage", slug: "eclairage" },
-  { title: "Mises aux normes", href: "/services/mise-aux-normes", slug: "mise-aux-normes" },
-];
+interface ServicePageProps {
 
-export default function DepannageElectricitePage() {
-  const { slug } = useParams();
+    params: Promise<{ slug: string }>
+}
+
+
+export default async function DepannageElectricitePage({ params }: ServicePageProps) {
+  const { slug } = await params;
   const service = servicesData.find((p) => p.slug === slug);
 
   if (!service) return notFound();
@@ -28,14 +24,14 @@ export default function DepannageElectricitePage() {
       <div className="w-full max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 py-10">
         {/* === Menu latéral === */}
         <aside className="space-y-4">
-          {services.map((item) => (
+          {servicesData.map((item) => (
             <Link
-              key={item.href}
-              href={item.href}
+              key={item.slug}
+              href={`/services/${item.slug}`}
               className={cn(
-                "flex items-center justify-between px-4 py-3 border rounded-md shadow-sm font-semibold transition hover:bg-[#f25000] hover:text-white",
+                "flex items-center justify-between px-4 py-3 border rounded-md shadow-sm font-semibold transition hover:bg-[#c1121f] hover:text-white",
                 {
-                  "text-[#f25000]": service.slug === item.slug,
+                  "text-[#c1121f]": service.slug === item.slug,
                   "text-[#19182]": service.slug !== item.slug,
                 }
               )}
@@ -56,11 +52,11 @@ export default function DepannageElectricitePage() {
               />
             </div>
             {/* Bloc orange en bas */}
-            <div className="bg-[#f25000] text-white text-center py-6 px-4 space-y-2">
+            <div className="bg-[#c1121f] text-white text-center py-6 px-4 space-y-2">
               <a href="tel:+33756935200" aria-label="Appeler le numéro +33 7 56 93 52 00" className="space-y-2 block">
                 <div className="flex justify-center">
                   <div className="bg-white rounded p-2">
-                    <MdPhone className="text-[#f25000] text-3xl" />
+                    <MdPhone className="text-[#c1121f] text-3xl" />
                   </div>
                 </div>
                 <p className="font-semibold text-sm">Besoin d’aide immédiate ?</p>
@@ -76,7 +72,7 @@ export default function DepannageElectricitePage() {
           <div className="w-full h-64 md:h-96 relative rounded-md overflow-hidden">
             <Image
               src="/images/service-img.webp"
-              alt="Dépannage électrique à Nice"
+              alt="Dépannage électrique à Toulon"
               fill
               className="object-cover"
             />
@@ -108,10 +104,10 @@ export default function DepannageElectricitePage() {
               <div className="w-full">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">Pourquoi nous choisir ?</h3>
                 <div className="flex flex-col md:flex-row items-start gap-8 mt-6">
-                  <ul className="space-y-3 text-[15px] text-[#1b1e3f]">
+                  <ul className="space-y-3 text-[15px] text-[#003049]">
                     {service.benefits.map((item, index) => (
                       <li key={index} className="flex items-center gap-2">
-                        <FaCheckCircle className="text-[#f25000]" />
+                        <FaCheckCircle className="text-[#c1121f]" />
                         {item}
                       </li>
                     ))}
@@ -123,7 +119,7 @@ export default function DepannageElectricitePage() {
             {/* Image à droite */}
             <div className="relative w-full h-64 md:h-auto">
               <Image
-                src="/images/Electricien-proxmité-nice.webp"
+                src="/images/Electricien-proxmité-Toulon.webp"
                 alt="Intervention rapide"
                 fill
                 className="object-cover rounded-md"

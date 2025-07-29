@@ -33,20 +33,20 @@ const Footer = () => {
                         {/* Section 1 - Logo & Réseaux */}
                         <div className="flex flex-col items-start gap-4 max-w-xs">
                             <Image
-                                src="/images/electricien-expert-nice.svg"
+                                src="/images/electricien-expert-Toulon.svg"
                                 width={150}
                                 height={20}
                                 alt="Logo OneSpark Electricité"
                             />
                             <p className="text-xs font-light text-[#FFFFFF91] leading-5">
-                                <span className="font-semibold">Eelectricien Nice Expert</span> est votre entreprise d&#39;électricité générale à Nice à votre service pour tous vos travaux d&#39;électricité et de dépannage électrique.
+                                <span className="font-semibold">Eelectricien Toulon Expert</span> est votre entreprise d&#39;électricité générale à Toulon à votre service pour tous vos travaux d&#39;électricité et de dépannage électrique.
                             </p>
-                            <div className="flex gap-4 mt-2 text-sm text-[#f25000]">
+                            <div className="flex gap-4 mt-2 text-sm text-[#c1121f]">
                                 <a
                                     href="https://www.facebook.com/onesparkelectricite/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="p-2 rounded-full border border-[#f25000] hover:bg-white hover:text-[#f25000] transition"
+                                    className="p-2 rounded-full border border-[#c1121f] hover:bg-white hover:text-[#c1121f] transition"
                                     aria-label="Facebook"
                                 >
                                     <RiFacebookFill />
@@ -55,7 +55,7 @@ const Footer = () => {
                                     href="https://www.instagram.com/onesparkelectricite/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="p-2 rounded-full border border-[#f25000] hover:bg-white hover:text-[#f25000] transition"
+                                    className="p-2 rounded-full border border-[#c1121f] hover:bg-white hover:text-[#c1121f] transition"
                                     aria-label="Instagram"
                                 >
                                     <FaInstagram />
@@ -64,7 +64,7 @@ const Footer = () => {
                                     href="https://www.linkedin.com/company/onesparkelectricite/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="p-2 rounded-full border border-[#f25000] hover:bg-white hover:text-[#f25000] transition"
+                                    className="p-2 rounded-full border border-[#c1121f] hover:bg-white hover:text-[#c1121f] transition"
                                     aria-label="X / Twitter"
                                 >
                                     <FaXTwitter />
@@ -74,15 +74,15 @@ const Footer = () => {
 
                         {/* Section 2 - Navigation */}
                         <div className="flex flex-col items-start gap-3 min-w-[150px]">
-                            <h2 className="text-[#f25000] font-semibold text-lg">Explorer</h2>
+                            <h2 className="text-[#c1121f] font-semibold text-lg">Explorer</h2>
                             <ul className="flex flex-col gap-2 text-sm text-[#ffffff91]">
                                 {menuItems.map((item, idx) => (
                                     <li key={idx}>
                                         <Link
                                             href={item.href}
-                                            className="flex items-center gap-2 hover:text-[#f25000] cursor-pointer font-medium transition"
+                                            className="flex items-center gap-2 hover:text-[#c1121f] cursor-pointer font-medium transition"
                                         >
-                                            <GoArrowRight className="text-[#f25000] text-xs" />
+                                            <GoArrowRight className="text-[#c1121f] text-xs" />
                                             {item.label}
                                         </Link>
                                     </li>
@@ -92,19 +92,19 @@ const Footer = () => {
 
                         {/* Section 3 - Contact */}
                         <div className="flex flex-col items-start gap-3 min-w-[200px]">
-                            <h2 className="text-[#f25000] font-semibold text-lg">Contact</h2>
+                            <h2 className="text-[#c1121f] font-semibold text-lg">Contact</h2>
                             <div className="text-white text-sm flex flex-col gap-4">
                                 <div className="flex items-start gap-3">
-                                    <TiLocation className="text-xl p-1.5 bg-[#f25000] rounded-full hover:bg-white hover:text-[#191c25] transition" />
+                                    <TiLocation className="text-xl p-1.5 bg-[#c1121f] rounded-full hover:bg-white hover:text-[#191c25] transition" />
                                     <div>
                                         <h4 className="font-semibold text-sm">Bureau central :</h4>
                                         <p className="text-[#ffffff91] text-xs">
-                                            34 Chemin des Moulins 06000 NICE
+                                            34 Chemin des Moulins 06000 Toulon
                                         </p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
-                                    <MdLocalPhone className="text-xl p-1.5 bg-[#f25000] rounded-full hover:bg-white hover:text-[#191c25] transition" />
+                                    <MdLocalPhone className="text-xl p-1.5 bg-[#c1121f] rounded-full hover:bg-white hover:text-[#191c25] transition" />
                                     <div>
                                         <h4 className="font-semibold text-sm">Phones :</h4>
                                         <p className="text-[#ffffff91] text-xs">+33 693 78 88 07</p>
@@ -116,7 +116,7 @@ const Footer = () => {
 
                         {/* Section 4 - Newsletter */}
                         <div className="flex flex-col items-start gap-4 w-full sm:max-w-sm">
-                            <h2 className="text-[#f25000] font-semibold text-lg">S&apos;abonner</h2>
+                            <h2 className="text-[#c1121f] font-semibold text-lg">S&apos;abonner</h2>
                             <form className="flex w-full max-w-xs">
                                 <Input
                                     type="email"
@@ -126,7 +126,7 @@ const Footer = () => {
                                 />
                                 <Button
                                     type="submit"
-                                    className="h-10 rounded-l-none bg-[#f25000]"
+                                    className="h-10 rounded-l-none bg-[#c1121f]"
                                     aria-label="Envoyer l'email"
                                 >
                                     <LuSend />
@@ -138,7 +138,7 @@ const Footer = () => {
                     {/* Copyright */}
                     <div className="w-full flex justify-center pt-6">
                         <p className="text-xs text-[#ffffff91] text-center">
-                            © 2025 Tous droits réservés - <span className="text-[#f25000] cursor-pointer">Elecricien Nice Expert</span>
+                            © 2025 Tous droits réservés - <span className="text-[#c1121f] cursor-pointer">Elecricien Toulon Expert</span>
                         </p>
                     </div>
                 </div>

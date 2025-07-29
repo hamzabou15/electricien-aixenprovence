@@ -4,21 +4,21 @@ import ContactForm from "@/components/contact/Form";
 
 // SEO spécifique à cette page
 export const metadata: Metadata = {
-    title: "Contactez Electricien Nice Expert | Demande de devis ou intervention",
-    description: "Prenez contact avec Electricien Nice Expert pour vos travaux ou urgences électriques à Nice. Réponse rapide assurée.",
-    keywords: ["contact électricien Nice", "demande devis électricien", "intervention électricien urgence Nice", "Electricien Nice Expert"],
+    title: "Contactez Electricien Toulon Expert | Demande de devis ou intervention",
+    description: "Prenez contact avec Electricien Toulon Expert pour vos travaux ou urgences électriques à Toulon. Réponse rapide assurée.",
+    keywords: ["contact électricien Toulon", "demande devis électricien", "intervention électricien urgence Toulon", "Electricien Toulon Expert"],
     openGraph: {
-        title: "Contactez Electricien Nice Expert | Demande de devis ou intervention",
-        description: "Prenez contact avec Electricien Nice Expert pour vos travaux ou urgences électriques à Nice.",
-        url: "https://electricien-nice.netlify.app/contact",
-        siteName: "Electricien Nice Expert",
+        title: "Contactez Electricien Toulon Expert | Demande de devis ou intervention",
+        description: "Prenez contact avec Electricien Toulon Expert pour vos travaux ou urgences électriques à Toulon.",
+        url: "https://electricientoulon-expert.fr/contact",
+        siteName: "Electricien Toulon Expert",
         locale: "fr_FR",
         type: "website",
     },
     twitter: {
         card: "summary",
-        title: "Contactez Electricien Nice Expert | Demande de devis ou intervention",
-        description: "Demandez votre devis ou votre intervention d'urgence à Nice.",
+        title: "Contactez Electricien Toulon Expert | Demande de devis ou intervention",
+        description: "Demandez votre devis ou votre intervention d'urgence à Toulon.",
     },
 };
 

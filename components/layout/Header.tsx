@@ -27,7 +27,7 @@ const Header = () => {
         <header className="w-full shadow-bottom z-20 relative bg-white  ">
             <div className="flex items-center justify-between px-4 md:px-8 py-4  max-w-[1300px] m-auto">
                 <Link href="/">
-                    <Image src="/images/logo-electrcien-nice.svg" alt="Logo" width={160} height={50} />
+                    <Image src="/images/logo-electricien-toulon.svg" alt="Logo" width={160} height={50} />
                 </Link>
 
                 {/* Mobile Burger */}
@@ -57,7 +57,7 @@ const Header = () => {
                                     <ul className="grid gap-2 p-4 w-[250px]">
                                         {servicesData.map((service, index) => (
                                             <li key={index}>
-                                                <Link href={`/services/${service.slug}`} className="block px-2 py-1 hover:text-orange-500">
+                                                <Link href={`/services/${service.slug}`} className="block px-2 py-1 hover:text-[#c1121f]">
                                                     {service.title}
                                                 </Link>
                                             </li>
@@ -89,7 +89,7 @@ const Header = () => {
                 <div className="hidden lg:flex items-center gap-6">
                     <a href="tel:+33693788807" aria-label="Appeler le numéro +33 693 78 88 07"
                         className="flex items-center gap-2 text-sm font-semibold group">
-                        <MdLocalPhone className=" rounded-full w-8 h-8 p-2 text-[#e03a00] bg-[#edeff5]" />
+                        <MdLocalPhone className=" rounded-full w-8 h-8 p-2 text-[#e03a00] bg-[#fdf0d5]" />
                         <span className="group-hover:underline ">+33 693 78 88 07</span>
                     </a>
                     <Button type="button" variant="submit" size="lg">
@@ -179,11 +179,11 @@ const Header = () => {
 
                         <div className="mt-4 flex flex-col gap-2">
                             <div className="flex items-center gap-2 text-sm font-semibold">
-                                <MdLocalPhone className="rounded-full w-8 h-8 p-2 bg-[#edeff5]" />
+                                <MdLocalPhone className="rounded-full w-8 h-8 p-2 bg-[#fdf0d5]" />
                                 <span>+33 693 78 88 07</span>
                             </div>
                             <button
-                                className="bg-[#f25000] text-white py-2 rounded-md hover:bg-[#e03a00] flex items-center justify-center gap-2"
+                                className="bg-[#c1121f] text-white py-2 rounded-md hover:bg-[#e03a00] flex items-center justify-center gap-2"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 <IoNewspaperOutline />

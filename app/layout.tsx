@@ -12,37 +12,37 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Electricien Nice Expert | Travaux & Dépannage Électrique à Nice",
-  description: "Electricien à Nice pour vos installations, rénovations et dépannages électriques. Intervention rapide, professionnelle et conforme aux normes.",
-  keywords: ["électricien Nice", "travaux électriques", "dépannage électrique", "installations électriques", "mise aux normes", "électricien urgence Nice"],
-  authors: [{ name: "Electricien Nice Expert", url: "https://electricien-nice.netlify.app" }],
-  creator: "Electricien Nice Expert",
-  publisher: "Electricien Nice Expert",
-  metadataBase: new URL("https://electricien-nice.netlify.app"),
+  title: "Electricien Toulon | Dépannage électricité 24h/24 en urgence",
+  description: "Electricien à Toulon pour vos installations, rénovations et dépannages électriques. Intervention rapide, professionnelle et conforme aux normes.",
+  keywords: ["électricien Toulon", "travaux électriques", "dépannage électrique", "installations électriques", "mise aux normes", "électricien urgence Toulon"],
+  authors: [{ name: "Electricien Toulon Expert", url: "https://electricientoulon-expert.fr" }],
+  creator: "Electricien Toulon Expert",
+  publisher: "Electricien Toulon Expert",
+  metadataBase: new URL("https://electricientoulon-expert.fr"),
 
   openGraph: {
-    title: "Electricien Nice Expert | Travaux & Dépannage Électrique à Nice",
-    description: "Entreprise spécialisée dans les travaux électriques à Nice. Service rapide et professionnel.",
-    url: "https://electricien-nice.netlify.app", // a changer
-    siteName: "Electricien Nice Expert",
+    title: "Electricien Toulon Expert | Travaux & Dépannage Électrique à Toulon",
+    description: "Entreprise spécialisée dans les travaux électriques à Toulon. Service rapide et professionnel.",
+    url: "https://electricientoulon-expert.fr", 
+    siteName: "Electricien Toulon Expert",
     locale: "fr_FR",
     type: "website",
     images: [
       {
-        url: "/images/constructeur-electricien-nice.webp", // à créer
+        url: "/images/constructeur-electricien-Toulon.webp", // à créer
         width: 1200,
         height: 630,
-        alt: "Électricien Nice Expert",
+        alt: "Électricien Toulon Expert",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Electricien Nice Expert | Travaux & Dépannage Électrique à Nice",
-    description: "Entreprise spécialisée dans les travaux électriques à Nice. Service rapide et professionnel.",
-    images: ["/images/constructeur-electricien-nice.webp"],
-    creator: "@ElectricienNice",
+    title: "Electricien Toulon Expert | Travaux & Dépannage Électrique à Toulon",
+    description: "Entreprise spécialisée dans les travaux électriques à Toulon. Service rapide et professionnel.",
+    images: ["/images/constructeur-electricien-Toulon.webp"],
+    creator: "@ElectricienToulon",
   },
 
   icons: {
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
 
-  themeColor: "#f25000",
+  themeColor: "#c1121f",
 };
 
 export default function RootLayout({

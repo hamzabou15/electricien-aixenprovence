@@ -6,10 +6,10 @@ const Hero = () => {
     return (
         <>
             <Head>
-                <title>Électricien à Nice - Services d&apos;urgence, tableaux et conformité</title>
+                <title>Électricien à Toulon - Services d&apos;urgence, tableaux et conformité</title>
                 <meta
                     name="description"
-                    content="Services d'électricité à Nice : urgence, réparation, remplacement de tableau, conformité NF C 15-100. Intervention rapide et certifiée."
+                    content="Services d'électricité à Toulon : urgence, réparation, remplacement de tableau, conformité NF C 15-100. Intervention rapide et certifiée."
                 />
             </Head>
             <HeroPages
