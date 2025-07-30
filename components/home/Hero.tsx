@@ -16,14 +16,10 @@ const Hero = () => {
         >
             <div className="relative h-full w-full max-md:h-[500px]">
                 <Image
-                    src="/images/electricien-toulonV2.webp"
+                    src="/images/electricien-a-toulon.webp"
                     alt="Électricien intervenant à Toulon pour pannes et remises aux normes"
                     fill
                     className="object-cover object-top"
-                    priority
-                    fetchPriority="high"
-                    sizes="100vw"
-                
                 />
 
             </div>
