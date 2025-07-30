@@ -22,7 +22,7 @@ const Presentation = () => {
                     {/* Image illustrative */}
                     <div className="w-full lg:w-[55%] max-lg:w-full items-center">
                         <Image
-                            src="/images/constructeur-electricien-Toulon.webp"
+                            src="/images/constructeur-electricien-toulon-expert.webp"
                             alt="Électricien professionnel intervenant à Toulon"
                             width={800}
                             height={600}

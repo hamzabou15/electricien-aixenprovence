@@ -16,7 +16,7 @@ const About2 = () => {
             width={1000}
             height={1000}
             alt='Électricien professionnel intervenant à Toulon'
-            src='/images/electricien-toulon.webp'
+            src='/images/electricien-toulon-expert.webp'
             className='w-full object-cover object-top min-h-screen max-h-[900px] max-lg:max-h-[600px] max-lg:max-w-[500px] m-auto'
           />
         </div>
