@@ -18,22 +18,22 @@ const services = [
         description: "Intervention rapide 7j/7 en cas de panne électrique totale ou partielle, avec solution immédiate.",
     },
     {
-        img: "/images/electricien-sur-Toulon3.webp",
+        img: "/images/electricien-sur-toulon3.webp",
         title: "Remise aux normes NF C 15-100",
         description: "Mise en conformité de votre réseau électrique selon la norme NF C 15-100 pour votre sécurité.",
     },
     {
-        img: "/images/electricien-sur-Toulon2.webp",
+        img: "/images/electricien-sur-toulon2.webp",
         title: "Réparation de coupures générales ou partielles",
         description: "Traitement rapide des coupures de courant dans votre logement ou local professionnel à Toulon.",
     },
     {
-        img: "/images/un-electricien-sur-Toulon.webp",
+        img: "/images/un-electricien-sur-toulon.webp",
         title: "Diagnostic de panne électrique à Toulon",
         description: "Analyse complète et test des circuits pour localiser les défauts de votre installation.",
     },
     {
-        img: "/images/electricien-sur-Toulon2.webp",
+        img: "/images/electricien-sur-toulon2.webp",
         title: "Remplacement de tableau électrique à Toulon",
         description: "Remplacement sécurisé et conforme des tableaux électriques obsolètes ou endommagés.",
     },
