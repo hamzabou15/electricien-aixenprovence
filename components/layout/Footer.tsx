@@ -32,12 +32,9 @@ const Footer = () => {
                     <div className="flex flex-col lg:flex-row flex-wrap justify-between gap-y-10 gap-x-6">
                         {/* Section 1 - Logo & Réseaux */}
                         <div className="flex flex-col items-start gap-4 max-w-xs">
-                            <Image
-                                src="/images/logo-electricien-toulon.svg.svg"
-                                width={150}
-                                height={20}
-                                alt="Logo Electricien Toulon Expert"
-                            />
+                            <Link href="/">
+                                <Image src="/images/logo-electricien-toulon.svg" alt="Logo" width={150} height={20} />
+                            </Link>
 
                             <p className="text-xs font-light text-[#FFFFFF91] leading-5">
                                 <span className="font-semibold">Eelectricien Toulon Expert</span> est votre entreprise d&#39;électricité générale à Toulon à votre service pour tous vos travaux d&#39;électricité et de dépannage électrique.
