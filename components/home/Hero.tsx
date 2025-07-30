@@ -2,7 +2,7 @@ import React from 'react';
 import { FaStar } from 'react-icons/fa';
 import { Button } from '../ui/button';
 import { GoArrowRight } from 'react-icons/go';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
 
 const Hero = () => {
@@ -15,12 +15,13 @@ const Hero = () => {
             aria-label="Électricien urgence et dépannage à Toulon"
         >
             <div className="relative h-full w-full max-md:h-[500px]">
-                <Image
+
+                {/* <Image
                     src="/images/electricien-a-toulon.webp"
-                    alt="Électricien intervenant à Toulon pour pannes et remises aux normes"
+                    alt="Description"
                     fill
-                    className="object-cover object-top"
-                />
+                    className="object-cover"
+                /> */}
 
             </div>
 
