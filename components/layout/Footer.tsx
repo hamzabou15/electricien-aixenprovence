@@ -33,11 +33,12 @@ const Footer = () => {
                         {/* Section 1 - Logo & Réseaux */}
                         <div className="flex flex-col items-start gap-4 max-w-xs">
                             <Image
-                                src="/images/electricien-expert-Toulon.svg"
+                                src="/images/logo-electricien-toulon.svg.svg"
                                 width={150}
                                 height={20}
-                                alt="Logo OneSpark Electricité"
+                                alt="Logo Electricien Toulon Expert"
                             />
+
                             <p className="text-xs font-light text-[#FFFFFF91] leading-5">
                                 <span className="font-semibold">Eelectricien Toulon Expert</span> est votre entreprise d&#39;électricité générale à Toulon à votre service pour tous vos travaux d&#39;électricité et de dépannage électrique.
                             </p>
