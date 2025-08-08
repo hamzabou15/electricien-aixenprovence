@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const CTA = () => {
   return (
-    <div className="fixed bottom-16 right-8 flex flex-col items-end z-50 space-y-4 max-md:w-full max-md:lef-0 max-md:p-6 max-md:bottom-4 max-md:lef-0">
+    <div className="fixed bottom-16 right-8 flex flex-col items-end z-50 space-y-4 max-md:w-full max-md:lef-0 max-md:p-6 max-md:bottom-4 max-md:left-0">
       {/* Bouton téléphone */}
       <Button
         asChild
