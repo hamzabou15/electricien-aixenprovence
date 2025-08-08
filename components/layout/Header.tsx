@@ -20,7 +20,7 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" aria-label="Accueil">
             <Image
-              src="/images/logo-electricien-aixenprovences.png"
+              src="/images/logo-electricien-aixenprovences.webp"
               alt="Logo Electricien Aix en Provence"
               width={160}
               height={50}
