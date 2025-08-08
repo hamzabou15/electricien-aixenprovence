@@ -110,7 +110,7 @@ const Reviews = () => {
                         {review.comment}
                       </p>
                       <div className="flex items-center justify-center gap-4">
-                        <Image src={review.img} alt="" className="bg-gray-200 border-2 border-dashed object-cover rounded-xl w-16 h-16" />
+                        <Image src={review.img} alt="" height={300} width={300} className="bg-gray-200 border-2 border-dashed object-cover rounded-xl w-16 h-16" />
                         <div className="text-center">
                           <h4 className="font-bold text-xl text-[#0055AA]">{review.name}</h4>
                           <p className="text-gray-500">{review.location}</p>
