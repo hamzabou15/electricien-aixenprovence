@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://electricienToulon-expert.fr/sitemap.xml
+Sitemap: https://electricienaixenprovence-sos.Fr/sitemap.xml

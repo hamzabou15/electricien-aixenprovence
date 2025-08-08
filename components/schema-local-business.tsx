@@ -1,31 +1,31 @@
-import Head from "next/head";
+import Script from "next/script";
 
 const SchemaLocalBusiness = () => {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Electrician",
-    "name": "Electricien Toulon Expert",
-    "image": "https://electricientoulon-expert.fr/images/electricien-Toulon-intervention.webp",
-    "url": "https://electricientoulon-expert.fr",
-    "telephone": "+33 6 00 00 00 00",
+    "name": "SOS Électricien Aix-en-Provence",
+    "image": "https://electricienaixenprovence-sos.fr/images/electricien-aixenprovence-expert.webp",
+    "url": "https://electricienaixenprovence-sos.fr",
+    "telephone": "+33756935200",
     "priceRange": "€€",
-    "description": "Electricien certifié à Toulon pour dépannages, installations électriques, mises aux normes et rénovations. Intervention rapide et garantie 7j/7.",
+    "description": "Électricien certifié à Aix-en-Provence pour dépannages, installations électriques, mises aux normes et rénovations. Intervention rapide et garantie 7j/7.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "12 Rue Masséna",
-      "addressLocality": "Toulon",
+      "addressLocality": "Aix-en-Provence",
       "addressRegion": "Provence-Alpes-Côte d’Azur",
-      "postalCode": "06000",
+      "postalCode": "13100",
       "addressCountry": "FR"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 43.7031,
-      "longitude": 7.2661
+      "latitude": 43.526302,
+      "longitude": 5.445429
     },
     "areaServed": {
       "@type": "Place",
-      "name": "Toulon"
+      "name": "Aix-en-Provence et ses environs"
     },
     "openingHoursSpecification": [
       {
@@ -39,8 +39,8 @@ const SchemaLocalBusiness = () => {
           "Saturday",
           "Sunday"
         ],
-        "opens": "08:00",
-        "closes": "20:00"
+        "opens": "00:00",
+        "closes": "23:59"
       }
     ],
     "aggregateRating": {
@@ -60,7 +60,7 @@ const SchemaLocalBusiness = () => {
           "@type": "Person",
           "name": "Marie Lemoine"
         },
-        "reviewBody": "Excellent service, électricien très professionnel à Toulon. Je recommande vivement !"
+        "reviewBody": "Excellent service, électricien très professionnel à Aix-en-Provence. Je recommande vivement !"
       },
       {
         "@type": "Review",
@@ -73,7 +73,7 @@ const SchemaLocalBusiness = () => {
           "@type": "Person",
           "name": "Sofiane B."
         },
-        "reviewBody": "Rapide, ponctuel et efficace. Intervention nickel dans mon appartement à Toulon centre."
+        "reviewBody": "Rapide, ponctuel et efficace. Intervention nickel dans mon appartement à Aix-en-Provence centre."
       },
       {
         "@type": "Review",
@@ -92,12 +92,11 @@ const SchemaLocalBusiness = () => {
   };
 
   return (
-    <Head>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-      />
-    </Head>
+    <Script
+      id="schema-local-business"
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+    />
   );
 };
 

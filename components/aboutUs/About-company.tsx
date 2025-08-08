@@ -1,81 +1,64 @@
-'use client'
-
-import React from 'react'
-import { Button } from '../ui/button'
-import { GoArrowRight } from 'react-icons/go'
-import { PiPhoneCallLight } from 'react-icons/pi'
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import { Button } from "../ui/button";
+import { FaCheck } from "react-icons/fa";
 
 const AboutCompany = () => {
     return (
-        <section
-            className='w-full h-auto  flex  xl:max-w-[1300px] xl:mx-auto'
-            id="a-propos-electricien-Toulon"
-            aria-label="Présentation de notre entreprise d'électricité à Toulon"
-        >
-            <div className='px-8 py-32 flex gap-6 flex-wrap lg:flex-nowrap h-auto'>
-                <div className="flex flex-col items-start gap-5 max-md:items-center w-full lg:w-[40%] h-auto">
-                    <h2 className="text-[14px] font-semibold text-[#c1121f] uppercase tracking-[7px] text-start max-sm:text-center">
-                        Électricien certifié à Toulon
+        <section className="py-16 bg-white">
+            <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 className="text-2xl font-bold text-[#0055AA] mb-2">
+                        Votre électricien de confiance à Aix-en-Provence
                     </h2>
-
-                    <h1 className="text-[48px] text-[#003049] font-bold tracking-[-2px] leading-tight max-sm:text-[32px] max-md:text-center">
-                        Plus de 22 ans d’expérience dans le dépannage électrique à Toulon
+                    <h1 className="text-4xl font-bold text-[#003049] mb-6">
+                        22 ans d&apos;expertise électrique <span className="text-[#FFD600]">locale</span>
                     </h1>
 
-                    <p className="text-[18px] font-light text-[#2E2937BF] leading-8 max-sm:text-center my-5">
-                        Spécialistes du <strong>dépannage électrique en urgence à Toulon</strong>, nous intervenons 7j/7 pour résoudre toute <strong>panne générale ou partielle</strong>, <strong>remplacer votre tableau électrique</strong>, ou effectuer une <strong>remise aux normes NF C 15-100</strong>. Électriciens certifiés, nous vous garantissons une intervention rapide et conforme.
+                    <p className="text-lg mb-6">
+                        Depuis 2003, nous intervenons sur <strong>Aix-en-Provence et sa région</strong> pour tous travaux d&apos;électricité :
+                        dépannage d&apos;urgence, mise aux normes NFC 15-100, rénovation de tableaux électriques et installations sécurisées.
                     </p>
 
-                    <div className='flex items-end gap-4 mt-6 max-sm:flex-col max-sm:items-center'>
-                        <Link href="/projets">
-                            <Button variant='read' size='xlg' className='min-w-[200px] flex items-center gap-2 font-medium'>
-                                En savoir plus
-                                <GoArrowRight style={{ width: '20px', height: '20px' }} />
-                            </Button>
-                        </Link>
-                        <a href="tel:+33756935200" aria-label="Appeler le numéro +33 7 56 93 52 00"
-                            className="flex items-center gap-2 mt-4 text-[#003049] font-semibold cursor-pointer relative group">
-                            <div className="w-16 h-16 bg-[#f0f0f0] flex items-center justify-center group-hover:bg-[#003049] transition-colors duration-200 group-hover:text-white">
-                                <PiPhoneCallLight className="text-4xl" />
+                    <div className="grid grid-cols-2 gap-4 mb-8">
+                        {[
+                            "Intervention en moins de 30 min",
+                            "Devis gratuit immédiat",
+                            "Artisans certifiés Qualifelec",
+                            "24h/24 - 7j/7",
+                            "Matériel aux normes françaises",
+                            "Garantie décennale"
+                        ].map((item, i) => (
+                            <div key={i} className="flex items-center">
+                                <FaCheck className="text-[#FFD600] mr-2" />
+                                <span>{item}</span>
                             </div>
-                            <span className="text-[15px] font-medium">+33 7 56 93 52 00</span>
-                        </a>
-
+                        ))}
                     </div>
+
+                    <Button className="bg-[#0055AA] hover:bg-[#004488] text-white">
+                        Demander un diagnostic gratuit
+                    </Button>
                 </div>
 
-                <div className='w-full lg:w-[60%] h-full max-h-[500px] flex gap-5 mt-10 lg:mt-0 max-sm:flex-col max-sm:max-h-[100%]'>
-                    <div className='flex gap-4 relative '>
-                        <Image
-                            alt="Électricien intervenant à Toulon pour une réparation urgente"
-                            src="/images/un-ouvrier-du-batiment-en-combinaison-un-electricien-en-combinaison (1).webp"
-                            width={1000}
-                            height={1000}
-                            className='object-cover'
-                        />
-                        <div className='absolute left-[-30px] bottom-[30px] w-[220px] h-[130px]
-                             text-white bg-[#c1121f] flex flex-col justify-center items-center
-                                max-lg:left-0 max-lg:bottom-0
-                             '>
-                            <span className='text-4xl font-bold'>22 ans</span>
-                            <span className='text-[18px] font-semibold'>d’expérience</span>
-                        </div>
-                    </div>
-                    <div className='flex gap-4'>
-                        <Image
-                            alt="Dépannage électrique professionnel à Toulon"
-                            src="/images/vue-des-mains-engagees-dans-un-projet-de-bricolage (1).webp"
-                            width={1000}
-                            height={1000}
-                            className='object-cover'
-                        />
-                    </div>
+                <div className="grid grid-cols-2 gap-4 ">
+                    <Image
+                        src="/images/electricien-aix-intervention.webp"
+                        alt="Électricien professionnel intervenant à Aix-en-Provence"
+                        width={500}
+                        height={500}
+                        className="rounded-lg shadow-lg h-[400px] object-cover"
+                    />
+                    <Image
+                        src="/images/mise-aux-normes-aixenprovence.webp"
+                        alt="Mise aux normes électrique à Aix-en-Provence"
+                        width={500}
+                        height={500}
+                        className="rounded-lg shadow-lg h-[400px] mt-8 object-cover"
+                    />
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default AboutCompany

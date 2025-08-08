@@ -1,21 +1,36 @@
+// src/pages/404.tsx
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
-export default function NotFound() {
-
-
+export default function NotFoundPage() {
     return (
-        <main className="h-screen flex flex-col justify-center items-center text-[#003049] p-6 text-center font-sans">
-            <h1 className="text-[5rem] mb-2 font-bold">404</h1>
-            <h2 className="text-2xl mb-4">Oups ! Page non trouvée</h2>
-            <p className="text-lg max-w-md">
-                La page que vous recherchez n’existe pas ou a été déplacée.
-            </p>
-            <Link
-                href="/"
-                className="mt-8 px-6 py-3 bg-[#c1121f] text-[white] rounded-md font-semibold transition-colors hover:bg-[#162036]"
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 text-center p-6">
+            {/* Animation d'apparition */}
+            <h1
+
+                className="text-7xl font-bold text-primary"
             >
-                Retour à l&apos;accueil
-            </Link>
-        </main>
+                404
+            </h1>
+
+            <p
+
+                className="mt-4 text-lg text-gray-600"
+            >
+                Oups ! La page que vous recherchez n’existe pas.
+            </p>
+
+            {/* Bouton retour */}
+            <div
+
+                className="mt-6"
+            >
+                <Link href="/">
+                    <Button className="rounded-2xl shadow-lg text-white">
+                        Retour à l’accueil
+                    </Button>
+                </Link>
+            </div>
+        </div>
     );
 }

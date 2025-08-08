@@ -1,130 +1,184 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { listItems } from "@/lib/projetcs";
-import {
-    FaFacebookF,
-    FaTwitter,
-    FaLinkedinIn,
-    FaInstagram,
-    FaCheckCircle,
-} from "react-icons/fa";
+import { FaCheckCircle, FaShareAlt } from "react-icons/fa";
 import { Metadata } from "next";
+import Link from "next/link";
 
-// ✅ Typage standard requis par Next.js pour les routes dynamiques
 interface ProjectPageProps {
-
-    params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
 }
 
-
-// ✅ Fonction SEO dynamique (metadata)
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
-    const { slug } = await params;
+  const { slug } = await params;
+  const project = listItems.find((p) => p.slug === slug);
 
-    const project = listItems.find((p) => p.slug === slug);
+  if (!project) return {
+    title: "Projet introuvable | Électricien Aix-en-Provence",
+    description: "Ce projet n'existe pas ou a été supprimé",
+  };
 
-    if (!project) return {
-        title: "Projet introuvable | Électricien à Toulon",
-        description: "Ce projet n'existe pas ou a été supprimé.",
-    };
-
-    return {
-        title: `${project.title} | Projet électrique à Toulon`,
-        description: project.description,
-        openGraph: {
-            title: `${project.title} | Projet électrique à Toulon`,
-            description: project.description,
-            images: [
-                {
-                    url: project.image,
-                    width: 1200,
-                    height: 630,
-                    alt: project.title,
-                },
-            ],
+  return {
+    title: `${project.title} | Électricien Aix-en-Provence`,
+    description: project.description,
+    openGraph: {
+      title: `${project.title} | Projet électrique à Aix-en-Provence`,
+      description: project.description,
+      images: [
+        {
+          url: project.image,
+          width: 1200,
+          height: 630,
+          alt: project.title,
         },
-    };
+      ],
+    },
+  };
 }
 
-// ✅ Composant server-side : pas de "use client"
 export default async function ProjectPage({ params }: ProjectPageProps) {
-    const { slug } = await params;
+  const { slug } = await params;
+  const project = listItems.find((p) => p.slug === slug);
 
-    const project = listItems.find((p) => p.slug === slug);
+  if (!project) notFound();
 
-    if (!project) {
-        notFound();
-    }
+  return (
+    <section className="w-full py-12 bg-white px-4 md:px-8">
+      <div className="max-w-6xl mx-auto">
+        {/* Breadcrumb simplifié */}
+        <div className="flex items-center text-sm text-gray-600 mb-6">
+          <Link href="/" className="hover:text-[#0055AA]">Accueil</Link>
+          <span className="mx-2">/</span>
+          <Link href="/projets" className="hover:text-[#0055AA]">Projets</Link>
+          <span className="mx-2">/</span>
+          <span className="text-[#0055AA] font-medium">{project.title}</span>
+        </div>
 
-    return (
-        <section className="w-full py-16 bg-white px-8 md:px-20">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 xl:max-w-[1300px] xl:mx-auto">
-                {/* Left content */}
-                <div className="lg:col-span-2 flex flex-col gap-8">
-                    <Image
-                        src={project.image}
-                        alt={project.title}
-                        width={1200}
-                        height={600}
-                        className="w-full rounded-md object-cover h-[500px]"
-                    />
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Contenu principal */}
+          <div className="lg:col-span-2 space-y-8">
+            <Image
+              src={project.image}
+              alt={project.title}
+              width={1200}
+              height={600}
+              className="w-full rounded-xl object-cover h-auto max-h-[500px] shadow-md"
+              priority
+            />
 
-                    <div>
-                        <h2 className="text-[32px] font-bold text-[#1b1e3f] mb-4">{project.title}</h2>
-                        <p className="text-[#2E2937BF] text-[15px] leading-7">{project.description}</p>
-                        <p className="text-[#2E2937BF] text-[15px] leading-7 mt-4">
-                            Nos clients bénéficient d’un accompagnement personnalisé, de conseils adaptés, et d’une intervention rapide avec garantie.
-                        </p>
-                    </div>
+            <div>
+              <h1 className="text-3xl md:text-4xl font-bold text-[#0055AA] mb-4">
+                {project.title}
+              </h1>
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="px-3 py-1 bg-[#FFD600] text-[#0055AA] rounded-full text-sm font-bold">
+                  {project.category}
+                </span>
+                <span className="px-3 py-1 bg-[#003366] text-white rounded-full text-sm font-bold">
+                  {project.location}
+                </span>
+              </div>
+              
+              <p className="text-lg text-[#2E2937] leading-relaxed mb-6">
+                {project.description}
+              </p>
 
-                    <div className="flex flex-col md:flex-row items-start gap-8 mt-6">
-                        <div className="flex-1">
-                            <h3 className="text-xl font-semibold text-[#1b1e3f] mb-4">Entreprise reconnue à Toulon</h3>
-                            <ul className="space-y-3 text-[15px] text-[#1b1e3f]">
-                                <li className="flex items-center gap-2">
-                                    <FaCheckCircle className="text-[#f25000]" />
-                                    Intervention rapide et soignée
-                                </li>
-                                <li className="flex items-center gap-2">
-                                    <FaCheckCircle className="text-[#f25000]" />
-                                    Mise en conformité NF C 15‑100
-                                </li>
-                                <li className="flex items-center gap-2">
-                                    <FaCheckCircle className="text-[#f25000]" />
-                                    Électricien agréé à Toulon & alentours
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+              <div className="bg-[#f0f8ff] p-6 rounded-lg border border-[#0055AA]/20 mb-8">
+                <h3 className="text-xl font-bold text-[#0055AA] mb-3">
+                  Témoignage du client
+                </h3>
+                <blockquote className="italic border-l-4 border-[#FFD600] pl-4 py-2 text-[#003049]">
+                  &quot;Service professionnel et intervention rapide. Je recommande vivement cet électricien à Aix-en-Provence !&quot;
+                  <footer className="mt-2 not-italic font-bold">- {project.client}</footer>
+                </blockquote>
+              </div>
 
-                {/* Right project info */}
-                <aside className="bg-[#f7f7f7] p-6 rounded-md shadow-sm h-[max-content]">
-                    <h4 className="text-xl font-bold text-[#1b1e3f] border-b border-[#f25000] pb-2 mb-6">
-                        Informations du projet
-                    </h4>
-
-                    <div className="space-y-4 text-[15px]">
-                        <p><strong className="text-[#1b1e3f]">Client :</strong> {project.client}</p>
-                        <p><strong className="text-[#1b1e3f]">Coût :</strong> {project.price}</p>
-                        <p><strong className="text-[#1b1e3f]">Catégorie :</strong> {project.category}</p>
-                        <p><strong className="text-[#1b1e3f]">Date :</strong> {project.date}</p>
-                    </div>
-
-                    <div className="flex gap-4 mt-6">
-                        {[FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram].map((Icon, i) => (
-                            <a
-                                key={i}
-                                href="#"
-                                aria-label="Partager sur les réseaux"
-                                className="w-10 h-10 rounded-full bg-[#f25000] flex items-center justify-center text-white hover:bg-[#1b1e3f] transition-colors"
-                            >
-                                <Icon />
-                            </a>
-                        ))}
-                    </div>
-                </aside>
+              <h2 className="text-2xl font-bold text-[#0055AA] mb-4 border-b border-[#FFD600] pb-2">
+                Notre approche
+              </h2>
+              
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <FaCheckCircle className="text-[#FFD600] mt-1 mr-3 flex-shrink-0" />
+                  <span className="text-[#2E2937]">
+                    <strong>Diagnostic complet :</strong> Analyse approfondie de vos besoins et de l&apos;existant
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <FaCheckCircle className="text-[#FFD600] mt-1 mr-3 flex-shrink-0" />
+                  <span className="text-[#2E2937]">
+                    <strong>Solution sur mesure :</strong> Proposition adaptée à votre budget et contraintes
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <FaCheckCircle className="text-[#FFD600] mt-1 mr-3 flex-shrink-0" />
+                  <span className="text-[#2E2937]">
+                    <strong>Réalisation professionnelle :</strong> Travail soigné conforme aux normes NFC 15-100
+                  </span>
+                </li>
+              </ul>
             </div>
-        </section>
-    );
+          </div>
+
+          {/* Sidebar */}
+          <aside className="space-y-6">
+            <div className="bg-[#f7f9fc] p-6 rounded-xl border border-[#e2e8f0] shadow-sm">
+              <h2 className="text-xl font-bold text-[#0055AA] mb-4 pb-2 border-b border-[#FFD600]">
+                Détails du projet
+              </h2>
+              
+              <div className="space-y-4">
+                <div>
+                  <h3 className="font-semibold text-[#003049]">Client :</h3>
+                  <p>{project.client}</p>
+                </div>
+                
+                <div>
+                  <h3 className="font-semibold text-[#003049]">Investissement :</h3>
+                  <p className="text-xl font-bold text-[#0055AA]">{project.price}</p>
+                </div>
+                
+                <div>
+                  <h3 className="font-semibold text-[#003049]">Date de réalisation :</h3>
+                  <p>{project.date}</p>
+                </div>
+                
+                <div>
+                  <h3 className="font-semibold text-[#003049]">Localisation :</h3>
+                  <p>{project.location}</p>
+                </div>
+              </div>
+              
+              <div className="mt-8 pt-6 border-t border-[#e2e8f0]">
+                <button className="flex items-center gap-2 text-[#0055AA] font-medium hover:text-[#003366]">
+                  <FaShareAlt className="text-xl" />
+                  <span>Partager ce projet</span>
+                </button>
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-br from-[#0055AA] to-[#003366] p-6 rounded-xl text-white">
+              <h2 className="text-xl font-bold mb-4">Un projet similaire ?</h2>
+              <p className="mb-6">Notre équipe intervient rapidement dans tout Aix-en-Provence.</p>
+              
+              <div className="space-y-3">
+                <Link 
+                  href="/contact" 
+                  className="block w-full bg-[#FFD600] hover:bg-[#FFC400] text-[#0055AA] text-center py-3 px-4 rounded-lg font-bold transition-colors"
+                >
+                  Demander un devis
+                </Link>
+                <a 
+                  href="tel:+33756935200" 
+                  className="block w-full bg-white/10 hover:bg-white/20 text-center py-3 px-4 rounded-lg font-bold transition-colors"
+                >
+                  07 56 93 52 00
+                </a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  );
 }

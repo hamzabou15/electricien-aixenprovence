@@ -1,71 +1,66 @@
-'use client';
-
 import Image from 'next/image';
-import React from 'react';
-import Head from 'next/head';
 import { FaCheck } from 'react-icons/fa';
 
 const WhyUs = () => {
-    return (
-        <>
-            <Head>
-                <title>Pourquoi nous choisir ? Électricien à Toulon – Fiable, Certifié, Rapide</title>
-                <meta
-                    name="description"
-                    content="Découvrez pourquoi choisir notre entreprise d'électricité à Toulon : électriciens certifiés, interventions rapides, sécurité garantie et service client exemplaire."
-                />
-            </Head>
-
-            <section
-                id="pourquoi-nous-electricien-Toulon"
-                aria-label="Pourquoi choisir notre entreprise d'électricité à Toulon"
-                className="w-full bg-white"
-            >
-                <div className="px-12 py-16 flex flex-wrap lg:flex-nowrap gap-8 max-lg:flex-col-reverse xl:max-w-[1300px] xl:mx-auto">
-
-                    {/* Texte explicatif */}
-                    <div className="bg-white w-full lg:w-[45%] max-lg:w-full">
-                        <span className="text-[12px] font-semibold text-[#c1121f] uppercase tracking-[7px]">
-                            Pourquoi nous ?
-                        </span>
-                        <h2 className="text-[30px] text-[#003049] font-bold tracking-[-1.5px] leading-tight mt-3 mb-6">
-                            Nos engagements à Toulon :
-                        </h2>
-
-                        <ul className="text-[14px] font-medium text-[#2E2937BF] space-y-4">
-                            {[
-                                "Électriciens certifiés et vérifiés, intervention en toute confiance",
-                                "Nous serions fiers de les envoyer chez nous : sérieux & rigueur",
-                                "Équipement soigné, uniforme professionnel, sécurité maximale",
-                                "Experts formés pour diagnostic, dépannage et conformité NF C 15‑100",
-                                "Service client attentif, disponible et à l'écoute",
-                                "Entreprise assurée, agréée, avec garanties structurées",
-                                "Professionnels amicaux, fiables, chez vous en moins de 60 min"
-                            ].map((text, i) => (
-                                <li key={i} className="flex items-start gap-3">
-                                    <FaCheck className="text-[#c1121f] mt-1" aria-hidden="true" />
-                                    <span>{text}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* Image illustrative */}
-                    <div className="w-full lg:w-[55%] max-lg:w-full">
-                        <Image
-                            src="/images/homme-un-technicien-electricien-Toulon.webp"
-                            alt="Une équipe d'électriciens professionnels à Toulon"
-                            width={200}
-                            height={400}
-                            layout="responsive"
-                            className="h-[500px] w-auto object-cover max-h-[500px] max-w-[500px] m-auto"
-                            priority
-                        />
-                    </div>
-                </div>
-            </section>
-        </>
-    );
+  return (
+    <section
+      id="pourquoi-nous"
+      aria-label="Pourquoi choisir notre entreprise d'électricité"
+      className="w-full bg-white py-16"
+    >
+      <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span className="text-sm font-semibold text-[#0055AA] uppercase tracking-[4px]">
+            Notre différence
+          </span>
+          <h2 className="text-3xl font-bold text-[#003049] mt-3 mb-6">
+            Pourquoi nous choisir à Aix-en-Provence ?
+          </h2>
+          
+          <ul className="space-y-4">
+            {[
+              "Électriciens certifiés avec plus de 20 ans d'expérience",
+              "Intervention en moins de 30 minutes sur Aix-en-Provence",
+              "Matériel de qualité conforme aux normes françaises",
+              "Devis gratuit et transparent sans surprise",
+              "Garantie décennale sur tous nos travaux",
+              "Service client disponible 7j/7"
+            ].map((item, i) => (
+              <li key={i} className="flex items-start">
+                <FaCheck className="text-[#FFD600] mt-1 mr-3 flex-shrink-0" aria-hidden="true" />
+                <span className="text-lg text-gray-700">{item}</span>
+              </li>
+            ))}
+          </ul>
+          
+          <div className="mt-8 flex flex-wrap gap-4">
+            <div className="bg-[#0055AA] text-white px-4 py-2 rounded-lg">
+              <div className="text-2xl font-bold">24h/24</div>
+              <div>Disponibilité</div>
+            </div>
+            <div className="bg-[#FFD600] text-[#0055AA] px-4 py-2 rounded-lg">
+              <div className="text-2xl font-bold">3500+</div>
+              <div>Interventions</div>
+            </div>
+            <div className="bg-[#003366] text-white px-4 py-2 rounded-lg">
+              <div className="text-2xl font-bold">98%</div>
+              <div>Satisfaction</div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="flex justify-center">
+          <Image
+            src={"/images/un-electricien-sur-aixenprovence.webp"}
+            alt=''
+            width={500}
+            height={500}
+            className='border-2 border-dashed rounded-xl w-full h-[400px] object-cover'
+  />
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default WhyUs;

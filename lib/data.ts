@@ -1,127 +1,149 @@
 export const servicesData = [
   {
-    title: "Dépannage Électrique à Toulon – Urgences 7j/7",
-    slug: "depannage-electrique-a-toulon-urgences-7j7",
+    title: "Dépannage Électrique Urgence 24h/24 à Aix-en-Provence",
+    slug: "depannage-electrique-urgence-aix-en-provence",
+    location: "Aix-en-Provence et environs",
     description:
-      "Besoin d’un dépannage électrique à Toulon ? Court-circuit, panne de courant, disjoncteur qui saute... Notre électricien intervient rapidement, 7j/7, pour sécuriser votre installation et rétablir l’électricité en toute sécurité.",
+      "Électricien d'urgence à Aix-en-Provence pour pannes de courant, disjoncteurs qui sautent et courts-circuits. Intervention rapide en moins de 30 minutes 7j/7.",
     keywords:
-      "dépannage électrique Toulon, électricien urgence Toulon, court-circuit, disjoncteur saute, panne électricité",
-    image: "/images/depannage-electricien-Toulon.jpg",
-    secondaryImage: "/images/electricien-urgence-Toulon.webp",
+      "dépannage électrique Aix-en-Provence, électricien urgence, panne courant, disjoncteur saute, réparation électrique",
+    image: "/images/depannage-urgence-aix.webp",
+    secondaryImage: "/images/electricien-intervention-urgence.webp",
     benefits: [
-      "Intervention d'urgence en moins de 30 minutes à Toulon",
-      "Diagnostic rapide et précis",
-      "Réparation sécurisée et conforme aux normes",
-      "Disponibilité 7 jours sur 7, même les jours fériés",
+      "Intervention en moins de 30 min sur Aix et sa région",
+      "Équipes disponibles 24h/24, 7j/7 et jours fériés",
+      "Diagnostic précis et réparation immédiate",
+      "Matériel professionnel dans chaque véhicule"
     ],
     serviceBenefitsDescription1:
-      "Notre service de dépannage électrique à Toulon est conçu pour répondre rapidement à toute situation d'urgence : panne de courant, court-circuit, disjoncteur qui saute…",
+      "Notre service de dépannage électrique à Aix-en-Provence intervient pour toutes urgences : panne générale, disjoncteur qui saute, court-circuit ou problème d'installation.",
     serviceBenefitsDescription2:
-      "Nos électriciens qualifiés se déplacent rapidement partout à Toulon, même les week-ends et jours fériés, pour diagnostiquer avec précision la source de la panne et effectuer les réparations nécessaires. Qu’il s’agisse d’un court-circuit, d’un disjoncteur qui saute ou d’une coupure générale, nous intervenons avec tout le matériel adapté pour remettre votre installation en état de fonctionnement dans les plus brefs délais, en assurant votre sécurité et celle de votre logement.",
+      "Nos électriciens certifiés se déplacent rapidement dans tout Aix-en-Provence (centre-ville, Jas de Bouffan, Puyricard, Les Milles...) équipés pour résoudre votre problème électrique immédiatement. Que ce soit pour une simple prise défectueuse ou une panne complexe, nous garantissons une intervention rapide et sécurisée pour rétablir votre électricité dans les meilleurs délais."
   },
-
   {
-    title: "Installation Électrique Complète à Toulon",
-    slug: "installation-electrique-complete-a-toulon",
+    title: "Installation Électrique Neuve à Aix-en-Provence",
+    slug: "installation-electrique-neuve-aix-en-provence",
+    location: "Aix-en-Provence et environs",
     description:
-      "Installation électrique pour maison neuve, rénovation ou local commercial à Toulon. Tableaux électriques, prises, éclairages… tout est pris en charge dans le respect des normes NF C 15-100.",
+      "Installation électrique complète pour maisons neuves, extensions et rénovations à Aix-en-Provence. Conformité NF C 15-100 garantie.",
     keywords:
-      "installation électrique Toulon, électricien logement neuf, tableau électrique, mise en conformité, prises et interrupteurs",
-    image: "/images/installation.jpg",
-    secondaryImage: "/images/installation-secondary.jpg",
+      "installation électrique Aix-en-Provence, électricien maison neuve, tableau électrique, câblage électrique, norme NFC 15-100",
+    image: "/images/installation-electrique-neuve.webp",
+    secondaryImage: "/images/tableau-electrique-installation.webp",
     benefits: [
-      "Étude personnalisée selon vos besoins",
-      "Matériel de qualité professionnelle",
-      "Conformité avec les normes électriques actuelles",
-      "Installation garantie jusqu'à 10 ans",
+      "Plan électrique personnalisé",
+      "Matériel haute qualité (Legrand, Schneider)",
+      "Conformité totale aux normes en vigueur",
+      "Garantie décennale sur les installations"
     ],
     serviceBenefitsDescription1:
-      "Que ce soit pour un logement neuf, une rénovation ou un local professionnel, nous assurons une installation électrique complète à Toulon.",
+      "Pour votre projet de construction ou d'extension à Aix-en-Provence, nous réalisons des installations électriques neuves conformes et sécurisées.",
     serviceBenefitsDescription2:
-      "Nous réalisons une étude approfondie de vos besoins, puis concevons et mettons en œuvre une installation sur mesure, que ce soit pour une habitation neuve, un local commercial ou une rénovation. Nos électriciens installent des tableaux électriques performants, des prises sécurisées, un éclairage optimisé et tous les circuits nécessaires, en respectant strictement la norme NF C 15-100. Chaque projet est réalisé avec du matériel de qualité professionnelle pour garantir efficacité énergétique, longévité et confort d’utilisation.",
+      "De la conception du plan électrique à la pose des derniers interrupteurs, nos électriciens interviennent sur tout le territoire d'Aix-en-Provence pour installer des tableaux modernes, des circuits sécurisés et des solutions énergétiques optimisées. Chaque installation est réalisée dans le strict respect de la norme NF C 15-100 et contrôlée par nos soins avant la mise en service."
   },
-
   {
-    title: "Rénovation Électrique à Toulon – Sécurisez Votre Logement",
-    slug: "renovation-electrique-a-toulon-securisez-votre-logement",
+    title: "Rénovation Électrique Complète à Aix-en-Provence",
+    slug: "renovation-electrique-aix-en-provence",
+    location: "Aix-en-Provence et environs",
     description:
-      "Modernisez votre installation électrique à Toulon : câblages anciens, prises vétustes, risques de court-circuit… Nous rénovons entièrement votre réseau électrique pour plus de sécurité et de performance.",
+      "Remise aux normes et modernisation d'installations électriques anciennes à Aix-en-Provence. Sécurisez votre logement avec nos électriciens experts.",
     keywords:
-      "rénovation électrique Toulon, mise aux normes, remplacement câbles, tableau vétuste, sécurité électrique",
-      image: "/images/renovation-electricite.jpg",
-    secondaryImage: "/images/renovation-chantier.jpg",
+      "rénovation électrique Aix-en-Provence, mise aux normes électricité, remplacement tableau électrique, sécurité électrique, norme NFC 15-100",
+    image: "/images/renovation-electrique-aix.webp",
+    secondaryImage: "/images/mise-aux-normes-tableau.webp",
     benefits: [
-      "Mise aux normes NF C 15-100",
-      "Remplacement complet des anciens câblages",
-      "Sécurisation du tableau électrique",
-      "Rénovation adaptée à votre budget",
+      "Diagnostic complet gratuit",
+      "Remplacement des éléments vétustes",
+      "Sécurisation des circuits électriques",
+      "Conformité NFC 15-100 garantie"
     ],
     serviceBenefitsDescription1:
-      "Notre service de rénovation électrique à Toulon vous permet de moderniser des installations vétustes ou dangereuses.",
+      "Votre installation électrique à Aix-en-Provence est ancienne ou présente des risques? Nous réalisons des rénovations complètes pour votre sécurité.",
     serviceBenefitsDescription2:
-      "Nos équipes interviennent pour remplacer les câbles défectueux, moderniser les prises, interrupteurs et tableaux électriques, et supprimer les risques liés aux installations anciennes. Grâce à une rénovation conforme aux normes NF C 15-100, nous renforçons la sécurité de votre logement ou de vos locaux tout en améliorant leur performance énergétique. Cette démarche vous permet non seulement d’éviter les pannes et les incidents, mais aussi d’augmenter la valeur de votre bien immobilier tout en répondant aux exigences légales.",
+      "Spécialistes de la rénovation électrique sur Aix-en-Provence, nous intervenons dans les appartements anciens du centre-ville comme dans les villas des quartiers résidentiels pour remplacer tableaux vétustes, câblages défectueux et prises dangereuses. Notre objectif : vous offrir une installation sécurisée, aux normes et économe en énergie, sans poussière ni désagrément majeur."
   },
-
   {
-    title: "Inspection & Sécurité Électrique à Toulon",
-    slug: "inspection-securite-electrique-a-toulon",
+    title: "Mise aux Normes NFC 15-100 à Aix-en-Provence",
+    slug: "mise-aux-normes-electrique-aix-en-provence",
+    location: "Aix-en-Provence et environs",
     description:
-      "Contrôle et vérification de votre installation électrique à Toulon. Détection de défauts, conformité réglementaire, sécurité des personnes et des biens. Idéal pour vente immobilière ou prévention des risques.",
+      "Conformité de votre installation électrique à la norme NFC 15-100 par des électriciens certifiés à Aix-en-Provence. Obligatoire pour la vente immobilière.",
     keywords:
-      "inspection électrique Toulon, diagnostic sécurité électricité, conformité installation, contrôle électricien",
-    image: "/images/inspection.jpg",
-    secondaryImage: "/images/controle-electricien.jpg",
+      "mise aux normes électrique Aix-en-Provence, norme NFC 15-100, conformité électrique, électricien certifié, diagnostic immobilier",
+    image: "/images/mise-aux-normes-aixenprovence.webp",
+    secondaryImage: "/images/mise-aux-normes-aixenprovence.webp",
     benefits: [
-      "Rapport complet et précis",
-      "Détection des anomalies invisibles",
-      "Conseils pour mise aux normes",
-      "Obligatoire avant certaines transactions immobilières",
+      "Attestation de conformité officielle",
+      "Préparation aux diagnostics immobiliers",
+      "Protection contre les risques électriques",
+      "Éligibilité aux assurances habitation"
     ],
     serviceBenefitsDescription1:
-      "Grâce à notre service d’inspection électrique à Toulon, vous bénéficiez d’un contrôle rigoureux de votre installation.",
+      "La mise aux normes NFC 15-100 est indispensable pour tout logement à Aix-en-Provence, surtout lors d'une vente ou location.",
     serviceBenefitsDescription2:
-      "Nous réalisons un audit technique complet de votre réseau électrique afin d’identifier tout dysfonctionnement ou non-conformité pouvant nuire à la sécurité des occupants. Notre rapport détaillé vous indique les points critiques à corriger, les améliorations possibles et les démarches à suivre pour être en règle avec la réglementation en vigueur. Ce service est particulièrement recommandé avant une transaction immobilière ou dans le cadre d’un plan de prévention des risques électriques pour les professionnels comme les particuliers.",
+      "Nos électriciens agréés à Aix-en-Provence réalisent la mise en conformité de votre installation selon la norme NFC 15-100 : mise à la terre, installation de disjoncteurs différentiels, pose de prises sécurisées, et sécurisation des circuits. Nous fournissons un certificat de conformité reconnu par les assurances et nécessaire pour les transactions immobilières dans la région."
   },
-
   {
-    title: "Installation d’Éclairage à Toulon – Intérieur & Extérieur",
-    slug: "installation-eclairage-a-toulon-interieur-exterieur",
+    title: "Éclairage Extérieur & Jardin à Aix-en-Provence",
+    slug: "eclairage-exterieur-jardin-aix-en-provence",
+    location: "Aix-en-Provence et environs",
     description:
-      "Éclairage LED, spots, luminaires de jardin, éclairage de sécurité… Nous installons vos systèmes lumineux à Toulon pour valoriser vos espaces tout en réduisant votre consommation énergétique.",
+      "Installation d'éclairage LED pour jardins, terrasses et allées à Aix-en-Provence. Solutions esthétiques, sécuritaires et économes en énergie.",
     keywords:
-      "installation éclairage Toulon, spots LED, luminaires extérieurs, éclairage jardin, électricité décoration",
-    image: "/images/eclairage.jpg",
-    secondaryImage: "/images/eclairage-jardin.jpg",
+      "éclairage extérieur Aix-en-Provence, spots jardin LED, éclairage terrasse, détecteur mouvement, électricien paysagiste",
+    image: "/images/eclairage-exterieur-aix.webp",
+    secondaryImage: "/images/spot-jardin-led.webp",
     benefits: [
-      "Design moderne et économie d’énergie",
-      "Installation sur mesure",
-      "Éclairage intelligent (détecteurs de mouvement, variateurs)",
-      "Adapté aux logements et locaux pros",
+      "Éclairage design et sécuritaire",
+      "LED basse consommation (jusqu'à -80%)",
+      "Automatisation avec détecteurs crépusculaires",
+      "Installation discrète et durable"
     ],
     serviceBenefitsDescription1:
-      "Nous réalisons l’installation d’éclairages LED, luminaires décoratifs, éclairage extérieur et dispositifs de sécurité à Toulon.",
+      "Mettez en valeur votre jardin aixois avec un éclairage extérieur professionnel et économe.",
     serviceBenefitsDescription2:
-      "Nous concevons des solutions d’éclairage adaptées à chaque espace, intérieur comme extérieur, en tenant compte de vos goûts esthétiques et des contraintes techniques. Nos installations comprennent des luminaires LED économiques, des spots encastrés, des éclairages d’ambiance ou encore des dispositifs de sécurité avec détecteurs de mouvement. Le tout est posé avec soin pour un rendu harmonieux, moderne et performant. Idéal pour sublimer votre maison, sécuriser votre jardin ou valoriser un commerce.",
+      "De la simple applique murale à l'éclairage paysager complet, nous concevons des solutions lumineuses adaptées aux jardins, terrasses et allées d'Aix-en-Provence. Nos installations combinent esthétisme provençal et technologie LED économe, avec options de programmation et détection de mouvement pour une sécurité optimale sans gaspillage énergétique."
   },
-
   {
-    title: "Mise aux Normes Électriques à Toulon",
-    slug: "mise-aux-normes-electriques-a-toulon",
+    title: "Tableaux Électriques & Compteurs à Aix-en-Provence",
+    slug: "tableaux-electriques-compteurs-aix-en-provence",
+    location: "Aix-en-Provence et environs",
     description:
-      "Protégez vos proches et vos équipements en mettant votre installation aux normes. Nos électriciens certifiés à Toulon assurent la mise en conformité selon la norme NF C 15-100.",
+      "Installation, remplacement et sécurisation de tableaux électriques à Aix-en-Provence. Solutions modernes pour une distribution électrique optimale.",
     keywords:
-      "mise aux normes électrique Toulon, conformité NF C 15-100, électricien certifié, protection électrique",
-    image: "/images/mise-aux-normes.jpg",
-    secondaryImage: "/images/normes-electriques.jpg",
+      "tableau électrique Aix-en-Provence, remplacement compteur, disjoncteur différentiel, électricien tableau, sécurité électrique",
+    image: "/images/tableau-electrique-aixenprovence.webp",
+    secondaryImage: "/images/compteur-linky-installation.webp",
     benefits: [
-      "Analyse complète de votre installation",
-      "Correction des éléments non conformes",
-      "Sécurisation du tableau et des circuits",
-      "Respect total des normes en vigueur",
+      "Tableaux modulaires évolutifs",
+      "Protection contre les surtensions",
+      "Optimisation de la distribution électrique",
+      "Pose de compteurs Linky certifiée"
     ],
     serviceBenefitsDescription1:
-      "La mise aux normes électriques est indispensable pour garantir la sécurité des occupants et la conformité de votre logement à Toulon.",
+      "Votre tableau électrique à Aix-en-Provence est vétuste ou insuffisant? Nous proposons des solutions modernes et sécurisées.",
     serviceBenefitsDescription2:
-      "Nos électriciens certifiés effectuent un diagnostic complet de votre réseau électrique et remplacent tous les éléments non conformes : câbles vétustes, protections insuffisantes, tableaux obsolètes… Chaque intervention est réalisée dans le respect total de la norme NF C 15-100 afin d’éliminer tout risque d’électrocution, de court-circuit ou d’incendie. Cette mise aux normes est également un gage de fiabilité si vous souhaitez vendre ou louer votre bien, ou simplement vivre dans un environnement sécurisé et conforme.",
+      "Spécialistes des tableaux électriques sur Aix-en-Provence, nous installons des équipements modulaires performants avec protections différentielles, parafoudres et sectionneurs. Nous intervenons aussi pour la pose et le raccordement de compteurs Linky en partenariat avec Enedis, toujours dans le respect des normes de sécurité en vigueur dans les Bouches-du-Rhône."
   },
+  {
+    title: "Solutions Domotiques à Aix-en-Provence",
+    slug: "domotique-electricien-aix-en-provence",
+    location: "Aix-en-Provence et environs",
+    description:
+      "Automatisation de votre habitat à Aix-en-Provence : éclairage intelligent, chauffage connecté, volets motorisés et systèmes de sécurité.",
+    keywords:
+      "domotique Aix-en-Provence, maison connectée, éclairage intelligent, chauffage connecté, volets motorisés",
+    image: "/images/domotique-maison-connectee.webp",
+    secondaryImage: "/images/thermostat-connecte-installation.webp",
+    benefits: [
+      "Pilotage centralisé via smartphone",
+      "Économies d'énergie garanties",
+      "Sécurité renforcée (alarmes, détecteurs)",
+      "Installation discrète et esthétique"
+    ],
+    serviceBenefitsDescription1:
+      "Transformez votre maison d'Aix-en-Provence en habitat intelligent avec nos solutions domotiques sur mesure.",
+    serviceBenefitsDescription2:
+      "De la simple programmation d'éclairage à la gestion complète de votre habitat, nos électriciens spécialisés en domotique installent à Aix-en-Provence des systèmes connectés pour contrôler lumières, chauffage, volets roulants et sécurité. Ces solutions, particulièrement adaptées au climat provençal, vous permettent de réaliser jusqu'à 30% d'économies d'énergie tout en améliorant votre confort quotidien."
+  }
 ];

@@ -1,27 +1,35 @@
-import React from 'react'
-import HeroPages from '../layout/HeroPages'
-import Head from 'next/head'
+import React from 'react';
 
 const Hero = () => {
-    return (
-        <>
-            <Head>
-                <title>Électricien à Toulon - Services d&apos;urgence, tableaux et conformité</title>
-                <meta
-                    name="description"
-                    content="Services d'électricité à Toulon : urgence, réparation, remplacement de tableau, conformité NF C 15-100. Intervention rapide et certifiée."
-                />
-            </Head>
-            <HeroPages
-                actual='services'
-                previous='Accueil'
-                title='Nos Services'
-                link='/'
-            />
+  return (
+    <section 
+      className="relative bg-gradient-to-br from-[#0055AA] to-[#003366] min-h-[60vh] flex items-center"
+      id="hero-services"
+      aria-label="Services d'électricien à Aix-en-Provence"
+    >
+      <div className="absolute inset-0 z-0 opacity-20">
+        <div className="bg-[url('/images/electricien-services-hero.jpg')] bg-cover bg-center w-full h-full" />
+      </div>
+      
+      <div className="container mx-auto px-4 py-16 relative z-10 text-center">
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          Services Électriques à <span className="text-[#FFD600]">Aix-en-Provence</span>
+        </h1>
+        <p className="text-xl text-white max-w-3xl mx-auto mb-8">
+          Dépannage urgent 24h/24, installations sécurisées et mise aux normes NF C15-100
+        </p>
+        
+        <div className="mt-8 flex justify-center flex-wrap gap-4">
+          <a 
+            href="tel:+33756935200" 
+            className="bg-white/20 text-white px-6 py-3 rounded-full font-bold hover:bg-white/30 transition-colors"
+          >
+            07 56 93 52 00
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-
-        </>
-    )
-}
-
-export default Hero
+export default Hero;

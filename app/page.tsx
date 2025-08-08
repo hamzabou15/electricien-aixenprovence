@@ -1,45 +1,45 @@
+import { Metadata } from 'next';
 import Hero from "@/components/home/Hero";
 import About from "@/components/home/About";
-import ServiceCard from "@/components/home/ServiceCard";
-import SchemaLocalBusiness from "@/components/schema-local-business";
 import About2 from "@/components/home/About2";
 import StatsCard from "@/components/home/StatsCard";
-import Services from "@/components/home/services";
-import Reviews from "@/components/home/reviews";
+// import Reviews from "@/components/home/Reviews";
+import SchemaLocalBusiness from "@/components/schema-local-business";
+import ServicesGrid from '@/components/home/ServiceGrid';
+import FAQ from '@/components/home/FAQ';
+import ServicesCarousel from '@/components/home/ServicesCarousel';
+import Reviews from '@/components/home/reviews';
+
+export const metadata: Metadata = {
+  title: "Électricien d'urgence à Aix-en-Provence - Dépannage 24h/24",
+  description: "Électricien certifié à Aix-en-Provence pour dépannages, installations et mise aux normes NF C15-100. Intervention rapide 7j/7, devis gratuit. Urgence électrique 07 56 93 52 00.",
+  keywords: "électricien Aix-en-Provence, dépannage électrique, urgence électricité, électricien pas cher, mise aux normes électrique, tableau électrique, panne électrique",
+  openGraph: {
+    title: "Électricien Urgence à Aix-en-Provence - SOS Dépannage 24/7",
+    description: "Électricien certifié intervenant en moins de 30 minutes sur Aix-en-Provence et ses environs",
+    url: "https://electricienaixenprovence-sos.fr",
+    images: [{
+      url: "/images/og-image.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Électricien professionnel à Aix-en-Provence",
+    }],
+  },
+};
 
 export default function HomePage() {
   return (
     <>
       <SchemaLocalBusiness />
-
-      <header>
-        <Hero />
-      </header>
-
+      <Hero />
       <main className="flex flex-col items-center justify-center w-full">
-        <section id="a-propos" aria-label="Présentation de l'entreprise">
-          <About />
-        </section>
-
-        <section id="services" aria-label="Services proposés par l’électricien à Toulon">
-          <ServiceCard />
-        </section>
-
-        <section id="a-propos2" className="w-full" aria-label="Description de l’entreprise">
-          <About2 />
-        </section>
-
-        <section id="stats" className="w-full bg-white" aria-label="Statistiques">
-          <StatsCard />
-        </section>
-
-        <section id="services-2" className="w-full" aria-label="Services complémentaires">
-          <Services />
-        </section>
-
-        <section id="reviews" className="w-full overflow-hidden" aria-label="Avis clients">
-          <Reviews />
-        </section>
+        <About />
+        <ServicesGrid />
+        <About2 />
+        <StatsCard />
+        <ServicesCarousel />
+        <Reviews />
+        <FAQ />
       </main>
     </>
   );

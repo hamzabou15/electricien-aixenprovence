@@ -1,31 +1,36 @@
-// app/contact/page.tsx
 import { Metadata } from "next";
 import ContactForm from "@/components/contact/Form";
 
 // SEO spécifique à cette page
 export const metadata: Metadata = {
-    title: "Contactez Electricien Toulon Expert | Demande de devis ou intervention",
-    description: "Prenez contact avec Electricien Toulon Expert pour vos travaux ou urgences électriques à Toulon. Réponse rapide assurée.",
-    keywords: ["contact électricien Toulon", "demande devis électricien", "intervention électricien urgence Toulon", "Electricien Toulon Expert"],
+    title: "Contactez votre Électricien à Aix-en-Provence | Devis gratuit & Intervention rapide",
+    description: "Besoin d'un dépannage électrique ou d'une mise aux normes à Aix-en-Provence ? Contactez nos électriciens certifiés pour une intervention rapide 24h/24 et 7j/7. Devis gratuit.",
+    keywords: [
+        "contact électricien Aix-en-Provence",
+        "demande devis électricien Aix-en-Provence",
+        "dépannage urgent électricien Aix-en-Provence",
+        "mise aux normes électrique Aix-en-Provence",
+        "électricien certifié Aix-en-Provence"
+    ],
     openGraph: {
-        title: "Contactez Electricien Toulon Expert | Demande de devis ou intervention",
-        description: "Prenez contact avec Electricien Toulon Expert pour vos travaux ou urgences électriques à Toulon.",
-        url: "https://electricientoulon-expert.fr/contact",
-        siteName: "Electricien Toulon Expert",
+        title: "Contactez votre Électricien à Aix-en-Provence | Devis gratuit & Intervention rapide",
+        description: "Intervention électrique 24h/24 et 7j/7 à Aix-en-Provence. Demandez votre devis gratuit dès maintenant.",
+        url: "https://electricienaixenprovence-sos.fr/contact",
+        siteName: "Electricien Aix-en-Provence Expert",
         locale: "fr_FR",
         type: "website",
     },
     twitter: {
-        card: "summary",
-        title: "Contactez Electricien Toulon Expert | Demande de devis ou intervention",
-        description: "Demandez votre devis ou votre intervention d'urgence à Toulon.",
+        card: "summary_large_image",
+        title: "Contactez votre Électricien à Aix-en-Provence | Devis gratuit & Intervention rapide",
+        description: "Électricien certifié à Aix-en-Provence – dépannage urgent et devis gratuit.",
     },
 };
 
 export default function ContactPage() {
     return (
-        <div>
+        <main>
             <ContactForm />
-        </div>
+        </main>
     );
 }

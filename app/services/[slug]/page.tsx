@@ -2,16 +2,44 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { servicesData } from "../../../lib/data";
-import { FaCheckCircle } from "react-icons/fa";
-import { MdPhone } from "react-icons/md";
-import { cn } from "@/lib/utils";
+import { FaCheckCircle, FaShareAlt } from "react-icons/fa";
 import React from "react";
 
+// Types
 interface ServicePageProps {
-
-    params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
 }
 
+// 🆕 Fonction pour générer les meta dynamiques
+export async function generateMetadata({ params }: ServicePageProps) {
+  const { slug } = await params;
+  const service = servicesData.find((p) => p.slug === slug);
+
+  if (!service) {
+    return {
+      title: "Service introuvable - Électricien Aix-en-Provence",
+      description: "Le service que vous recherchez n'existe pas.",
+    };
+  }
+
+  return {
+    title: `${service.title} | Électricien Aix-en-Provence`,
+    description: service.description,
+    keywords: service.keywords,
+    openGraph: {
+      title: `${service.title} | Électricien Aix-en-Provence`,
+      description: service.description,
+      images: [
+        {
+          url: service.image,
+          width: 1200,
+          height: 630,
+          alt: service.title,
+        },
+      ],
+    },
+  };
+}
 
 export default async function DepannageElectricitePage({ params }: ServicePageProps) {
   const { slug } = await params;
@@ -20,135 +48,111 @@ export default async function DepannageElectricitePage({ params }: ServicePagePr
   if (!service) return notFound();
 
   return (
-    <div className="w-full mx-auto bg-white">
-      <div className="w-full max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 py-10">
-        {/* === Menu latéral === */}
-        <aside className="space-y-4">
-          {servicesData.map((item) => (
-            <Link
-              key={item.slug}
-              href={`/services/${item.slug}`}
-              className={cn(
-                "flex items-center justify-between px-4 py-3 border rounded-md shadow-sm font-semibold transition hover:bg-[#c1121f] hover:text-white",
-                {
-                  "text-[#c1121f]": service.slug === item.slug,
-                  "text-[#19182]": service.slug !== item.slug,
-                }
-              )}
-            >
-              {item.title}
-              <span className="text-xl">➔</span>
-            </Link>
-          ))}
+    <section className="w-full py-12 bg-white px-4 md:px-8">
+      <div className="max-w-6xl mx-auto">
+        {/* Fil d'Ariane */}
+        <div className="flex items-center text-sm text-gray-600 mb-6">
+          <Link href="/" className="hover:text-[#0055AA]">Accueil</Link>
+          <span className="mx-2">/</span>
+          <Link href="/services" className="hover:text-[#0055AA]">Services</Link>
+          <span className="mx-2">/</span>
+          <span className="text-[#0055AA] font-medium">{service.title}</span>
+        </div>
 
-          <div className="max-w-sm rounded-md overflow-hidden shadow-md border max-md:mx-auto">
-            {/* Image */}
-            <div className="relative h-64 md:h-96 w-full">
-              <Image
-                src="/images/lampe-suspendue.webp"
-                alt="Technicien électricien en intervention"
-                fill
-                className="object-cover"
-              />
-            </div>
-            {/* Bloc orange en bas */}
-            <div className="bg-[#c1121f] text-white text-center py-6 px-4 space-y-2">
-              <a href="tel:+33756935200" aria-label="Appeler le numéro +33 7 56 93 52 00" className="space-y-2 block">
-                <div className="flex justify-center">
-                  <div className="bg-white rounded p-2">
-                    <MdPhone className="text-[#c1121f] text-3xl" />
-                  </div>
-                </div>
-                <p className="font-semibold text-sm">Besoin d’aide immédiate ?</p>
-                <p className="text-2xl font-bold tracking-wide">+33 756 935 200</p>
-              </a>
-            </div>
-          </div>
-        </aside>
-
-        {/* === Colonne principale === */}
-        <div className="md:col-span-2 space-y-8">
-          {/* Image principale */}
-          <div className="w-full h-64 md:h-96 relative rounded-md overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Colonne principale */}
+          <div className="lg:col-span-2 space-y-8">
             <Image
-              src="/images/service-img.webp"
-              alt="Dépannage électrique à Toulon"
-              fill
-              className="object-cover"
+              src={service.image}
+              alt={service.title}
+              width={1200}
+              height={600}
+              className="w-full rounded-xl object-cover h-auto max-h-[500px] shadow-md"
+              priority
             />
+
+            <div>
+              <h1 className="text-3xl md:text-4xl font-bold text-[#0055AA] mb-4">
+                {service.title}
+              </h1>
+
+              <p className="text-lg text-[#2E2937] leading-relaxed mb-6">
+                {service.description}
+              </p>
+
+              <h2 className="text-2xl font-bold text-[#0055AA] mb-4 border-b border-[#FFD600] pb-2">
+                Pourquoi nous choisir ?
+              </h2>
+
+              <ul className="space-y-4">
+                {service.benefits.map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <FaCheckCircle className="text-[#FFD600] mt-1 mr-3 flex-shrink-0" />
+                    <span className="text-[#2E2937]">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <h2 className="text-2xl font-bold text-[#0055AA] mt-8 mb-4 border-b border-[#FFD600] pb-2">
+                Détails et avantages
+              </h2>
+              <p className="text-[#2E2937] leading-relaxed whitespace-pre-line">
+                {service.serviceBenefitsDescription1}
+              </p>
+              <p className="text-[#2E2937] leading-relaxed mt-4 whitespace-pre-line">
+                {service.serviceBenefitsDescription2}
+              </p>
+            </div>
           </div>
 
-          {/* Contenu principal */}
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{service.title}</h2>
-            <p className="text-[#6a6f78] text-base md:text-[17px] leading-relaxed">
-              {service.description}
-            </p>
-          </div>
+          {/* Sidebar */}
+          <aside className="space-y-6">
+            <div className="bg-[#f7f9fc] p-6 rounded-xl border border-[#e2e8f0] shadow-sm">
+              <h2 className="text-xl font-bold text-[#0055AA] mb-4 pb-2 border-b border-[#FFD600]">
+                Informations rapides
+              </h2>
 
-          {/* Avantages */}
-          <div className="flex w-full gap-7 flex-col lg:flex-row">
-            <div className="w-full flex flex-col items-start gap-12">
-              <div className="text-[#6a6f78]">
-                <h3 className="text-2xl font-bold mb-3 text-gray-900">Avantages des services</h3>
-                {servicesData.map(
-                  (item, index) =>
-                    service.slug === item.slug && (
-                      <p key={index} className="text-base md:text-[16px] leading-relaxed">
-                        {item.serviceBenefitsDescription1}
-                      </p>
-                    )
-                )}
-              </div>
-
-              <div className="w-full">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Pourquoi nous choisir ?</h3>
-                <div className="flex flex-col md:flex-row items-start gap-8 mt-6">
-                  <ul className="space-y-3 text-[15px] text-[#003049]">
-                    {service.benefits.map((item, index) => (
-                      <li key={index} className="flex items-center gap-2">
-                        <FaCheckCircle className="text-[#c1121f]" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+              <div className="space-y-4">
+                <div>
+                  <h3 className="font-semibold text-[#003049]">Service :</h3>
+                  <p>{service.title}</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-[#003049]">Zone d’intervention :</h3>
+                  <p>{service.location}</p>
                 </div>
               </div>
+
+              <div className="mt-8 pt-6 border-t border-[#e2e8f0]">
+                <button className="flex items-center gap-2 text-[#0055AA] font-medium hover:text-[#003366]">
+                  <FaShareAlt className="text-xl" />
+                  <span>Partager ce service</span>
+                </button>
+              </div>
             </div>
 
-            {/* Image à droite */}
-            <div className="relative w-full h-64 md:h-auto">
-              <Image
-                src="/images/Electricien-proxmité-Toulon.webp"
-                alt="Intervention rapide"
-                fill
-                className="object-cover rounded-md"
-              />
-            </div>
-          </div>
+            <div className="bg-gradient-to-br from-[#0055AA] to-[#003366] p-6 rounded-xl text-white">
+              <h2 className="text-xl font-bold mb-4">Besoin d’une intervention ?</h2>
+              <p className="mb-6">Nous intervenons rapidement dans toute la région.</p>
 
-          {/* Description longue avec retours à la ligne */}
-          <div className="text-[#6a6f78] w-full text-base md:text-[16px] leading-relaxed text-justify">
-            {servicesData.map(
-              (item, index) =>
-                service.slug === item.slug && (
-                  <p key={index}>
-                    {item.serviceBenefitsDescription2
-                      .split(".")
-                      .filter((sentence) => sentence.trim() !== "")
-                      .map((sentence, i) => (
-                        <React.Fragment key={i}>
-                          {sentence.trim()}.
-                          <br />
-                          <br />
-                        </React.Fragment>
-                      ))}
-                  </p>
-                )
-            )}
-          </div>
+              <div className="space-y-3">
+                <Link
+                  href="/contact"
+                  className="block w-full bg-[#FFD600] hover:bg-[#FFC400] text-[#0055AA] text-center py-3 px-4 rounded-lg font-bold transition-colors"
+                >
+                  Demander un devis
+                </Link>
+                <a
+                  href="tel:+33756935200"
+                  className="block w-full bg-white/10 hover:bg-white/20 text-center py-3 px-4 rounded-lg font-bold transition-colors"
+                >
+                  07 56 93 52 00
+                </a>
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

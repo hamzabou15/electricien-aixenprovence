@@ -1,40 +1,29 @@
 'use client';
 
-import Image from 'next/image';
 import React from 'react';
 
 const AboutStats = () => {
-    return (
-        <section
-            className='w-full h-screen max-h-[600px] bg-[url("/images/electricien-de-sexe-masculin-travaillant-dans-un-central-electrique.webp")] bg-cover bg-center relative bg-fixed
-                
-            '
-            id="stats-electricien-Toulon"
-            aria-label="Chiffres clés de notre entreprise d'électricité à Toulon"
-        >
-            <div className="py-2 flex justify-start px-10 items-center h-full text-[#f6f6f6] bg-[#00000062] ">
-                <div className="flex items-center gap-7 justify-start text-start max-w-3xl max-sm:flex-col xl:max-w-[1300px] xl:mx-auto ">
-                    {/* Logo ou icône liée à l'électricité */}
-                    <div className="cursor-pointer">
-                        <Image
-                            alt="Logo électricité Toulon"
-                            src="/images/high-voltage-svgrepo-com.svg"
-                            width={100}
-                            height={100}
-                            priority
-                        />
-                    </div>
+  const stats = [
+    { value: "22+", label: "Années d'expérience" },
+    { value: "3500+", label: "Interventions" },
+    { value: "98%", label: "Clients satisfaits" },
+    { value: "24/24", label: "Disponibilité" }
+  ];
 
-                    {/* Texte SEO optimisé */}
-                    <div>
-                        <h2 className="text-5xl sm:text-5xl font-bold mb-4 leading-16 max-sm:text-center">
-                            Votre partenaire d’électricité à Toulon
-                        </h2>
-                    </div>
-                </div>
+  return (
+    <section className="py-16 bg-[#0055AA] text-white">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {stats.map((stat, index) => (
+            <div key={index}>
+              <div className="text-5xl font-bold mb-2">{stat.value}</div>
+              <div className="text-xl">{stat.label}</div>
             </div>
-        </section>
-    );
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default AboutStats;

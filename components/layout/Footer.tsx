@@ -1,148 +1,104 @@
-import Image from 'next/image'
-import React from 'react'
-import { FaInstagram } from 'react-icons/fa'
-import { FaXTwitter } from 'react-icons/fa6'
-import { GoArrowRight } from 'react-icons/go'
-import { MdLocalPhone } from 'react-icons/md'
-import { RiFacebookFill } from 'react-icons/ri'
-import { TiLocation } from 'react-icons/ti'
-import { Input } from '../ui/input'
-import { Button } from '../ui/button'
-import { LuSend } from 'react-icons/lu'
-import Link from 'next/link'
+import React from 'react';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
+  return (
+    <footer className="w-full bg-[#003049] text-white pt-16 pb-8">
+      <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div>
+          <h3 className="text-2xl font-bold mb-6 text-[#FFD600]">
+            SOS Électricien<br />
+            <span className="text-white">Aix-en-Provence</span>
+          </h3>
+          <p className="mb-6 text-white/80">
+            Électricien certifié intervenant 24h/24 sur Aix-en-Provence et sa région pour tous vos dépannages électriques, installations et mises aux normes.
+          </p>
+          <div className="flex gap-4">
+            <a href="#" className="bg-[#FFD600] text-[#003049] p-3 rounded-full hover:bg-[#FFC400] transition-colors">
+              <FaFacebookF />
+            </a>
+            <a href="#" className="bg-[#FFD600] text-[#003049] p-3 rounded-full hover:bg-[#FFC400] transition-colors">
+              <FaTwitter />
+            </a>
+            <a href="#" className="bg-[#FFD600] text-[#003049] p-3 rounded-full hover:bg-[#FFC400] transition-colors">
+              <FaInstagram />
+            </a>
+          </div>
+        </div>
 
-    const menuItems = [
-        { label: "Accueil", href: "/" },
-        { label: "Services", href: "/services" },
-        { label: "Projets", href: "/projets" },
-        { label: "À propos", href: "/a-propos" },
-        { label: "Contact", href: "/contact" },
-    ];
+        <div>
+          <h4 className="text-xl font-bold mb-6 border-b border-[#FFD600] pb-2">Services</h4>
+          <ul className="space-y-3">
+            <li><a href="#" className="hover:text-[#FFD600] transition-colors">Dépannage électrique</a></li>
+            <li><a href="#" className="hover:text-[#FFD600] transition-colors">Mise aux normes NF C15-100</a></li>
+            <li><a href="#" className="hover:text-[#FFD600] transition-colors">Tableau électrique</a></li>
+            <li><a href="#" className="hover:text-[#FFD600] transition-colors">Rénovation électrique</a></li>
+            <li><a href="#" className="hover:text-[#FFD600] transition-colors">Diagnostic électrique</a></li>
+            <li><a href="#" className="hover:text-[#FFD600] transition-colors">Éclairage et domotique</a></li>
+          </ul>
+        </div>
 
+        <div>
+          <h4 className="text-xl font-bold mb-6 border-b border-[#FFD600] pb-2">Zones d&lsquo;intervention</h4>
+          <ul className="space-y-3">
+            <li className="flex items-center gap-2"><FaMapMarkerAlt className="text-[#FFD600]" /> Aix-en-Provence</li>
+            <li className="flex items-center gap-2"><FaMapMarkerAlt className="text-[#FFD600]" /> Marseille</li>
+            <li className="flex items-center gap-2"><FaMapMarkerAlt className="text-[#FFD600]" /> Vitrolles</li>
+            <li className="flex items-center gap-2"><FaMapMarkerAlt className="text-[#FFD600]" /> Gardanne</li>
+            <li className="flex items-center gap-2"><FaMapMarkerAlt className="text-[#FFD600]" /> Les Milles</li>
+            <li className="flex items-center gap-2"><FaMapMarkerAlt className="text-[#FFD600]" /> Puyricard</li>
+          </ul>
+        </div>
 
-    return (
-        <footer className="w-full bg-footer">
-            <div className="w-full py-10 px-6 md:px-10 bg-[url('/images/footer-bg.webp')] bg-cover bg-no-repeat bg-center
-                xl:max-w-[1300px]  xl:mx-auto
-            ">
-                <div className="flex flex-col gap-10">
-                    {/* Main sections */}
-                    <div className="flex flex-col lg:flex-row flex-wrap justify-between gap-y-10 gap-x-6">
-                        {/* Section 1 - Logo & Réseaux */}
-                        <div className="flex flex-col items-start gap-4 max-w-xs">
-                            <Link href="/">
-                                <Image src="/images/logo-electricien-toulon.svg" alt="Logo" width={150} height={20} />
-                            </Link>
+        <div>
+          <h4 className="text-xl font-bold mb-6 border-b border-[#FFD600] pb-2">Contact</h4>
+          <ul className="space-y-4">
+            <li className="flex items-start gap-3">
+              <FaPhone className="text-[#FFD600] mt-1" />
+              <div>
+                <p className="font-semibold">Téléphone</p>
+                <a href="tel:+33756935200" className="hover:text-[#FFD600] transition-colors">07 56 93 52 00</a>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <FaEnvelope className="text-[#FFD600] mt-1" />
+              <div>
+                <p className="font-semibold">Email</p>
+                <a href="mailto:contact@electricienaixenprovence-sos.fr" className="hover:text-[#FFD600] transition-colors">contact@electricienaixenprovence-sos.fr</a>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <FaClock className="text-[#FFD600] mt-1" />
+              <div>
+                <p className="font-semibold">Horaires</p>
+                <p>24h/24 - 7j/7</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <FaMapMarkerAlt className="text-[#FFD600] mt-1" />
+              <div>
+                <p className="font-semibold">Adresse</p>
+                <p>12 Rue Masséna, 13100 Aix-en-Provence</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-                            <p className="text-xs font-light text-[#FFFFFF91] leading-5">
-                                <span className="font-semibold">Eelectricien Toulon Expert</span> est votre entreprise d&#39;électricité générale à Toulon à votre service pour tous vos travaux d&#39;électricité et de dépannage électrique.
-                            </p>
-                            <div className="flex gap-4 mt-2 text-sm text-[#c1121f]">
-                                <a
-                                    href="https://www.facebook.com/onesparkelectricite/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="p-2 rounded-full border border-[#c1121f] hover:bg-white hover:text-[#c1121f] transition"
-                                    aria-label="Facebook"
-                                >
-                                    <RiFacebookFill />
-                                </a>
-                                <a
-                                    href="https://www.instagram.com/onesparkelectricite/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="p-2 rounded-full border border-[#c1121f] hover:bg-white hover:text-[#c1121f] transition"
-                                    aria-label="Instagram"
-                                >
-                                    <FaInstagram />
-                                </a>
-                                <a
-                                    href="https://www.linkedin.com/company/onesparkelectricite/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="p-2 rounded-full border border-[#c1121f] hover:bg-white hover:text-[#c1121f] transition"
-                                    aria-label="X / Twitter"
-                                >
-                                    <FaXTwitter />
-                                </a>
-                            </div>
-                        </div>
+      <div className="max-w-6xl mx-auto px-4 mt-16 pt-8 border-t border-white/20">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-white/70 text-sm">
+            &copy; {new Date().getFullYear()} SOS Électricien Aix-en-Provence - Tous droits réservés
+          </p>
+          <div className="flex gap-6">
+            <a href="#" className="text-white/70 hover:text-white text-sm">Mentions légales</a>
+            <a href="#" className="text-white/70 hover:text-white text-sm">Politique de confidentialité</a>
+            <a href="#" className="text-white/70 hover:text-white text-sm">CGV</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
-                        {/* Section 2 - Navigation */}
-                        <div className="flex flex-col items-start gap-3 min-w-[150px]">
-                            <h2 className="text-[#c1121f] font-semibold text-lg">Explorer</h2>
-                            <ul className="flex flex-col gap-2 text-sm text-[#ffffff91]">
-                                {menuItems.map((item, idx) => (
-                                    <li key={idx}>
-                                        <Link
-                                            href={item.href}
-                                            className="flex items-center gap-2 hover:text-[#c1121f] cursor-pointer font-medium transition"
-                                        >
-                                            <GoArrowRight className="text-[#c1121f] text-xs" />
-                                            {item.label}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        {/* Section 3 - Contact */}
-                        <div className="flex flex-col items-start gap-3 min-w-[200px]">
-                            <h2 className="text-[#c1121f] font-semibold text-lg">Contact</h2>
-                            <div className="text-white text-sm flex flex-col gap-4">
-                                <div className="flex items-start gap-3">
-                                    <TiLocation className="text-xl p-1.5 bg-[#c1121f] rounded-full hover:bg-white hover:text-[#191c25] transition" />
-                                    <div>
-                                        <h4 className="font-semibold text-sm">Bureau central :</h4>
-                                        <p className="text-[#ffffff91] text-xs">
-                                            34 Chemin des Moulins 06000 Toulon
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="flex items-start gap-3">
-                                    <MdLocalPhone className="text-xl p-1.5 bg-[#c1121f] rounded-full hover:bg-white hover:text-[#191c25] transition" />
-                                    <div>
-                                        <h4 className="font-semibold text-sm">Phones :</h4>
-                                        <p className="text-[#ffffff91] text-xs">+33 693 78 88 07</p>
-                                        <p className="text-[#ffffff91] text-xs">+33 693 78 88 07</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Section 4 - Newsletter */}
-                        <div className="flex flex-col items-start gap-4 w-full sm:max-w-sm">
-                            <h2 className="text-[#c1121f] font-semibold text-lg">S&apos;abonner</h2>
-                            <form className="flex w-full max-w-xs">
-                                <Input
-                                    type="email"
-                                    placeholder="Votre Email..."
-                                    name="email"
-                                    className="rounded-r-none border-r-0"
-                                />
-                                <Button
-                                    type="submit"
-                                    className="h-10 rounded-l-none bg-[#c1121f]"
-                                    aria-label="Envoyer l'email"
-                                >
-                                    <LuSend />
-                                </Button>
-                            </form>
-                        </div>
-                    </div>
-
-                    {/* Copyright */}
-                    <div className="w-full flex justify-center pt-6">
-                        <p className="text-xs text-[#ffffff91] text-center">
-                            © 2025 Tous droits réservés - <span className="text-[#c1121f] cursor-pointer">Elecricien Toulon Expert</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    )
-}
-
-export default Footer
+export default Footer;

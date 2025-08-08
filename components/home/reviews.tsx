@@ -1,122 +1,156 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
-import { Card, CardContent } from "@/components/ui/card"
+import React, { useEffect, useState } from 'react';
+import { Card, CardContent } from "@/components/ui/card";
 import {
-    Carousel,
-    CarouselApi,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "@/components/ui/carousel"
-import { cn } from '@/lib/utils'
-import Image from 'next/image'
-import { FaStar } from 'react-icons/fa'
+  Carousel,
+  CarouselApi,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { FaStar } from 'react-icons/fa';
+import Image from 'next/image';
 
 const Reviews = () => {
-    const [api, setApi] = useState<CarouselApi>()
-    const [current, setCurrent] = useState(0)
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
 
-    useEffect(() => {
-        if (!api) return
-        setCurrent(api.selectedScrollSnap() + 1)
-        api.on("select", () => {
-            setCurrent(api.selectedScrollSnap() + 1)
-        })
-    }, [api])
+  useEffect(() => {
+    if (!api) return;
 
-    const reviews = [
-        {
-            img: "/images/user1.webp",
-            name: "Jean Dupont",
-            description: "Suite à une coupure générale, l'électricien est intervenu en moins d'une heure à Toulon. Travail rapide et conforme aux normes.",
-        },
-        {
-            img: "/images/user4.webp",
-            name: "Claire Martin",
-            description: "Nous avons fait appel pour un remplacement de tableau électrique à Toulon. Très professionnel, avec mise aux normes NF C 15-100.",
-        },
-        {
-            img: "/images/user2.webp",
-            name: "Marc Laurent",
-            description: "Électricien compétent à Toulon. Il a identifié la panne électrique rapidement et effectué la réparation le jour-même.",
-        },
-        {
-            img: "/images/user5.webp",
-            name: "Sophie Bernard",
-            description: "Excellent service à Toulon pour une remise aux normes de notre installation. Travail soigné, je recommande cet électricien.",
-        }
-    ]
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
 
-    return (
-        <section
-            id="avis-electricien-Toulon"
-            aria-label="Avis clients sur notre électricien à Toulon"
-            className="w-full py-24"
-        >
-            <div className="flex flex-col items-center justify-center mb-12 px-6 sm:px-20 gap-6 max-sm:gap-4 xl:max-w-[1300px] xl:mx-auto">
-                <p className="text-[14px] font-semibold text-[#c1121f] uppercase tracking-[7px] max-lg:text-[12px]">
-                    Témoignages
-                </p>
-                <h2 className="text-[54px] leading-[1.15em] font-bold tracking-[-1.5px] text-center text-[#003049] max-lg:text-[46px] max-md:text-[40px] max-md:leading-[1.05em] max-sm:text-[28px]">
-                    Ce que disent nos <span className="text-[#c1121f]">clients à Toulon</span> sur nos interventions électriques
-                </h2>
-                <p className="text-[17px] text-[#2E2937BF] text-center max-w-3xl leading-7 max-md:text-base">
-                    Nos clients à Toulon nous font confiance pour les interventions en urgence, le remplacement de tableaux électriques ou la remise aux normes NF C 15-100. Découvrez leurs témoignages !
-                </p>
-            </div>
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
 
-            <Carousel setApi={setApi} opts={{ loop: true }}>
-                <CarouselContent className="max-sm:flex">
-                    {reviews.map((review, index) => (
-                        <CarouselItem key={index} className="basis-3/7 p-0 h-screen max-sm:basis-[100%]  gap-4  ">
-                            <Card
-                                className={cn(
-                                    "text-[#585964] text-[18px] leading-7 transition-all duration-500 h-[450px] bg-[#003049] max-sm:m-[20px] max-sm:w-[90%]  max-sm:ml-[40px] max-sm:rounded-lg",
-                                    {
-                                        "bg-[white]": index !== current - 1,
-                                    }
-                                )}
-                            >
-                                <CardContent className="flex flex-col items-center justify-around py-11 px-9 gap-8">
-                                    <div>
-                                        <div className="flex text-2xl items-center justify-center gap-2 mb-4 text-[#e3e300]">
-                                            {[...Array(5)].map((_, i) => (
-                                                <FaStar key={i} />
-                                            ))}
-                                        </div>
-                                        <p className={cn(
-                                            'p-0 text-center text-[white] font-light',
-                                            { "text-[#63646c] font-normal": index !== current - 1 }
-                                        )}>
-                                            {review.description}
-                                        </p>
-                                    </div>
-                                    <div className="flex flex-col items-center gap-1 mt-4">
-                                        <Image
-                                            src={review.img}
-                                            alt={`Témoignage client de ${review.name} sur nos services d'électricité à Toulon`}
-                                            width={100}
-                                            height={100}
-                                            className="rounded-full w-16 h-16 object-cover"
-                                        />
-                                        <h3 className={cn('text-[white] text-[16px] font-semibold mt-2', {
-                                            "text-[#003049]": index !== current - 1,
-                                        })}>
-                                            {review.name}
-                                        </h3>
-                                    </div>
-                                </CardContent>
-                            </Card>
-                        </CarouselItem>
-                    ))}
-                </CarouselContent>
-                <CarouselPrevious data-slot="button" />
-                <CarouselNext data-slot="button" />
-            </Carousel>
-        </section>
-    )
-}
+  const reviews = [
+    {
+      name: "Marie L.",
+      location: "Aix-en-Provence Centre",
+      rating: 5,
+      comment: "Intervention rapide et très professionnelle. L'électricien a résolu ma panne en moins d'une heure. Je recommande vivement !",
+      date: "15 octobre 2023",
+      img: "/images/femme1.webp"
+    },
+    {
+      name: "Pierre D.",
+      location: "Les Milles",
+      rating: 5,
+      comment: "Un service de qualité. Remplacement de mon tableau électrique effectué dans les règles de l'art. Devis respecté à la lettre.",
+      date: "2 septembre 2023",
+      img: "/images/homme1.webp"
+    },
+    {
+      name: "Sophie T.",
+      location: "Puyricard",
+      rating: 5,
+      comment: "Urgence électrique traitée à 22h un dimanche. Merci pour votre réactivité et votre professionnalisme. À recommander sans hésiter.",
+      date: "28 août 2023",
+      img: "/images/femme2.webp"
+    },
+    {
+      name: "Thomas G.",
+      location: "Vitrolles",
+      rating: 4,
+      comment: "Bonne intervention pour une mise aux normes. Travail propre et soigné. Petit bémol sur le délai d'intervention (2 jours).",
+      date: "12 juillet 2023",
+      img: "/images/homme2.webp"
+    },
+    {
+      name: "Daniel R.",
+      location: "Gardanne",
+      rating: 5,
+      comment: "Électricien très compétent et sympathique. Installation de mes spots LED parfaitement réalisée. Je ferai appel à eux pour tous mes travaux électriques.",
+      date: "25 juin 2023",
+      img: "/images/homme3.webp"
 
-export default Reviews
+    }
+  ];
+
+  return (
+    <section
+      className="w-full py-16 bg-white"
+      id="avis-clients"
+      aria-label="Avis de nos clients à Aix-en-Provence"
+    >
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-16">
+          <p className="text-sm font-semibold text-[#0055AA] uppercase tracking-[4px] mb-4">
+            Témoignages
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0055AA] mb-6">
+            Ce que disent nos clients à <span className="text-[#FFD600]">Aix-en-Provence</span>
+          </h2>
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+            Découvrez les retours d&apos;expérience de nos clients satisfaits
+          </p>
+        </div>
+
+        <Carousel setApi={setApi} className="w-full max-w-4xl mx-auto">
+          <CarouselContent>
+            {reviews.map((review, index) => (
+              <CarouselItem key={index}>
+                <div className="p-4">
+                  <Card className="border-0 shadow-lg">
+                    <CardContent className="p-8">
+                      <div className="flex justify-center mb-6">
+                        <div className="flex text-2xl text-[#FFD600]">
+                          {[...Array(5)].map((_, i) => (
+                            <FaStar key={i} fill={i < review.rating ? "#FFD600" : "#e2e8f0"} />
+                          ))}
+                        </div>
+                      </div>
+                      <p className="text-gray-600 text-center text-lg italic mb-8">
+                        {review.comment}
+                      </p>
+                      <div className="flex items-center justify-center gap-4">
+                        <Image src={review.img} alt="" className="bg-gray-200 border-2 border-dashed object-cover rounded-xl w-16 h-16" />
+                        <div className="text-center">
+                          <h4 className="font-bold text-xl text-[#0055AA]">{review.name}</h4>
+                          <p className="text-gray-500">{review.location}</p>
+                          <p className="text-gray-400 text-sm">{review.date}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-0 md:-left-12" />
+          <CarouselNext className="right-0 md:-right-12" />
+        </Carousel>
+
+        <div className="flex justify-center mt-8 gap-2">
+          {Array.from({ length: count }).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => api?.scrollTo(index)}
+              className={`w-3 h-3 rounded-full ${index === current ? 'bg-[#0055AA]' : 'bg-gray-300'
+                }`}
+              aria-label={`Aller à l'avis ${index + 1}`}
+            />
+          ))}
+        </div>
+
+        <div className="mt-16 bg-gradient-to-r from-[#0055AA] to-[#003366] rounded-2xl p-8 text-center">
+          <h3 className="text-2xl font-bold text-white mb-4">Vous aussi, donnez votre avis !</h3>
+          <p className="text-white/90 mb-6 max-w-2xl mx-auto">
+            Votre satisfaction est notre priorité. Partagez votre expérience avec notre service d&apos;électricien à Aix-en-Provence.
+          </p>
+          <button className="bg-[#FFD600] hover:bg-[#FFC400] text-[#0055AA] font-bold py-3 px-8 rounded-lg text-lg transition-colors">
+            Laisser un avis Google
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Reviews;

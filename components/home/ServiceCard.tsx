@@ -1,168 +1,76 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
-import { GoArrowRight } from 'react-icons/go'
+import {
+    FaExclamationTriangle,
+    FaRegCheckCircle,
+    FaPlug,
+    FaLightbulb
+} from "react-icons/fa";
 
-const ServiceCard = () => {
+const AboutServices = () => {
+    const services = [
+        {
+            title: "Dépannage Urgence 24h/24",
+            description: "Intervention rapide sur Aix-en-Provence pour toutes pannes électriques",
+            icon: <FaExclamationTriangle className="text-white text-2xl" />
+        },
+        {
+            title: "Mise aux Normes NFC 15-100",
+            description: "Certification de vos installations électriques à Aix-en-Provence",
+            icon: <FaRegCheckCircle className="text-white text-2xl" />
+        },
+        {
+            title: "Tableaux Électriques",
+            description: "Installation et rénovation de tableaux électriques sécurisés",
+            icon: <FaPlug className="text-white text-2xl" />
+        },
+        {
+            title: "Éclairage & Automatismes",
+            description: "Solutions d'éclairage moderne pour maisons et entreprises",
+            icon: <FaLightbulb className="text-white text-2xl" />
+        }
+    ];
+
     return (
-        <section className="w-full px-4 py-24 xl:max-w-[1300px] xl:mx-auto">
-            <div className="grid grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 gap-4 xl:max-w-[1300px]">
-                <div className="relative group before:h-full before:content-[''] before:absolute before:border-r-[2px] before:border-[#d8d8d8] before:border-dashed max-sm:border-0 max-sm:before:border-0">
-                    <div className="flex flex-col items-start px-9 py-5 gap-7 relative transition-all duration-300 max-lg:px-5 max-sm:items-center ">
-
-                        {/* Image animée */}
-                        <Image
-                            src="/icons/power-drill.webp"
-                            alt="Handyman Icon"
-                            width={70}
-                            height={70}
-                            className="transition-transform duration-300 group-hover:-translate-y-2 filter  brightness-70 hue-rotate-[-30deg] saturate-200"
-                        />
-
-                        {/* Titre + description */}
-                        <div className="flex flex-col items-start gap-2 text-[#003049] max-w-[80%] max-lg:max-w[100%] max-sm:items-center">
-                            <h3 className="text-2xl font-bold max-lg:text-xl max-sm:text-center">Outils professionnels</h3>
-                            <span className="text-[15px] text-[#0030498f] font-[300] leading-7 max-lg:text-[14px] max-lg:leading-6 max-sm:text-center">
-                                Un travail de qualité avec une touche personnelle et amicale
-                            </span>
-                        </div>
-
-                        {/* Bloc animé */}
-                        <div className="overflow-hidden w-full group">
-                            <a href="#" className="inline-block">
-                                <span className="flex items-center gap-2 text-[16px] tracking-[-1px] font-semibold 
-                      text-[#003049] -translate-x-[80%] transition-transform duration-300 group-hover:translate-x-0
-                        hover:text-[#c1121f]  hover:transition-all max-sm:-translate-x-0
-                      ">
-                                    <Link href={"/services"} >
-                                        <span className="block  ">
-                                            Savoir plus
-                                        </span>
-                                    </Link>
-
-                                    <GoArrowRight className="text-[#c1121f]  " style={{ width: "24px", height: "24px" }} />
-                                </span>
-                            </a>
-                        </div>
-                    </div>
+        <section
+            className="py-16 bg-gray-50"
+            id="services-electricien-aix"
+            aria-label="Nos services d'électricité à Aix-en-Provence"
+        >
+            <div className="container mx-auto px-4">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl font-bold text-[#0055AA] mb-4">
+                        Nos Services Électriques à <span className="text-[#FFD600]">Aix-en-Provence</span>
+                    </h2>
+                    <p className="text-xl max-w-3xl mx-auto">
+                        Des solutions complètes pour particuliers et professionnels sur Aix et sa région
+                    </p>
                 </div>
-                <div className="relative group before:h-full before:content-[''] before:absolute before:border-r-[2px] before:border-[#d8d8d8] before:border-dashed max-sm:before:border-0">
-                    <div className="flex flex-col items-start px-9 py-5 gap-7 relative transition-all duration-300 max-lg:px-5 max-sm:items-center">
 
-                        {/* Image animée */}
-                        <Image
-                            src="/icons/construction-safety.webp"
-                            alt="Handyman Icon"
-                            width={70}
-                            height={70}
-                            className="transition-transform duration-300 group-hover:-translate-y-2 filter  brightness-70 hue-rotate-[-30deg] saturate-200"
-                        />
-
-                        {/* Titre + description */}
-                        <div className="flex flex-col items-start gap-2 text-[#003049] max-w-[80%] max-lg:max-w[100%] max-sm:items-center">
-                            <h3 className="text-2xl font-bold max-lg:text-xl max-sm:text-center ">Expert Électricien</h3>
-                            <span className="text-[15px] text-[#0030498f] font-[300] leading-7 max-sm:tec">
-                                De la panne à la performance, une expertise électrique à chaque intervention
-                            </span>
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {services.map((service, index) => (
+                        <div
+                            key={index}
+                            className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all group"
+                        >
+                            <div
+                                className="w-16 h-16 bg-[#0055AA] rounded-full flex items-center justify-center mb-6
+                                transition-all duration-300 group-hover:bg-[#FFD600] group-hover:text-[#0055AA]"
+                            >
+                                {service.icon}
+                            </div>
+                            <h3 className="text-xl font-bold text-[#003049] mb-3">{service.title}</h3>
+                            <p className="text-gray-600">{service.description}</p>
                         </div>
-
-                        {/* Bloc animé */}
-                        <div className="overflow-hidden w-full group">
-                            <a href="#" className="inline-block">
-                                <span className="flex items-center gap-2 text-[16px] tracking-[-1px] font-semibold 
-                      text-[#003049] -translate-x-[80%] transition-transform duration-300 group-hover:translate-x-0
-                        hover:text-[#c1121f]  hover:transition-all max-sm:-translate-x-0
-                      ">
-                                    <Link href={"/services"} >
-                                        <span className="block  ">
-                                            Savoir plus
-                                        </span>
-                                    </Link>
-                                    <GoArrowRight className="text-[#c1121f]  " style={{ width: "24px", height: "24px" }} />
-                                </span>
-                            </a>
-                        </div>
-                    </div>
+                    ))}
                 </div>
-                <div className="relative group before:h-full before:content-[''] before:absolute before:border-r-[2px] before:border-[#d8d8d8] before:border-dashed max-sm:border-0 max-sm:before:border-0">
-                    <div className="flex flex-col items-start px-9 py-5 gap-7 relative transition-all duration-300 max-lg:px-5 max-sm:items-center">
 
-                        {/* Image animée */}
-                        <Image
-                            src="/icons/tool-box.webp"
-                            alt="Handyman Icon"
-                            width={70}
-                            height={70}
-                            className="transition-transform duration-300 group-hover:-translate-y-2 filter  brightness-70 hue-rotate-[-30deg] saturate-200"
-                        />
-
-                        {/* Titre + description */}
-                        <div className="flex flex-col items-start gap-2 text-[#003049] max-w-[80%] max-lg:max-w-[100%] max-sm:items-center">
-                            <h3 className="text-2xl font-bold max-lg:text-xl max-sm:text-center">Large gamme de services</h3>
-                            <span className="text-[15px] text-[#0030498f] font-[300] leading-7 max-sm:text-center">
-                                Des experts locaux prêts à vous aider pour tous vos besoins domestiques aujourd&#39;hui
-                            </span>
-                        </div>
-
-                        {/* Bloc animé */}
-                        <div className="overflow-hidden w-full group">
-                            <a href="#" className="inline-block">
-                                <span className="flex items-center gap-2 text-[16px] tracking-[-1px] font-semibold 
-                      text-[#003049] -translate-x-[80%] transition-transform duration-300 group-hover:translate-x-0
-                        hover:text-[#c1121f]  hover:transition-all max-sm:-translate-x-0
-                      ">
-                                    <Link href={"/services"} >
-                                        <span className="block  ">
-                                            Savoir plus
-                                        </span>
-                                    </Link>
-                                    <GoArrowRight className="text-[#c1121f]  " style={{ width: "24px", height: "24px" }} />
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div className="relative group before:h-full before:content-[''] before:absolute before:border-r-[2px] before:border-[#d8d8d8] before:border-dashed max-sm:border-0 max-sm:before:border-0">
-                    <div className="flex flex-col items-start px-9 py-5 gap-7 relative transition-all duration-300 max-lg:px-5 max-sm:items-center">
-
-                        {/* Image animée */}
-                        <Image
-                            src="/icons/security-protection.webp"
-                            alt="Handyman Icon"
-                            width={70}
-                            height={70}
-                            className="transition-transform duration-300 group-hover:-translate-y-2 filter  brightness-70 hue-rotate-[-30deg] saturate-200"
-                        />
-
-                        {/* Titre + description */}
-                        <div className="flex flex-col items-start gap-2 text-[#003049] max-w-[80%] max-lg:max-w[100%] max-sm:items-center">
-                            <h3 className="text-2xl font-bold max-lg:text-xl max-sm:text-center">Assurance qualité</h3>
-                            <span className="text-[15px] text-[#0030498f] font-[300] leading-7 max-sm:text-center">
-                                Une aide fiable pour tous vos besoins de rénovation domiciliaire
-                            </span>
-                        </div>
-
-                        {/* Bloc animé */}
-                        <div className="overflow-hidden w-full group">
-                            <a href="#" className="inline-block">
-                                <span className="flex items-center gap-2 text-[16px] tracking-[-1px] font-semibold 
-                      text-[#003049] -translate-x-[80%] transition-transform duration-300 group-hover:translate-x-0
-                        hover:text-[#c1121f]  hover:transition-all max-sm:-translate-x-0
-                      ">
-                                    <Link href={"/services"} >
-                                        <span className="block  ">
-                                            Savoir plus
-                                        </span>
-                                    </Link>
-                                    <GoArrowRight className="text-[#c1121f]  " style={{ width: "24px", height: "24px" }} />
-                                </span>
-                            </a>
-                        </div>
-                    </div>
+                <div className="mt-12 text-center">
+                    <button className="bg-[#0055AA] hover:bg-[#004488] text-white py-3 px-8 rounded-lg font-bold text-lg transition-colors">
+                        Voir tous nos services
+                    </button>
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default ServiceCard
+export default AboutServices;

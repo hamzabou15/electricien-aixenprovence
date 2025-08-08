@@ -1,31 +1,31 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Électricien à Toulon – Dépannage 7j/7 | Devis gratuit",
+    title: "Électricien à Aix En Provence – Dépannage 7j/7 | Devis gratuit",
     description:
-        "Artisan électricien à Toulon. Intervention rapide pour dépannage, installation et mise aux normes. Devis gratuit, réactivité 24h/24.",
+        "Artisan électricien à Aix En Provence. Intervention rapide pour dépannage, installation et mise aux normes. Devis gratuit, réactivité 24h/24.",
     keywords: [
-        "électricien Toulon",
-        "dépannage électrique Toulon",
-        "installation électrique Toulon",
-        "mise aux normes Toulon",
-        "urgence électricien Toulon",
+        "électricien Aix En Provence",
+        "dépannage électrique Aix En Provence",
+        "installation électrique Aix En Provence",
+        "mise aux normes Aix En Provence",
+        "urgence électricien Aix En Provence",
     ],
     alternates: {
-        canonical: "https://electricientoulon-expert.fr",
+        canonical: "https://electricienaixenprovence-sos.Fr",
     },
     openGraph: {
-        title: "Électricien à Toulon – Dépannage rapide 7j/7",
+        title: "Électricien à Aix En Provence – Dépannage rapide 7j/7",
         description:
-            "Artisan local certifié. Dépannage électrique express à Toulon. Devis gratuit.",
-        url: "https://electricientoulon-expert.fr",
-        siteName: "Électricien Toulon Expert",
+            "Artisan local certifié. Dépannage électrique express à Aix En Provence. Devis gratuit.",
+        url: "https://electricienaixenprovence-sos.Fr",
+        siteName: "Électricien Aix En Provence Expert",
         images: [
             {
-                url: "/images/Electricien-ToulonV2.webp",
+                url: "/images/Electricien-Aix En ProvenceV2.webp",
                 width: 1200,
                 height: 630,
-                alt: "Électricien Toulon",
+                alt: "Électricien Aix En Provence",
             },
         ],
         type: "website",
@@ -33,10 +33,10 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Électricien à Toulon – Dépannage rapide 7j/7",
-        description: "Contactez un électricien certifié à Toulon, devis gratuit.",
-        images: ["/images/Electricien-ToulonV2.webp"],
-        creator: "@ElectricienToulon",
+        title: "Électricien à Aix En Provence – Dépannage rapide 7j/7",
+        description: "Contactez un électricien certifié à Aix En Provence, devis gratuit.",
+        images: ["/images/Electricien-Aix En ProvenceV2.webp"],
+        creator: "@ElectricienAix En Provence",
     },
     robots: {
         index: true,

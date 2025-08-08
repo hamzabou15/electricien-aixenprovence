@@ -1,74 +1,109 @@
 "use client";
 import React from 'react';
-import { BsCheck } from 'react-icons/bs';
+import { FaCheck } from 'react-icons/fa';
 import { Button } from '../ui/button';
-import { GoArrowRight } from 'react-icons/go';
-import { PiPhoneCallLight } from 'react-icons/pi';
+import { FaArrowRight } from 'react-icons/fa';
+import { FaPhoneAlt } from 'react-icons/fa';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const About2 = () => {
+  const features = [
+    "Intervention en 30 minutes sur Aix-en-Provence",
+    "Devis gratuit et conseils professionnels",
+    "Électricien certifié et assuré",
+    "Service 24h/7j pour urgences électriques",
+    "Clientèle satisfaite dans tout le pays d'Aix",
+    "Matériel haut de gamme et conforme aux normes"
+  ];
+
   return (
-    <section className='bg-white w-full px-4 h-auto max-sm:px-7'>
-      <div className='flex gap-8 py-2 h-full max-lg:flex-col-reverse max-w-[1300px] m-auto'>
-        {/* Image à gauche */}
-        <div className='w-[60%] h-full pr-10 mt-20 max-lg:w-full max-lg:pr-0 '>
+    <section
+      className="w-full py-16 bg-gradient-to-br from-[#f0f7ff] to-[#e6f2ff]"
+      aria-label="Pourquoi choisir notre service d'électricien à Aix-en-Provence"
+    >
+      <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        {/* Image à gauche - Animation d'apparition */}
+        <motion.div
+          className="relative rounded-xl overflow-hidden shadow-2xl"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <Image
-            width={1000}
-            height={1000}
-            alt='Électricien professionnel intervenant à Toulon'
-            src='/images/electricien-toulon-expert.webp'
-            className='w-full object-cover object-top min-h-screen max-h-[900px] max-lg:max-h-[600px] max-lg:max-w-[500px] m-auto'
+            width={800}
+            height={800}
+            alt='Électricien professionnel intervenant à Aix-en-Provence'
+            src='/images/electricien-aixenprovence-expert.webp'
+            className="w-full object-cover aspect-square lg:aspect-video"
           />
-        </div>
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0055AA] to-transparent p-6 text-white">
+            <p className="font-bold text-lg">Intervention rapide 7j/7</p>
+            <p className="text-sm mt-1">Sur Aix-en-Provence et ses environs</p>
+          </div>
+        </motion.div>
 
         {/* Texte à droite */}
-        <div className='w-[40%] flex flex-col py-2 px-0 gap-8 mt-20 max-lg:w-full max-lg:items-center'>
-          <div className='flex flex-col gap-2 max-lg:max-w-[600px] max-lg:items-center max-sm:px-7'>
-            <p className='text-[12px] font-semibold text-[#c1121f] uppercase tracking-[7px] max-md:text-center'>
-              Électricien certifié à Toulon
-            </p>
-            <h3 className='text-[54px] text-[#003049] m-0 leading-[1.15em] font-bold tracking-[-1.5px] pr-7 max-lg:p-0 max-lg:text-center max-lg:text-[46px] max-md:text-[40px] max-md:leading-[1.05em] max-sm:text-[28px] '>
-              Des dépannages électriques fiables à Toulon, 7j/7
-            </h3>
-          </div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <div className="flex flex-col gap-6">
+            <div>
+              <span className="inline-block px-4 py-1 bg-[#FFD600] text-[#0055AA] text-sm font-bold rounded-full mb-4">
+                EXPERT ÉLECTRICIEN
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0055AA] mb-4">
+                Votre électricien de confiance à <span className="text-[#FFD600]">Aix-en-Provence</span>
+              </h2>
+              <p className="text-lg text-gray-700 mb-6">
+                Artisan électricien certifié basé à Aix-en-Provence, j&apos;interviens rapidement pour tous vos besoins électriques :
+                dépannages urgents, installations sécurisées, mises aux normes NF C 15-100 et solutions domotiques.
+                Bénéficiez d&apos;un travail certifié, d&apos;un devis gratuit et d&apos;une intervention possible le jour même.
+              </p>
+            </div>
 
-          <p className='text-[15px] font-light text-[#2E2937BF] leading-7'>
-            Artisan électricien basé à Toulon, j’interviens rapidement pour tous vos besoins : pannes, installations, mises aux normes, domotique, tableaux électriques. Travail certifié, devis gratuit, intervention le jour même possible.
-          </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <FaCheck className="text-[#FFD600] mt-1 flex-shrink-0 text-xl" />
+                  <span className="font-medium text-gray-800">{feature}</span>
+                </div>
+              ))}
+            </div>
 
-          <ul className='grid grid-cols-2 gap-4 max-sm:grid-cols-1 max-sm:gap-2 '>
-            <li className='flex items-center gap-2 font-light'>
-              <BsCheck className='w-8 h-8 text-[#c1121f]' />
-              <span className='text-[#003049] text-[17px] font-semibold max-sm:text-[16px]'>Intervention en 30 minutes</span>
-            </li>
-            <li className='flex items-center gap-2 font-light'>
-              <BsCheck className='w-8 h-8 text-[#c1121f]' />
-              <span className='text-[#003049] text-[17px] font-semibold max-sm:text-[16px]'>Devis & conseils gratuits</span>
-            </li>
-            <li className='flex items-center gap-2 font-light'>
-              <BsCheck className='w-8 h-8 text-[#c1121f]' />
-              <span className='text-[#003049] text-[17px] font-semibold max-sm:text-[16px]'>Certifié & assuré</span>
-            </li>
-            <li className='flex items-center gap-2 font-light'>
-              <BsCheck className='w-8 h-8 text-[#c1121f]' />
-              <span className='text-[#003049] text-[17px] font-semibold max-sm:text-[16px]'>Clientèle à Toulon et alentours</span>
-            </li>
-          </ul>
+            <div className="flex flex-wrap gap-4 mt-4">
+              <Button className="bg-[#0055AA] hover:bg-[#004488] text-white py-4 px-8 flex items-center gap-2 font-bold text-lg">
+                Demander un devis
+                <FaArrowRight className="text-[#FFD600]" />
+              </Button>
 
-          <div className='flex items-end gap-4 mt-6 max-sm:flex-col max-sm:items-center'>
-            <Button variant='read' size='xlg' className='min-w-[200px] flex items-center gap-2 font-medium'>
-              Savoir Plus
-              <GoArrowRight style={{ width: '20px', height: '20px' }} />
-            </Button>
-
-            <div className='flex items-center gap-2 mt-4 text-[#003049] font-semibold cursor-pointer relative group'>
-              <div className='w-16 h-16 bg-[#f0f0f0] flex items-center justify-center group-hover:bg-[#003049] transition-colors duration-200 group-hover:text-white'>
-                <PiPhoneCallLight className='text-4xl' />
+              <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-md">
+                <div className="bg-[#0055AA] text-white p-3 rounded-full">
+                  <FaPhoneAlt className="text-xl" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-600">Urgence 24h/24</p>
+                  <a
+                    href="tel:+33756935200"
+                    className="text-xl font-bold text-[#0055AA] hover:text-[#004488] transition-colors"
+                  >
+                    07 56 93 52 00
+                  </a>
+                </div>
               </div>
-              <span className='text-[18px] font-medium'>+33 7 56 93 52 00</span>
+            </div>
+
+            <div className="mt-6 p-4 bg-white border-l-4 border-[#FFD600] rounded-r-lg shadow-sm">
+              <p className="font-semibold text-gray-800">
+                Une intervention rapide et professionnelle sur Aix-en-Provence pour votre sécurité électrique.
+              </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

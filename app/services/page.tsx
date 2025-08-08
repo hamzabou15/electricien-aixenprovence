@@ -3,42 +3,75 @@ import Hero from '@/components/services/Hero';
 import ListServices from '@/components/services/ListServices';
 import Presentation from '@/components/services/Presentation';
 import WhyUs from '@/components/services/WhyUs';
-import React from 'react';
+import { Metadata } from 'next';
 
-const page = () => {
+export const metadata: Metadata = {
+    title: "Électricien Aix-en-Provence | Services Urgence, Installation & Normes",
+    description: "Électricien certifié à Aix-en-Provence pour dépannages 24h/24, installations électriques et mise aux normes NF C15-100. Intervention rapide sur toute la région.",
+    keywords: [
+        "électricien aix en provence",
+        "dépannage électrique urgence",
+        "mise aux normes électrique",
+        "installation tableau électrique",
+        "réparation panne courant",
+        "électricien certifié",
+        "urgence électricité aix"
+    ],
+    openGraph: {
+        title: "Services Électriques à Aix-en-Provence | SOS Électricien",
+        description: "Dépannage, installation et mise aux normes par des électriciens certifiés sur Aix-en-Provence et sa région. Intervention en moins de 30 minutes.",
+        url: "https://electricienaixenprovence-sos.fr/services",
+        images: [{
+            url: "/images/og-services-electricien-aix.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Services d'électricien à Aix-en-Provence",
+        }],
+    },
+};
+
+const ServicesPage = () => {
     return (
         <>
-            {/* Schema.org LocalBusiness JSON-LD */}
             <SchemaLocalBusiness />
 
             <header>
                 <Hero />
             </header>
 
-            <main className="flex flex-col items-center justify-center w-full">
-                {/* SECTION À PROPOS */}
-                <section id="a-propos" aria-label="Présentation de l'entreprise" className='w-full'>
-                    <Presentation />
-                </section>
+            <main className="flex flex-col items-center w-full">
+                <Presentation />
+                <ListServices />
+                <WhyUs />
 
-                <section
-                    id="services"
-                    aria-label="Services proposés par Electricien Toulon Expert"
-                    className="w-full"
-                >
-                    <ListServices />
-                </section>
-
-                <section
-                    id="pourquoi-nous"
-                    aria-label="Pourquoi choisir notre entreprise d'électricité"
-                    className="w-full"
-                >
-                    <WhyUs />
+                {/* Section CTA */}
+                <section className="w-full py-16 bg-gradient-to-r from-[#0055AA] to-[#003366] text-white">
+                    <div className="max-w-6xl mx-auto px-4 text-center">
+                        <h2 className="text-3xl font-bold mb-6">
+                            Besoin d&apos;un électricien à Aix-en-Provence ?
+                        </h2>
+                        <p className="text-xl max-w-2xl mx-auto mb-8">
+                            Notre équipe intervient 24h/24 pour dépannages urgents, installations et mises aux normes
+                        </p>
+                        <div className="flex flex-col sm:flex-row justify-center gap-4">
+                            <a
+                                href="/contact"
+                                className="bg-[#FFD600] hover:bg-[#FFC400] text-[#0055AA] font-bold py-3 px-8 rounded-lg text-lg"
+                            >
+                                Demander un devis
+                            </a>
+                            <a
+                                href="tel:+33756935200"
+                                className="bg-white/10 hover:bg-white/20 font-bold py-3 px-8 rounded-lg text-lg"
+                            >
+                                07 56 93 52 00
+                            </a>
+                        </div>
+                    </div>
                 </section>
             </main>
         </>
     );
 };
 
-export default page;
+export default ServicesPage;

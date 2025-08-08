@@ -1,47 +1,43 @@
-"use client";
-
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
 import { FaArrowRight } from "react-icons/fa";
 
 interface ElectricianCardProps {
-    image: string;
-    title: string;
-    subtitle: string;
+  image: string;
+  title: string;
+  subtitle: string;
+  slug: string;
 }
 
-export default function ElectricianCard({ image, title, subtitle }: ElectricianCardProps) {
-    return (
-        <div className="relative group w-full h-[400px] overflow-hidden rounded-md cursor-pointer">
-            <Image
-                src={image}
-                alt={title}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-
-            {/* Overlay orange au hover */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#c1121f] via-[#c1121f]/80 to-transparent
-                 opacity-0 group-hover:opacity-100 transition-opacity duration-300
-                    max-sm:opacity-30
-                 " />
-
-            {/* Contenu affiché au hover */}
-            <div
-                className="
-    absolute bottom-6 left-6 space-y-2 
-    opacity-0 group-hover:opacity-100 transition duration-500 
-    max-sm:opacity-75 max-sm:translate-y-2 max-sm:group-hover:translate-y-0 max-sm:group-hover:opacity-100
-  "
-            >                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#003049] text-white">
-                    <FaArrowRight size={16} />
-                </div>
-                <div className="bg-[#fdf0d5] px-3 py-1 font-bold text-lg text-[#003049] w-fit rounded">
-                    {title}
-                </div>
-                <div className="bg-[#fdf0d5] px-3 py-1 text-[#003049] text-sm w-fit rounded">
-                    {subtitle}
-                </div>
-            </div>
+export default function ElectricianCard({ image, title, subtitle, slug }: ElectricianCardProps) {
+  return (
+    <Link href={`/projets/${slug}`} passHref>
+      <div 
+        className="relative group w-full h-[400px] overflow-hidden rounded-xl cursor-pointer shadow-lg hover:shadow-2xl transition-all"
+        aria-label={`Voir le projet: ${title}`}
+      >
+        {/* Image avec effet de zoom */}
+        <div className="absolute inset-0">
+          <Image
+            src={image}
+            alt={`Projet électrique: ${title} à ${subtitle}`}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
         </div>
-    );
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0055AA]/90 via-[#0055AA]/40 to-transparent" />
+
+        {/* Contenu */}
+        <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-transform duration-300 group-hover:-translate-y-2">
+          <h3 className="text-xl font-bold mb-1">{title}</h3>
+          <p className="text-sm mb-4 opacity-90">{subtitle}</p>
+          <div className="flex items-center font-medium">
+            <span className="mr-2">Voir le projet</span>
+            <FaArrowRight className="transition-transform group-hover:translate-x-1" />
+          </div>
+        </div>
+      </div>
+    </Link>
+  );
 }
