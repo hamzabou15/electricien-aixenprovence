@@ -1,5 +1,5 @@
 User-agent: *
 Disallow:
 
-Sitemap: Sitemap: https://electricienaixenprovence-sos.fr/sitemap.xml
+Sitemap: https://electricienaixenprovence-sos.fr/sitemap.xml
 
