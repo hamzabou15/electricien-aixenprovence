@@ -2,4 +2,3 @@ User-agent: *
 Disallow:
 
 Sitemap: https://electricienaixenprovence-sos.fr/sitemap.xml
-
